@@ -13,10 +13,16 @@
   "license": "MIT",
   "scripts": {
     "css": "node-sass scss/whiplash-ui.scss --source-map true -o dist && node-sass scss/whiplash-ui.scss --output-style compressed > dist/whiplash-ui.min.css",
-    "css:watch": "npm run css && node-sass scss/whiplash-ui.scss -wo dist",
     "js": "cp js/whiplash-ui.js dist/ && minify --output dist/whiplash-ui.min.js js/whiplash-ui.js",
-    "dist": "npm run css && npm run js"
+    "dist": "npm run css && npm run js",
+    "preversion": "npm run dist"
   },
+  "files": [
+    "dist",
+    "images",
+    "fonts",
+    "scss"
+  ],
   "devDependencies": {
     "node-sass": "^4.5.3"
   }
