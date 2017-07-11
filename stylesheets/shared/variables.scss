@@ -54,7 +54,10 @@ $table-header-bg: #F5F5F7 !default;
 $table-body-odd-bg: $horizontal-subnav-bg !default;
 $table-body-even-bg: #FAFAFA !default;
 $table-row-hover-bg: #F7F6FF !default;
-
+$button-bg: $horizontal-nav-bg !default;
+$button-secondary-bg: $code-bg !default;
+$button-dark-bg: #F9F8FF !default;
+$button-dark-shadow: #DCDCDF !default;
 
 // TEXT COLORS
 ////////////////////
@@ -68,6 +71,7 @@ $horizontal-nav-text: #C4C2FF !default;
 $mobile-nav-button-color: #000 !default;
 $table-header-text: #808091 !default;
 $loader-dots: $table-header-text !default;
+$button-text: $main-bg !default;
 
 
 // SIZES
