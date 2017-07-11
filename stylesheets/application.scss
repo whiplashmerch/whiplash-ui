@@ -56,7 +56,7 @@ ul {
 	margin: 0 1rem 1rem;
 
 	&:before {
-		background: image-url('search.svg') center center no-repeat transparent;
+		background: url('../images/search.svg') center center no-repeat transparent;
 		background-size: contain;
 		bottom: 0.9rem;
 		content: "";
@@ -134,14 +134,13 @@ ul {
 			display: inline-block;
 
 			&:not(:last-child):after {
-				background: image-url('breadcrumb-arrow.svg') no-repeat 100% transparent;
+				background: url('../images/breadcrumb-arrow.svg') no-repeat 100% transparent;
 				background-size: contain;
 				color: $main-text;
 				content: "";
 				display: inline-block;
-				font-size: 0.5rem;
-				height: 0.5rem;
-				margin: 0 0.4rem 0 0.2rem;
+				height: 0.5625rem;
+				margin: 0 0.125rem -0.0625rem -0.25rem;
 				width: 0.625rem;
 			}
 
@@ -168,7 +167,7 @@ ul {
     width: 100%;
 
     td, th {
-      background: image-url('table-border.svg') repeat-y 100% transparent;
+      background: url('../images/table-border.svg') repeat-y 100% transparent;
 
       &:last-child {
 	background: none;
@@ -225,22 +224,27 @@ ul {
     display: none;
   }
 
-  .logo, .menu, .search {
+  .logo-wrapper, .menu, .search {
     display: inline-block;
     vertical-align: top;
   }
 
-  .logo {
+  .logo-wrapper {
     background-color: $horizontal-nav-logo-bg;
     padding: 0.5rem 1rem;
 
-    img {
-      margin: 0 auto;
+    .logo {
+      background: url('../images/geo-logo-white.svg') center center no-repeat transparent;
+      background-size: contain;
+      height: 2.5rem;
+      margin: -0.1875rem auto 0.1875rem;
       width: 2.5rem;
     }
   }
 
   .menu {
+    margin: 0.1875rem 0 0 -0.1875rem;
+
     a {
       color: $horizontal-nav-text;
       padding-bottom: 1rem;
@@ -355,7 +359,7 @@ ul {
       }
     }
 
-    .logo {
+    .logo-wrapper {
       background-color: inherit;
       margin: 0 auto;
     }
@@ -396,7 +400,7 @@ body > .mobile-nav-button {
     opacity: 1;
   }
 
-  span {
+  > span {
     background-color: $mobile-nav-button-bg;
     border-radius: 0 0 0 5px;
     display: block;
@@ -405,10 +409,31 @@ body > .mobile-nav-button {
     transform: rotate(-90deg) translate(-100%, 0);
   }
 
-  img {
+  .mobile-nav-button-box {
+    display: inline-block;
     height: 1rem;
+    padding: 0.625rem 0.125rem 0.75rem;
+    margin-left: 0.25rem;
     transition: transform 0.3s ease-in-out;
     vertical-align: bottom;
+    width: 1rem;
+
+    .mobile-nav-button-bar {
+      background-color: $mobile-nav-inverted-bg;
+      display: block;
+      height: 2px;
+      transform: translateZ(0);
+      transform-origin: center;
+      transition: transform .3s cubic-bezier(.465,.183,.153,.946),-webkit-transform .3s cubic-bezier(.465,.183,.153,.946);
+      width: 100%;
+      will-change: transform;
+
+      &.middle {
+	margin: 0.1875rem 0;
+	opacity: 1;
+	transition: opacity 0.3s linear;
+      }
+    }
   }
 }
 
@@ -455,8 +480,15 @@ body > .mobile-nav-button {
     }
   }
 
-  .logo {
-      margin: $logo-margin;
+  .logo-wrapper {
+      padding: $logo-padding;
+
+      .logo {
+        background: url('../images/horizontal-logo-dark.svg') center center no-repeat transparent;
+        background-size: contain;
+        height: 1.625rem;
+        width: 10rem;
+      }
   }
 
   .sub-menu {
@@ -488,7 +520,9 @@ body > .mobile-nav-button {
     &.open {
       left: $nav-width;
 
-      img {
+      .mobile-nav-button-box {
+	padding-top: 0.125rem;
+	margin-top: 0.375rem;
         transform-origin: 0 0 0;
         transform: rotate(-90deg) translate(-100%, 0);
       }

@@ -48,6 +48,7 @@ $search-notice-bg: #9677DF !default;
 $border: #EDEDF3 !default;
 $nav-hover-border: #726EEA !default;
 $mobile-nav-button-bg: rgba(249, 249, 250, 0.7) !default;
+$mobile-nav-inverted-bg: $code-bg !default;
 $search-border-bottom: #B3B3CC !default;
 $table-header-bg: #F5F5F7 !default;
 $table-body-odd-bg: $horizontal-subnav-bg !default;
@@ -72,7 +73,7 @@ $table-header-text: #808091 !default;
 ////////////////////
 $nav-width: 230px !default; // width of the navbar
 $examples-width: 50% !default; // portion of the screen taken up by code examples
-$logo-margin: 20px !default; // margin between nav items and logo, ignored if search is active
+$logo-padding: 30px !default; // margin between nav items and logo, ignored if search is active
 $main-padding: 28px !default; // padding to left and right of content & examples
 $nav-padding: 15px !default; // padding to left and right of navbar
 $nav-v-padding: 10px !default; // padding used vertically around search boxes and results
