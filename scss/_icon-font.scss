@@ -1,10 +1,10 @@
 /* Webfont: Aller-light */
 @font-face {
   font-family: 'Aller-Light';
-  src:font-url('../../fonts/Aller-Light.ttf.woff') format('woff'),
-    font-url('../../fonts/Aller-Light.ttf.svg#Aller-Light') format('svg'),
-    font-url('../../fonts/Aller-Light.ttf.eot'),
-    font-url('../../fonts/Aller-Light.ttf.eot?#iefix') format('embedded-opentype');
+  src:font-url('../fonts/Aller-Light.ttf.woff') format('woff'),
+    font-url('../fonts/Aller-Light.ttf.svg#Aller-Light') format('svg'),
+    font-url('../fonts/Aller-Light.ttf.eot'),
+    font-url('../fonts/Aller-Light.ttf.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,11 +12,11 @@
 /* Webfont: Lato-Regular */
 @font-face {
   font-family: 'Lato';
-  src: font-url('../../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
-  src: font-url('../../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    font-url('../../fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
-    font-url('../../fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
-    font-url('../../fonts/Lato-Regular.ttf') format('truetype');
+  src: font-url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */
+  src: font-url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    font-url('../fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+    font-url('../fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+    font-url('../fonts/Lato-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
