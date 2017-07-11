@@ -16,3 +16,9 @@ In your `application.js` add the line:
 ```
 //= require whiplash-ui/javascripts/behavior
 ```
+
+## elements
+
+### DotLoader loading indicator
+
+This functionality is pulled right from the UI toolkit living style guide. To implement, create an element `<div class="loader-wrapper">` and the JS will populate it with the necessary children for animation when the page loads.
