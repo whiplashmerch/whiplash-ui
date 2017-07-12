@@ -176,7 +176,7 @@ ul {
       background: url('../images/table-border.svg') repeat-y 100% transparent;
 
       &:last-child {
-	background: none;
+	       background: none;
       }
     }
 
@@ -187,37 +187,37 @@ ul {
       width: 100%;
 
       th {
-	color: $table-header-text;
-	font-size: 0.8rem;
-	font-weight: 100;
-	height: 3rem;
-	letter-spacing: 0.0125rem;
-	padding: 0 1rem;
-	text-align: left;
-	text-transform: capitalize;
+      	color: $table-header-text;
+      	font-size: 0.8rem;
+      	font-weight: 100;
+      	height: 3rem;
+      	letter-spacing: 0.0125rem;
+      	padding: 0 1rem;
+      	text-align: left;
+      	text-transform: capitalize;
       }
     }
 
     tbody {
       tr {
-	background-color: $table-body-odd-bg;
+      	background-color: $table-body-odd-bg;
 
-	&:nth-child(2n) {
-	  background-color: $table-body-even-bg;
-	}
+      	&:nth-child(2n) {
+      	  background-color: $table-body-even-bg;
+      	}
 
-	&:hover {
-	  background-color: $table-row-hover-bg;
-	}
+      	&:hover {
+      	  background-color: $table-row-hover-bg;
+      	}
       }
 
       td {
-	text-transform: none;
-	font-size: 0.9rem;
-	letter-spacing: 0.04rem;
-	padding: 1rem;
-	position: relative;
-	-webkit-font-smoothing: antialiased;
+      	text-transform: none;
+      	font-size: 0.9rem;
+      	letter-spacing: 0.04rem;
+      	padding: 1rem;
+      	position: relative;
+      	-webkit-font-smoothing: antialiased;
       }
     }
   }
