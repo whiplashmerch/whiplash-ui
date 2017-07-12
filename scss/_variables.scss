@@ -91,6 +91,8 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 
 // FONTS
 ////////////////////
+$font-path: 'https://s3.amazonaws.com/wl-s3-assets/fonts/';
+
 %default-font {
   font-family: 'Lato', 'Aller-Light', Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -113,6 +115,7 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 
 // OTHER
 ////////////////////
+$asset-path: 'https://s3.amazonaws.com/wl-s3-assets/brand/';
 $nav-active-shadow: #000 !default;
 $nav-footer-border-color: #666 !default;
 $nav-embossed-border-top: #000 !default;

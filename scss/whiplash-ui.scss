@@ -62,7 +62,7 @@ ul {
 	margin: 0 1rem 1rem;
 
 	&:before {
-		background: url('../images/search.svg') center center no-repeat transparent;
+		background: url($asset-path + 'styles/search.svg') center center no-repeat transparent;
 		background-size: contain;
 		bottom: 0.9rem;
 		content: "";
@@ -140,7 +140,7 @@ ul {
 			display: inline-block;
 
 			&:not(:last-child):after {
-				background: url('../images/breadcrumb-arrow.svg') no-repeat 100% transparent;
+				background: url($asset-path + 'styles/breadcrumb-arrow.svg') no-repeat 100% transparent;
 				background-size: contain;
 				color: $main-text;
 				content: "";
@@ -173,7 +173,7 @@ ul {
     width: 100%;
 
     td, th {
-      background: url('../images/table-border.svg') repeat-y 100% transparent;
+      background: url($asset-path + 'styles/table-border.svg') repeat-y 100% transparent;
 
       &:last-child {
 	       background: none;
@@ -339,7 +339,7 @@ ul {
     padding: 0.5rem 1rem;
 
     .logo {
-      background: url('../images/geo-logo-white.svg') center center no-repeat transparent;
+      background: url($asset-path + 'logos/geo-logo-white.svg') center center no-repeat transparent;
       background-size: contain;
       height: 2.5rem;
       margin: -0.1875rem auto 0.1875rem;
@@ -517,7 +517,7 @@ body > .mobile-nav-button {
       padding: $logo-padding;
 
       .logo {
-        background: url('../images/horizontal-logo-dark.svg') center center no-repeat transparent;
+        background: url($asset-path + 'logos/horizontal-logo-dark.svg') center center no-repeat transparent;
         background-size: contain;
         height: 1.625rem;
         width: 10rem;
