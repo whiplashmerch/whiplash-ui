@@ -65,6 +65,7 @@ $code-bg: #1d1f21 !default;
 $main-text: #303030 !default; // main content text color
 $nav-text: #fff !default;
 $nav-active-text: $main-text !default; $nav-hover-text: #4641BE !default;
+$link-text: $horizontal-nav-bg;
 $lang-select-text: #fff !default; // color of unselected language tab text
 $lang-select-active-text: #fff !default; // color of selected language tab text
 $lang-select-pressed-text: #fff !default; // color of language tab text when mouse is pressed
