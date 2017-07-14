@@ -1,0 +1,35 @@
+.breadcrumb-wrapper {
+	padding: 0.5rem 0.8rem;
+	width: 100%;
+
+	.breadcrumb-list {
+		list-style-type: none;
+
+		.breadcrumb-item {
+			display: inline-block;
+
+			&:not(:last-child):after {
+				background: url($asset-path + 'styles/breadcrumb-arrow.svg') no-repeat 100% transparent;
+				background-size: contain;
+				color: $main-text;
+				content: "";
+				display: inline-block;
+				height: 0.5625rem;
+				margin: 0 0.125rem -0.0625rem -0.25rem;
+				width: 0.625rem;
+			}
+
+			a {
+				color: $main-text;
+				font-size: 0.625rem;
+				text-decoration: none;
+				text-transform: capitalize;
+				transition: color 0.2s linear;
+
+				&:hover {
+					color: $nav-active-bg;
+				}
+			}
+		}
+	}
+}

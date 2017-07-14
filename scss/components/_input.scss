@@ -1,0 +1,99 @@
+.field {
+	color: $field-text;
+	font-size: 0.875rem;
+	font-weight: bold;
+	letter-spacing: 0.03rem;
+	margin: 0 1rem 1rem;
+	position: relative;
+
+	label {
+		color: $table-header-text;
+		display: block;
+		font-size: inherit;
+		letter-spacing: 0.0125rem;
+		padding-bottom: 0.875rem;
+		text-transform: capitalize;
+	}
+
+	input[type=text],
+  input[type=number],
+  input[type=password],
+  input[type=email],
+  input[type=search] {
+		-webkit-appearance: none;
+		background-color: transparent;
+		border: 1px solid $search-border-bottom;
+		border-radius: 1px;
+		color: $main-text;
+		display: block;
+		font-size: 1rem;
+		letter-spacing: 0.011875rem;
+		outline: 0;
+		padding: 0.8rem 5rem 0.8rem 1rem;
+		transition: border 150ms ease-out;
+		width: 100%;
+    box-sizing: border-box;
+
+		&:hover, &:active {
+			border-color: $nav-active-bg;
+		}
+	}
+
+  textarea,
+  .formatted_content {
+    border: 1px dotted $search-border-bottom;
+    display: block;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+	&.menu-search {
+		&:after {
+			background-color: $nav-active-bg;
+			bottom: 0;
+			content: "";
+			display: inline-block;
+			height: 2px;
+			left: 0;
+			position: absolute;
+			width: 0;
+			transition: width 150ms ease-out;
+		}
+
+		&:hover:after {
+			width: 100%;
+		}
+
+		input[type=text],
+    input[type=search] {
+			border-top: initial;
+			border-right: initial;
+			border-bottom: 1px dotted $search-border-bottom;
+			border-left: initial;
+			font-size: 0.9625rem;
+		}
+	}
+
+
+	&.search,
+	&.menu-search {
+		input {
+			padding: 0.8rem 5rem 0.8rem 3rem !important;
+		}
+
+		&:before {
+			background: url($asset-path + 'styles/search.svg') center center no-repeat transparent;
+			background-size: contain;
+			bottom: 0.9rem;
+			content: "";
+			display: inline-block;
+			height: 1.125rem;
+			left: 0.75rem;
+			position: absolute;
+			width: 1.125rem;
+			z-index: 10;
+		}
+	}
+
+}

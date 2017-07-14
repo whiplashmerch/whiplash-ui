@@ -1,0 +1,106 @@
+.side-menu {
+  background-color: $nav-bg;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  width: $nav-width;
+
+  + .main-wrapper {
+    margin-left: $nav-width;
+    position: relative;
+  }
+
+  a {
+    border-left: 2px solid transparent;
+    color: $nav-subitem-bg;
+    display: block;
+    overflow-x: hidden;
+    padding-bottom: 0.5rem !important;
+    padding-top: 0.5rem !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:active,
+    &:hover {
+      color: $main-text;
+    }
+
+    &:hover {
+      background-color: $nav-hover-bg;
+      border-left: 2px solid $nav-hover-border;
+      color: $nav-hover-text;
+    }
+  }
+
+  li {
+    color: $nav-subitem-bg;
+
+    > a {
+      padding: 0 $nav-padding;
+    }
+  }
+
+  .logo-wrapper {
+      padding: $logo-padding;
+
+      .logo {
+        background: url($asset-path + 'logos/horizontal-logo-dark.svg') center center no-repeat transparent;
+        background-size: contain;
+        height: 1.625rem;
+        width: 10rem;
+      }
+  }
+
+  .sub-menu,
+  .tertiary-menu {
+    > a {
+      padding: 0 $nav-padding;
+    }
+
+    .menu-list {
+      background-color: $subnav-bg;
+      border-bottom: 1px solid $border;
+      border-top: 1px solid $border;
+
+      &.active {
+        margin: 0;
+        display: inherit;
+      }
+    }
+
+    li > a {
+      font-size: 12px;
+      padding: 0 $nav-padding + $nav-indent;
+    }
+  }
+
+  .tertiary-menu {
+    > a {
+      font-size: 12px;
+      font-weight: bold;
+      padding: 0 ($nav-padding + $nav-indent);
+    }
+
+    li > a {
+      padding: 0 ($nav-padding * 2) + $nav-indent;
+    }
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .side-menu {
+    background-color: $nav-bg;
+    left: -$nav-width;
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+
+    &.open {
+      left: 0;
+    }
+
+    + .main-wrapper {
+      margin-left: inherit;
+    }
+  }
+}
