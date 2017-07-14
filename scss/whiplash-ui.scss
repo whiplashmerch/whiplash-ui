@@ -453,7 +453,7 @@ ul {
           box-shadow: 0 0 15px $horizontal-subnav-shadow;
           padding: 1rem;
           position: absolute;
-          top: 2rem;
+          top: 1rem;
           width: 14rem;
 
           a {
@@ -472,6 +472,12 @@ ul {
             width: 100%;
           }
         }
+      }
+
+      .tertiary-menu {
+	> .menu-list {
+	  top: 0.75rem;
+	}
       }
     }
   }
