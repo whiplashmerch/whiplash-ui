@@ -127,6 +127,16 @@ ul {
 	aside, dt, h1, h2, h3, h4, h5, h6, ol, p, table, ul {
 		display: block;
 	}
+
+	code {
+		background-color: $code-bg;
+		border-radius: 2px;
+		color: $code-text;
+		display: block;
+		font-family: Menlo, Consolas, Monaco, monospace;
+		font-size: 0.9rem;
+		padding: 1rem;
+	}
 }
 
 .breadcrumb-wrapper {
