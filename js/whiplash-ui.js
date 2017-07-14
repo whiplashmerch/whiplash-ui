@@ -2,7 +2,7 @@ document.addEventListener('turbolinks:load', handleUIBehavior);
 
 function handleUIBehavior() {
   var mobileNavButton = document.querySelector('.mobile-nav-button');
-  var subMenuItem = document.querySelectorAll('.sub-menu > a');
+  var subMenuItem = document.querySelectorAll('.sub-menu > a, .tertiary-menu > a');
   var loaders = document.querySelectorAll('.loader-wrapper');
 
   mobileNavButton.addEventListener('click', mobileNavClickHandler);
