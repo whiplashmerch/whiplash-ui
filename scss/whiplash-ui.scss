@@ -50,7 +50,8 @@ ul {
 	}
 }
 
-.sub-menu {
+.sub-menu,
+.tertiary-menu {
 	.menu-list {
 		display: none;
 	}
@@ -429,13 +430,14 @@ ul {
       > li {
         margin-right: 1.5rem;
 
-        > a, > .submenu > a {
+	> a {
           font-size: 0.9rem;
           letter-spacing: 0.04rem;
         }
       }
 
-      .sub-menu {
+      .sub-menu,
+      .tertiary-menu {
         position: relative;
 
         &:hover {
@@ -451,7 +453,7 @@ ul {
           box-shadow: 0 0 15px $horizontal-subnav-shadow;
           padding: 1rem;
           position: absolute;
-          top: 2rem;
+          top: 1rem;
           width: 14rem;
 
           a {
@@ -470,6 +472,12 @@ ul {
             width: 100%;
           }
         }
+      }
+
+      .tertiary-menu {
+	> .menu-list {
+	  top: 0.75rem;
+	}
       }
     }
   }
@@ -584,7 +592,8 @@ body > .mobile-nav-button {
       }
   }
 
-  .sub-menu {
+  .sub-menu,
+  .tertiary-menu {
     > a {
       padding: 0 $nav-padding;
     }
@@ -602,6 +611,18 @@ body > .mobile-nav-button {
     li > a {
       font-size: 12px;
       padding: 0 $nav-padding + $nav-indent;
+    }
+  }
+
+  .tertiary-menu {
+    > a {
+      font-size: 12px;
+      font-weight: bold;
+      padding: 0 ($nav-padding + $nav-indent);
+    }
+
+    li > a {
+      padding: 0 ($nav-padding * 2) + $nav-indent;
     }
   }
 }
