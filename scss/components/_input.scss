@@ -32,6 +32,7 @@
 		padding: 0.8rem 5rem 0.8rem 1rem;
 		transition: border 150ms ease-out;
 		width: 100%;
+    box-sizing: border-box;
 
 		&:hover, &:active {
 			border-color: $nav-active-bg;
