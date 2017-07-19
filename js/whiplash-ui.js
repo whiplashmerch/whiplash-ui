@@ -5,6 +5,7 @@ function handleUIBehavior() {
   var subMenuItem = document.querySelectorAll('.sub-menu > a, .tertiary-menu > a');
   var loaders = document.querySelectorAll('.loader-wrapper');
   var selects = document.querySelectorAll('.select-input');
+  var toggles = document.querySelectorAll('.toggle-input');
 
   mobileNavButton.addEventListener('click', mobileNavClickHandler);
 
@@ -67,6 +68,40 @@ function handleUIBehavior() {
 
 	selectSelection.addEventListener('click', selectOpenHandler);
   });
+
+  Array.prototype.forEach.call(toggles, function (toggle) {
+	var toggleSibling = toggle.nextElementSibling;
+	var toggleParent = toggle.parentNode;
+
+	var newToggle = document.createElement('div');
+	var toggleInner = document.createElement('div');
+	var toggleButton = document.createElement('span');
+	var toggleClone = toggle.cloneNode();
+
+	newToggle.classList.add('toggle');
+	toggleInner.classList.add('toggle-inner');
+	toggleButton.classList.add('toggle-button');
+
+	newToggle.appendChild(toggleInner);
+
+	if (toggle.getAttribute('checked')) {
+	  newToggle.classList.add('active');
+	}
+
+	toggleInner.appendChild(toggleButton);
+	toggleInner.appendChild(toggleClone);
+
+	toggle.parentNode.removeChild(toggle);
+
+	if (toggleSibling) {
+	  toggleParent.insertBefore(newToggle, toggleSibling);
+	} else {
+	  toggleParent.appendChild(newToggle);
+	}
+
+
+	newToggle.addEventListener('click', toggleClickHandler);
+  });
 }
 
 function mobileNavClickHandler() {
@@ -109,4 +144,20 @@ function selectNewSelectionHandler(event) {
   selection.textContent = text;
 
   parent.classList.remove('open');
+}
+
+function toggleClickHandler(event) {
+  event.stopPropagation();
+
+  var parent = event.target;
+
+  while (!parent.classList.contains('toggle')) {
+	parent = parent.parentNode;
+  }
+
+  var input = parent.querySelector('input');
+  var checked = input.getAttribute('checked');
+
+  parent.classList.toggle('active');
+  input.setAttribute('checked', checked ? '' : 'checked');
 }

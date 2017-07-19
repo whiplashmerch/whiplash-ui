@@ -26,3 +26,7 @@ This functionality is pulled right from the UI toolkit living style guide. To im
 ### SelectBox select input field
 
 This component style is taken from the UI toolkit. To implement this style in a Whiplash UI-styled application, create an element `<select class="select-input">` with options as you normally would. The JavaScript will then parse that element and its options and convert the HTML layout to what is expected to implement the more complex and customized select dropdown input.
+
+### Toggle checkbox control
+
+The style of this control is taken from the UI toolkit. To implement in a Whiplash UI application, create an element `<input type="checkbox" class="toggle-input">` and the JS will create the required HTML structure to facilitate the complex styling of the element.
