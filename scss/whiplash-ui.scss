@@ -62,6 +62,18 @@ pre {
   padding: 1rem;
 }
 
+.print-logo {
+	display: none;
+	padding: $logo-padding;
+
+	.logo {
+		background: url($asset-path + 'logos/horizontal-logo-dark.svg') center center no-repeat transparent;
+		background-size: contain;
+		height: 1.625rem;
+		width: 10rem;
+	}
+}
+
 .menu-wrapper {
 	a {
 		text-decoration: none;
@@ -184,9 +196,23 @@ body > .mobile-nav-button {
   }
 }
 
-@media print {
-  .breadcrumb-wrapper,
-  .search-wrapper {
-    display: none;
-  }
+@media only print {
+	.menu-wrapper,
+	.breadcrumb-wrapper,
+	.loader-wrapper,
+	.input-wrapper,
+	.select-wrapper,
+	.textarea-wrapper,
+	.button,
+	input {
+		display: none;
+	}
+
+	.side-menu + .main-wrapper {
+		margin-left: inherit;
+	}
+
+	.print-logo {
+		display: block;
+	}
 }
