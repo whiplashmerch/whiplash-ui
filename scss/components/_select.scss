@@ -28,6 +28,10 @@
 	&.open {
 		border: 1px solid transparent;
 		overflow: visible;
+
+		.select-list-wrapper {
+			display: inherit;
+		}
 	}
 
 	.select-selection {
@@ -47,6 +51,7 @@
 		border: 1px solid $select-border;
 		box-shadow: 2px 2px 30px 0 $select-shadow;
 		border-radius: 2px;
+		display: none;
 		left: 0;
 		max-height: 13.75rem;
 		overflow-y: auto;
