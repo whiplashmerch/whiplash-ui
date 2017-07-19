@@ -59,6 +59,12 @@ $button-secondary-bg: $code-bg !default;
 $button-dark-bg: #F9F8FF !default;
 $button-dark-shadow: #DCDCDF !default;
 $code-bg: #1d1f21 !default;
+$select-bg: $horizontal-subnav-bg !default;
+$select-border: $search-border-bottom !default;
+$select-shadow: hsla(240, 7%, 54%, 0.1) !default;
+$select-hover-bg: $nav-active-bg !default;
+$select-hover-border: #9B8FFF !default;
+$select-hover-shadow: rgba(128, 113, 254, 0.2) !default;
 
 // TEXT COLORS
 ////////////////////
