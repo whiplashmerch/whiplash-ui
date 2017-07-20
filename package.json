@@ -1,6 +1,6 @@
 {
   "name": "whiplash-ui",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "description": "UI assets for Whiplash Merch",
   "main": "/dist/whiplash-ui.js",
   "repository": "git@github.com:whiplashmerch/whiplash-ui.git",
