@@ -66,8 +66,8 @@ function transformSelect(select) {
   selectListWrapper.classList.add('select-list-wrapper');
 
   selectInput.setAttribute('type', 'hidden');
-  selectInput.setAttribute('name', 'inputName');
-  selectInput.setAttribute('value', 'inputValue');
+  selectInput.setAttribute('name', inputName);
+  selectInput.setAttribute('value', inputValue);
 
   selectSelection.textContent = selectedText;
 
