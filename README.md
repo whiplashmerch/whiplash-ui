@@ -30,3 +30,21 @@ This component style is taken from the UI toolkit. To implement this style in a 
 ### Toggle checkbox control
 
 The style of this control is taken from the UI toolkit. To implement in a Whiplash UI application, create an element `<input type="checkbox" class="toggle-input">` and the JS will create the required HTML structure to facilitate the complex styling of the element.
+
+### Dropdown/up floating menu control
+
+In order to implement this, you need to have the following HTML structure:
+
+```
+<div class="dropdown-wrapper">
+	<button class="button text" data-dropdown="up-menu">Menu Button/Link</button>
+	<div class="dropdown dropdown-up" id="up-menu">
+		<ul class="dropdown-list">
+			<li><a href="#">Stuff</a></li>
+			<li><a href="#">Biz</a></li>
+		</ul>
+	</div>
+</div>
+```
+
+There are two orientations -- a menu that drops down uses the class `dropdown-down` on the div that wraps `dropdown-list`. A menu that pops up from the button uses the class `dropdown-up`.

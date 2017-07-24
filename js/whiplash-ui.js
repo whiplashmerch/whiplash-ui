@@ -6,6 +6,7 @@ function handleUIBehavior() {
   var loaders = document.querySelectorAll('.loader-wrapper');
   var selects = document.querySelectorAll('.select-input');
   var toggles = document.querySelectorAll('.toggle-input');
+  var dropdowns = document.querySelectorAll('button[data-dropdown]');
 
   mobileNavButton.addEventListener('click', mobileNavClickHandler);
 
@@ -16,6 +17,8 @@ function handleUIBehavior() {
   Array.prototype.forEach.call(selects, transformSelect);
 
   Array.prototype.forEach.call(toggles, transformToggle);
+
+  Array.prototype.forEach.call(dropdowns, registerDropdownClickHandlers);
 }
 
 function mobileNavClickHandler() {
@@ -163,6 +166,15 @@ function toggleClickHandler(event) {
 
   parent.classList.toggle('active');
   input.setAttribute('checked', checked ? '' : 'checked');
+}
+
+function registerDropdownClickHandlers(button) {
+  var dropdownId = button.getAttribute('data-dropdown');
+  var dropdown = document.getElementById(dropdownId);
+
+  button.addEventListener('click', function() {
+    dropdown.classList.toggle('open');
+  });
 }
 
 function getParent(element, className) {
