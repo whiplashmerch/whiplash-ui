@@ -22,8 +22,8 @@
   "license": "MIT",
   "scripts": {
     "css:sass": "node-sass scss/whiplash-ui.scss -o dist",
-    "css:autoprefix": "postcss -r dist/whiplash-ui.css --use autoprefixer -b '> 5%'",
-    "css:minify": "postcss dist/whiplash-ui.css --use cssnano -o dist/whiplash-ui.min.css",
+    "css:autoprefix": "postcss -r dist/whiplash-ui.css --map --use autoprefixer -b '> 5%'",
+    "css:minify": "postcss dist/whiplash-ui.css --map --use cssnano -o dist/whiplash-ui.min.css",
     "css": "npm run css:sass && npm run css:autoprefix && npm run css:minify",
     "js": "cp js/whiplash-ui.js dist/ && minify --output dist/whiplash-ui.min.js js/whiplash-ui.js",
     "dist": "npm run css && npm run js",
