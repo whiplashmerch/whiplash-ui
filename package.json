@@ -21,7 +21,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "css": "node-sass scss/whiplash-ui.scss --source-map true -o dist && node-sass scss/whiplash-ui.scss --output-style compressed > dist/whiplash-ui.min.css",
+    "css:sass": "node-sass scss/whiplash-ui.scss -o dist",
+    "css:autoprefix": "postcss -r dist/whiplash-ui.css --map --use autoprefixer -b '> 5%'",
+    "css:minify": "postcss dist/whiplash-ui.css --map --use cssnano -o dist/whiplash-ui.min.css",
+    "css": "npm run css:sass && npm run css:autoprefix && npm run css:minify",
     "js": "cp js/whiplash-ui.js dist/ && minify --output dist/whiplash-ui.min.js js/whiplash-ui.js",
     "dist": "npm run css && npm run js",
     "preversion": "npm run dist"
@@ -33,7 +36,11 @@
     "scss"
   ],
   "devDependencies": {
+    "autoprefixer": "7.1.2",
+    "cssnano": "3.10.0",
+    "minifier": "^0.8.1",
     "node-sass": "^4.5.3",
-    "minifier": "^0.8.1"
+    "postcss": "6.0.8",
+    "postcss-cli": "4.1.0"
   }
 }
