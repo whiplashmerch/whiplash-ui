@@ -1,5 +1,4 @@
 .notification-toast {
-  background: -webkit-linear-gradient(left, #e9faf6 1%, #deeaea);
   background: linear-gradient(90deg, #e9faf6 1%, #deeaea);
   // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#e9faf6", endColorstr="#c1cccb", GradientType=1);
   border-radius: 2px;
@@ -15,13 +14,11 @@
 
   &.pending {
     background: #eae8ff;
-    background: -webkit-linear-gradient(left, #eae8ff, #bde9ed);
     background: linear-gradient(90deg, #eae8ff 0, #bde9ed);
     color: #4800b6;
   }
 
   &.error {
-    background: -webkit-linear-gradient(left, rgba(234, 82, 94, .27), rgba(165, 34, 34, .39));
     background: linear-gradient(90deg, rgba(234, 82, 94, .27) 0, rgba(165, 34, 34, .39));
     color: #cc3e4a;
   }
