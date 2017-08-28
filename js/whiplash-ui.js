@@ -8,7 +8,9 @@ function handleUIBehavior() {
   var toggles = document.querySelectorAll('.toggle-input');
   var dropdowns = document.querySelectorAll('button[data-dropdown]');
 
-  mobileNavButton.addEventListener('click', mobileNavClickHandler);
+  if (mobileNavButton != null) {
+    mobileNavButton.addEventListener('click', mobileNavClickHandler);
+  }
 
   Array.prototype.forEach.call(subMenuItem, registerSubMenuClickHandlers);
 
