@@ -12,13 +12,13 @@
   letter-spacing: .04rem;
   -webkit-font-smoothing: antialiased;
 
-  &.pending {
+  &.pending, &.warning {
     background: #eae8ff;
     background: linear-gradient(90deg, #eae8ff 0, #bde9ed);
     color: #4800b6;
   }
 
-  &.error {
+  &.error, &.errors {
     background: linear-gradient(90deg, rgba(234, 82, 94, .27) 0, rgba(165, 34, 34, .39));
     color: #cc3e4a;
   }
