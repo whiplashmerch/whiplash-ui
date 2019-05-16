@@ -12,6 +12,6 @@
     "catalog-start": "catalog start",
     "catalog-build": "catalog build",
     "predeploy": "yarn run catalog-build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d catalog/build"
   }
 }
