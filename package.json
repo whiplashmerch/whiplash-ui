@@ -1,46 +1,13 @@
 {
-  "name": "whiplash-ui",
-  "version": "0.5.1",
-  "description": "UI assets for Whiplash Merch",
-  "main": "/dist/whiplash-ui.js",
-  "repository": "git@github.com:whiplashmerch/whiplash-ui.git",
-  "author": "Jacob M. Roufa <jacob.roufa@gmail.com> (http://jacobroufa.com/)",
-  "contributors": [
-    {
-      "name": "Casey Baggz",
-      "email": "casey.baggz@gmail.com"
-    },
-    {
-      "name": "Mark Dickson",
-      "email": "mark@sitesteaders.com"
-    },
-    {
-      "name": "Matt Smith",
-      "email": "azamatsmith@gmail.com"
-    }
-  ],
-  "license": "MIT",
-  "scripts": {
-    "css:sass": "node-sass scss/whiplash-ui.scss -o dist",
-    "css:autoprefix": "postcss -r dist/whiplash-ui.css --map --use autoprefixer -b '> 5%'",
-    "css:minify": "postcss dist/whiplash-ui.css --map --use cssnano -o dist/whiplash-ui.min.css",
-    "css": "npm run css:sass && npm run css:autoprefix && npm run css:minify",
-    "js": "cp js/whiplash-ui.js dist/ && minify --output dist/whiplash-ui.min.js js/whiplash-ui.js",
-    "dist": "npm run css && npm run js",
-    "preversion": "npm run dist"
+  "name": "catalog",
+  "description": "",
+  "dependencies": {
+    "catalog": "^3.6.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
-  "files": [
-    "dist",
-    "images",
-    "fonts",
-    "scss"
-  ],
-  "devDependencies": {
-    "autoprefixer": "7.1.2",
-    "cssnano": "3.10.0",
-    "minifier": "^0.8.1",
-    "node-sass": "^4.5.3",
-    "postcss": "6.0.8",
-    "postcss-cli": "4.1.0"
+  "scripts": {
+    "catalog-start": "catalog start",
+    "catalog-build": "catalog build"
   }
 }
