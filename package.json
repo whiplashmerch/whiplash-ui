@@ -1,13 +1,17 @@
 {
   "name": "catalog",
   "description": "",
+  "homepage": "https://whiplashmerch.github.io/whiplash-ui/",
   "dependencies": {
     "catalog": "^3.6.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "scripts": {
     "catalog-start": "catalog start",
-    "catalog-build": "catalog build"
+    "catalog-build": "catalog build",
+    "predeploy": "yarn run catalog-build",
+    "deploy": "gh-pages -d build"
   }
 }

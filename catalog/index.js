@@ -14,17 +14,17 @@ const pages = [
       {
         path: '/brand/logos/',
         title: 'Logos',
-        content: pageLoader(() => import("./pages/basics/LOGOS.md"))
+        content: pageLoader(() => import("./pages/brand/LOGOS.md"))
       },
       {
         path: '/brand/colors/',
         title: 'Colors',
-        content: pageLoader(() => import("./pages/basics/COLORS.md"))
+        content: pageLoader(() => import("./pages/brand/COLORS.md"))
       },
       {
         path: '/brand/type/',
         title: 'Type',
-        content: pageLoader(() => import("./pages/basics/TYPE.md"))
+        content: pageLoader(() => import("./pages/brand/TYPE.md"))
       },
     ]
   },
