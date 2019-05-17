@@ -1,2 +1,0 @@
-webpackJsonp([6],{783:function(e,t,n){var o=n(15),r=n(45),a=n(292).PageRenderer;a.__esModule&&(a=a.default);var i=r({displayName:"WrappedPageRenderer",getInitialState:function(){return{content:n(791)}},componentWillMount:function(){},render:function(){return o.createElement(a,Object.assign({},this.props,{content:this.state.content}))}});i.__catalog_loader__=!0,e.exports=i},791:function(e,t){e.exports="Whiplash uses [Flexbox Grid](http://flexboxgrid.com/) for all layout."}});
-//# sourceMappingURL=6.68f64faf.chunk.js.map
