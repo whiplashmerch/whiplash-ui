@@ -9,22 +9,22 @@ const pages = [
     content: pageLoader(() => import("./pages/WELCOME.md"))
   },
   {
-    title: 'Brand',
+    title: 'Branding',
     pages: [
       {
-        path: '/brand/logos/',
+        path: '/branding/logos/',
         title: 'Logos',
-        content: pageLoader(() => import("./pages/brand/LOGOS.md"))
+        content: pageLoader(() => import("./pages/branding/LOGOS.md"))
       },
       {
-        path: '/brand/colors/',
+        path: '/branding/colors/',
         title: 'Colors',
-        content: pageLoader(() => import("./pages/brand/COLORS.md"))
+        content: pageLoader(() => import("./pages/branding/COLORS.md"))
       },
       {
-        path: '/brand/type/',
+        path: '/branding/type/',
         title: 'Type',
-        content: pageLoader(() => import("./pages/brand/TYPE.md"))
+        content: pageLoader(() => import("./pages/branding/TYPE.md"))
       },
     ]
   },
@@ -47,9 +47,24 @@ const pages = [
     title: 'Forms',
     pages: [
       {
-        path: '/forms/',
-        title: 'DatePicker',
-        content: pageLoader(() => import("./pages/forms/DATEPICKER.md"))
+        path: '/forms/loading-indicator/',
+        title: 'Loading Indicator',
+        content: pageLoader(() => import("./pages/forms/LOADINGINDICATOR.md"))
+      },
+      {
+        path: '/forms/select-input/',
+        title: 'Select Input',
+        content: pageLoader(() => import("./pages/forms/SELECTINPUT.md"))
+      },
+      {
+        path: '/forms/checkbox/',
+        title: 'Checkbox',
+        content: pageLoader(() => import("./pages/forms/CHECKBOX.md"))
+      },
+      {
+        path: '/forms/dropdown/',
+        title: 'Dropdown',
+        content: pageLoader(() => import("./pages/forms/DROPDOWN.md"))
       },
     ]
   },
@@ -65,11 +80,11 @@ let whiplashTheme = {
 
 ReactDOM.render(
   <Catalog 
-    title="UI Library 2.0" 
+    title="UI Library 2.0.0" 
     pages={pages} 
-    logoSrc="/logo-vertical.png"
+    logoSrc="./logo-vertical.png"
     theme={whiplashTheme}
-    
+    basePath='/whiplash-ui/'
   />,
   document.getElementById("catalog")
 );

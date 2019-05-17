@@ -10,7 +10,7 @@
   },
   "scripts": {
     "catalog-start": "catalog start",
-    "catalog-build": "catalog build",
+    "catalog-build": "catalog build --public-url=/whiplash-ui/",
     "predeploy": "yarn run catalog-build",
     "deploy": "gh-pages -d catalog/build"
   }

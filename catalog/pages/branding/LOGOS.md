@@ -6,10 +6,10 @@ src: "/logo-vertical.png"
 title: "Black"
 description: |
   3674 x 3449 PNG
-  [Download]()
+  [Download](/logo-vertical.png)
 
   SVG
-  [Download]()
+  [Download](/logo-vertical.svg)
 ```
 
 ```image
@@ -19,7 +19,7 @@ src: "/logo-vertical-purple.png"
 title: "Brand Purple"
 description: |
  3674 x 3449 PNG
- [Download]()
+ [Download](/logo-vertical-purple.png)
  ```
 
 
@@ -32,10 +32,10 @@ src: "/logo-horizontal.png"
 title: "Black"
 description: |
   1294 x 209 PNG
-  [Download]()
+  [Download](/logo-horizontal.png)
 
   SVG
-  [Download]()
+  [Download](/logo-horizontal.svg)
 ```
 
 ```image
@@ -45,6 +45,7 @@ src: "/logo-horizontal-purple.png"
 title: "Brand Purple"
 description: |
   1294 x 209 PNG
+  [Download](/logo-horizontal-purple.png)
 ```
 
 # Animated
@@ -61,7 +62,12 @@ description: |
 # Favicon
 ```download|span-2
 title: Favicon PSD
-subtitle: 8 KB
-url: /assets/catalog_logo.svg
+subtitle: 205 KB
+url: /whiplash-favicon.psd
+```
+```download|span-2
+title: Favicons ZIP
+subtitle: 86 KB
+url: /whiplash-favicons.zip
 ```
 

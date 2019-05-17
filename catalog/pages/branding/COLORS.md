@@ -1,4 +1,4 @@
-## Primary Brand Colors
+# Primary Brand Colors
 ```color-palette|horizontal
 colors:
   - {name: "Whiplash Purple", value: "#3F00B6"}
@@ -6,7 +6,7 @@ colors:
   - {name: "Whiplash Cool", value: "#16DDA5"}
 ```
 
-## Secondary Brand Colors
+# Secondary Brand Colors
 ```color-palette|horizontal
 colors:
   - {name: "Whiplash Yellow", value: "#FFB800"}
