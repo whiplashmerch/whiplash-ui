@@ -385,16 +385,16 @@ under the License.
 /* Webfont: Aller-light */
 @font-face {
   font-family: 'Aller-Light';
-  src: url("https://s3.amazonaws.com/wl-s3-assets/fonts/Aller-Light.ttf.woff") format("woff"), url("https://s3.amazonaws.com/wl-s3-assets/fonts/Aller-Light.ttf.svg#Aller-Light") format("svg"), url("https://s3.amazonaws.com/wl-s3-assets/fonts/Aller-Light.ttf.eot"), url("https://s3.amazonaws.com/wl-s3-assets/fonts/Aller-Light.ttf.eot?#iefix") format("embedded-opentype");
+  src: url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Aller-Light.ttf.woff") format("woff"), url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Aller-Light.ttf.svg#Aller-Light") format("svg"), url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Aller-Light.ttf.eot"), url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Aller-Light.ttf.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal; }
 
 /* Webfont: Lato-Regular */
 @font-face {
   font-family: 'Lato';
-  src: url("https://s3.amazonaws.com/wl-s3-assets/fonts/Lato-Regular.eot");
+  src: url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Lato-Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/wl-s3-assets/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("https://s3.amazonaws.com/wl-s3-assets/fonts/Lato-Regular.woff2") format("woff2"), url("https://s3.amazonaws.com/wl-s3-assets/fonts/Lato-Regular.woff") format("woff"), url("https://s3.amazonaws.com/wl-s3-assets/fonts/Lato-Regular.ttf") format("truetype");
+  src: url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Lato-Regular.woff2") format("woff2"), url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Lato-Regular.woff") format("woff"), url("https://d1dhez4kvp48e8.cloudfront.net/fonts/Lato-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
