@@ -1,17 +1,54 @@
 {
-  "name": "catalog",
-  "description": "",
+  "name": "whiplash-ui",
+  "version": "0.6.0",
+  "description": "UI assets for Whiplash Merch",
+  "main": "/dist/whiplash-ui.js",
+  "repository": "git@github.com:whiplashmerch/whiplash-ui.git",
   "homepage": "https://whiplashmerch.github.io/whiplash-ui/",
+  "author": "Adam Kempa <adamkempa@gmail.com> (http://adamkempa.com/)",
+  "contributors": [
+    {
+      "name": "Adam Kempa",
+      "email": "adamkempa@gmail.com"
+    },
+    {
+      "name": "Mark Dickson",
+      "email": "mark@sitesteaders.com"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "css:sass": "node-sass scss/whiplash-ui.scss -o dist",
+    "css:autoprefix": "postcss -r dist/whiplash-ui.css --map --use autoprefixer -b '> 5%'",
+    "css:minify": "postcss dist/whiplash-ui.css --map --use cssnano -o dist/whiplash-ui.min.css",
+    "css": "yarn run css:sass && yarn run css:autoprefix && yarn run css:minify",
+    "js": "cp js/whiplash-ui.js dist/ && minify --output dist/whiplash-ui.min.js js/whiplash-ui.js",
+    "add-to-catalog": "cp dist/* catalog/static",
+    "dist": "yarn run css && yarn run js && yarn run add-to-catalog",
+    "preversion": "yarn run dist",
+    "catalog-start": "catalog start",
+    "catalog-build": "catalog build --public-url=/whiplash-ui/",
+    "predeploy": "yarn run catalog-build",
+    "deploy": "gh-pages -d catalog/build --repo git@github.com:whiplashmerch/whiplash-ui.git"
+  },
+  "files": [
+    "dist",
+    "images",
+    "fonts",
+    "scss"
+  ],
+  "devDependencies": {
+    "autoprefixer": "7.1.2",
+    "cssnano": "3.10.0",
+    "minifier": "^0.8.1",
+    "node-sass": "^4.5.3",
+    "postcss": "6.0.8",
+    "postcss-cli": "4.1.0"
+  },
   "dependencies": {
     "catalog": "^3.6.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  },
-  "scripts": {
-    "catalog-start": "catalog start",
-    "catalog-build": "catalog build --public-url=/whiplash-ui/",
-    "predeploy": "yarn run catalog-build",
-    "deploy": "gh-pages -d catalog/build"
   }
 }

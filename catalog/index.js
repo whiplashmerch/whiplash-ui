@@ -57,9 +57,9 @@ const pages = [
         content: pageLoader(() => import("./pages/forms/SELECTINPUT.md"))
       },
       {
-        path: '/forms/checkbox/',
-        title: 'Checkbox',
-        content: pageLoader(() => import("./pages/forms/CHECKBOX.md"))
+        path: '/forms/toggle/',
+        title: 'Toggle',
+        content: pageLoader(() => import("./pages/forms/TOGGLE.md"))
       },
       {
         path: '/forms/dropdown/',

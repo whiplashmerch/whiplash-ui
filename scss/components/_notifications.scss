@@ -1,0 +1,25 @@
+.notification-toast {
+  background: linear-gradient(90deg, #e9faf6 1%, #deeaea);
+  // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#e9faf6", endColorstr="#c1cccb", GradientType=1);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+  color: #00bc93;
+  font-family: Lato, Aller-Light, Helvetica, Arial, sans-serif;
+  font-size: .875rem;
+  letter-spacing: .04rem;
+  -webkit-font-smoothing: antialiased;
+
+  &.pending, &.warning {
+    background: #eae8ff;
+    background: linear-gradient(90deg, #eae8ff 0, #bde9ed);
+    color: #4800b6;
+  }
+
+  &.error, &.errors {
+    background: linear-gradient(90deg, rgba(234, 82, 94, .27) 0, rgba(165, 34, 34, .39));
+    color: #cc3e4a;
+  }
+}

@@ -1,0 +1,29 @@
+.whiplash-form {
+  .field {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    font-size: 16px;
+    line-height: 18px;
+    padding-bottom: 0.5rem;
+  }
+
+  .has-float-label {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .row {
+    margin-bottom: 4rem;
+  }
+
+  :disabled {
+    background: #d0d0d0;
+  }
+
+  .indent {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+}

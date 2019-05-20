@@ -1,0 +1,33 @@
+.badge {
+  display: inline-block;
+  padding: .3em .6em;
+  font-size: 70%;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+
+  &.badge-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+  }
+
+  &.badge-minor {
+    color: #383d41;
+    background-color: #e2e3e5;
+  }
+
+  &.badge-major {
+    color: #856404;
+    background-color: #fff3cd;
+  }
+
+  &.badge-critical {
+    color: #721c24;
+    background-color: #f8d7da;
+  }
+}
