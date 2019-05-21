@@ -89,7 +89,6 @@ ReactDOM.render(
     pages={pages} 
     logoSrc="./logo-vertical.png"
     theme={whiplashTheme}
-    //basePath='/whiplash-ui/'
   />,
   document.getElementById("catalog")
 );
