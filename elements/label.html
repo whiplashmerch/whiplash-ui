@@ -11,14 +11,30 @@
   crossorigin="anonymous"></script>
   <script src="/whiplash-ui/whiplash-ui.min.js"></script>
   <title>Whiplash - UI Library</title>
+  <style>
+    body {
+      background: transparent !important;
+    }
+  </style>
 </head>
 <body>
+  <div>
     <span class="labels">
       <span class="label warning">Warning</span>
       <span class="label important">Important</span>
       <span class="label success">Success</span>
       <span class="label small">SMALL</span>
     </span>
+  </div>
+  <div>
+    <span class="labels right">
+      <span class="label warning">Warning</span>
+      <span class="label important">Important</span>
+      <span class="label success">Success</span>
+      <span class="label small">SMALL</span>
+    </span>
+  </div>
+
   <script>
     $(document).ready(function() {
       handleUIBehavior(); 
