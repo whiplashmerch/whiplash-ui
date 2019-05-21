@@ -44,6 +44,11 @@ const pages = [
     content: pageLoader(() => import("./pages/TABLES.md"))
   },
   {
+    path: "/labels/",
+    title: "Labels",
+    content: pageLoader(() => import("./pages/LABELS.md"))
+  },
+  {
     title: 'Forms',
     pages: [
       {

@@ -1,0 +1,14 @@
+span.text-state,
+p.text-state {
+  &.approved,
+  &.success {
+    color: #00bc93 !important;
+  }
+  &.errored,
+  &.error {
+    color: #cc3e4a !important;
+  }
+  &.warning {
+    color: #4800b6 !important;
+  }
+}

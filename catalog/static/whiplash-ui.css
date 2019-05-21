@@ -616,6 +616,20 @@ under the License.
     .side-menu + .main-wrapper {
       margin-left: inherit; } }
 
+span.text-state.approved, span.text-state.success,
+p.text-state.approved,
+p.text-state.success {
+  color: #00bc93 !important; }
+
+span.text-state.errored, span.text-state.error,
+p.text-state.errored,
+p.text-state.error {
+  color: #cc3e4a !important; }
+
+span.text-state.warning,
+p.text-state.warning {
+  color: #4800b6 !important; }
+
 .field {
   color: #646471;
   font-size: 0.875rem;
@@ -1062,6 +1076,24 @@ under the License.
     .dropdown .dropdown-list li {
       padding: 0.5rem 1rem;
       text-transform: capitalize; }
+
+span.labels {
+  max-width: 55%; }
+
+span.label {
+  display: inline-block;
+  color: white !important;
+  padding: 2px 5px;
+  margin: 2px 0 3px 5px;
+  border-radius: 2px; }
+  span.label.warning {
+    background-color: #4800b6; }
+  span.label.important {
+    background-color: #cc3e4a; }
+  span.label.success {
+    background-color: #00bc93; }
+  span.label.small {
+    font-size: 0.8rem; }
 
 html {
   -webkit-box-sizing: border-box;

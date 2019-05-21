@@ -1,0 +1,29 @@
+span.labels {
+    max-width: 55%;
+  }
+  
+  // Used:
+  // Order Batches
+  // Scan Packaging
+  // Order
+  // See also: label-right
+  
+  span.label {
+    display: inline-block;
+    color: white !important;
+    padding: 2px 5px;
+    margin: 2px 0 3px 5px;
+    border-radius: 2px;
+    &.warning {
+      background-color: #4800b6;
+    }
+    &.important {
+      background-color: #cc3e4a;
+    }
+    &.success {
+      background-color: #00bc93;
+    }
+    &.small {
+      font-size: 0.8rem;
+    }
+  }

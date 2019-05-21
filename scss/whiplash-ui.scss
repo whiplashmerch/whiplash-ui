@@ -4,6 +4,7 @@
 @import "animation";
 @import "top-menu";
 @import "side-menu";
+@import "type";
 @import "components/input";
 @import "components/table";
 @import "components/button";
@@ -13,6 +14,9 @@
 @import "components/select";
 @import "components/toggle";
 @import "components/dropdown";
+@import "components/label";
+
+
 
 html {
 	box-sizing: border-box;
