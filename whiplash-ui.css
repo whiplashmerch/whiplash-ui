@@ -1077,10 +1077,14 @@ p.text-state.warning {
       padding: 0.5rem 1rem;
       text-transform: capitalize; }
 
+span.labels {
+  max-width: 55%; }
+
 span.label {
   display: inline-block;
   color: white !important;
   padding: 2px 5px;
+  margin: 2px 0 3px 5px;
   border-radius: 2px; }
   span.label.warning {
     background-color: #4800b6; }
