@@ -445,7 +445,7 @@ under the License.
     background-color: #3F00B6;
     padding: 0.5rem 1rem; }
     .top-menu .logo-wrapper .logo {
-      background: url("https://s3.amazonaws.com/wl-s3-assets/brand/logos/geo-logo-white.svg") center center no-repeat transparent;
+      background: url("https://d1dhez4kvp48e8.cloudfront.net/brand/logos/geo-logo-white.svg") center center no-repeat transparent;
       background-size: contain;
       height: 2.5rem;
       margin: -0.1875rem auto 0.1875rem;
@@ -577,7 +577,7 @@ under the License.
   .side-menu .logo-wrapper {
     padding: 30px; }
     .side-menu .logo-wrapper .logo {
-      background: url("https://s3.amazonaws.com/wl-s3-assets/brand/logos/horizontal-logo-dark.svg") center center no-repeat transparent;
+      background: url("https://d1dhez4kvp48e8.cloudfront.net/brand/logos/horizontal-logo-dark.svg") center center no-repeat transparent;
       background-size: contain;
       height: 1.625rem;
       width: 10rem; }
@@ -704,7 +704,7 @@ p.text-state.warning {
   .field.search input, .field.menu-search input {
     padding: 0.8rem 5rem 0.8rem 3rem !important; }
   .field.search:before, .field.menu-search:before {
-    background: url("https://s3.amazonaws.com/wl-s3-assets/brand/styles/search.svg") center center no-repeat transparent;
+    background: url("https://d1dhez4kvp48e8.cloudfront.net/brand/styles/search.svg") center center no-repeat transparent;
     background-size: contain;
     bottom: 0.9rem;
     content: "";
@@ -719,7 +719,7 @@ p.text-state.warning {
   margin: 1rem;
   width: 100%; }
   .table td, .table th {
-    background: url("https://s3.amazonaws.com/wl-s3-assets/brand/styles/table-border.svg") repeat-y 100% transparent; }
+    background: url("https://d1dhez4kvp48e8.cloudfront.net/brand/styles/table-border.svg") repeat-y 100% transparent; }
     .table td:last-child, .table th:last-child {
       background: none; }
   .table thead {
@@ -812,7 +812,7 @@ p.text-state.warning {
     .breadcrumb-wrapper .breadcrumb-list .breadcrumb-item {
       display: inline-block; }
       .breadcrumb-wrapper .breadcrumb-list .breadcrumb-item:not(:last-child):after {
-        background: url("https://s3.amazonaws.com/wl-s3-assets/brand/styles/breadcrumb-arrow.svg") no-repeat 100% transparent;
+        background: url("https://d1dhez4kvp48e8.cloudfront.net/brand/styles/breadcrumb-arrow.svg") no-repeat 100% transparent;
         background-size: contain;
         color: #303030;
         content: "";
@@ -897,14 +897,15 @@ p.text-state.warning {
   transition: border .15s ease-out,box-shadow .15s ease-out,-webkit-box-shadow .15s ease-out;
   width: 28.125rem; }
   .select-wrapper:after {
-    background: url("https://s3.amazonaws.com/wl-s3-assets/brand/styles/arrow.svg") no-repeat 50% transparent;
+    background: url("https://d1dhez4kvp48e8.cloudfront.net/brand/styles/arrow.svg") no-repeat 50% transparent;
     background-size: contain;
     content: "";
     height: .4rem;
     position: absolute;
     right: 1rem;
     top: 1rem;
-    width: .625rem; }
+    width: .625rem;
+    pointer-events: none; }
   .select-wrapper:hover {
     border: 1px solid #8071FE;
     -webkit-box-shadow: 0 1px 3px 0 rgba(128, 113, 254, 0.2);
@@ -986,7 +987,7 @@ p.text-state.warning {
     width: 100%;
     z-index: 0; }
     .toggle .toggle-inner:before {
-      background-image: url("https://s3.amazonaws.com/wl-s3-assets/brand/styles/unchecked.svg");
+      background-image: url("https://d1dhez4kvp48e8.cloudfront.net/brand/styles/unchecked.svg");
       opacity: 1;
       right: .8rem;
       top: .4rem;
@@ -1002,7 +1003,7 @@ p.text-state.warning {
       -webkit-transition: opacity .1s ease-out;
       transition: opacity .1s ease-out; }
     .toggle .toggle-inner:after {
-      background-image: url("https://s3.amazonaws.com/wl-s3-assets/brand/styles/checked.svg");
+      background-image: url("https://d1dhez4kvp48e8.cloudfront.net/brand/styles/checked.svg");
       opacity: 0;
       left: .8rem;
       top: .35rem;
@@ -1141,7 +1142,7 @@ pre {
   display: none;
   padding: 30px; }
   .print-logo .logo {
-    background: url("https://s3.amazonaws.com/wl-s3-assets/brand/logos/horizontal-logo-dark.svg") center center no-repeat transparent;
+    background: url("https://d1dhez4kvp48e8.cloudfront.net/brand/logos/horizontal-logo-dark.svg") center center no-repeat transparent;
     background-size: contain;
     height: 1.625rem;
     width: 10rem; }
