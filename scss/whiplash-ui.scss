@@ -54,6 +54,10 @@ a {
   &:hover {
     color: lighten( $link-text, 15% )
   }
+
+  strong, em, u, del {
+    color: inherit;
+  }
 }
 
 code,
@@ -70,13 +74,6 @@ pre {
 .print-logo {
 	display: none;
 	padding: $logo-padding;
-
-	.logo {
-		background: url($asset-path + 'logos/horizontal-logo-dark.svg') center center no-repeat transparent;
-		background-size: contain;
-		height: 1.625rem;
-		width: 10rem;
-	}
 }
 
 .menu-wrapper {
@@ -103,7 +100,11 @@ pre {
 	padding: $main-padding;
 
 	h1, h2, h3, h4, h5, h6 {
-		margin: 0.8rem 0;
+    margin: 0.8rem 0;
+    
+    strong, em, u, del {
+      font-size: inherit;
+    }
 
 		@extend %header-font;
 	}
@@ -144,17 +145,18 @@ body > .mobile-nav-button {
     background-color: $mobile-nav-button-bg;
     border-radius: 0 0 0 5px;
     display: block;
-    padding: 6px;
+    padding: 2px 10px 2px 2px;
     transform-origin: 0 0 0;
     transform: rotate(-90deg) translate(-100%, 0);
   }
 
   .mobile-nav-button-box {
+    margin: 6px 0 0 4px;
     display: inline-block;
     height: 1rem;
-    padding: 0.625rem 0.125rem 0.75rem;
-    margin-left: 0.25rem;
+   
     transition: transform 0.3s ease-in-out;
+    transform-origin: 50% 50%;
     vertical-align: bottom;
     width: 1rem;
 
@@ -167,6 +169,10 @@ body > .mobile-nav-button {
       transition: transform .3s cubic-bezier(.465,.183,.153,.946),-webkit-transform .3s cubic-bezier(.465,.183,.153,.946);
       width: 100%;
       will-change: transform;
+
+      &:first-child {
+        margin-top: 2px;
+      }
 
       &.middle {
       	margin: 0.1875rem 0;
@@ -185,10 +191,9 @@ body > .mobile-nav-button {
       left: $nav-width;
 
       .mobile-nav-button-box {
-	      padding-top: 0.125rem;
-	      margin-top: 0.375rem;
-        transform-origin: 0 0 0;
-        transform: rotate(-90deg) translate(-100%, 0);
+	      
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
       }
     }
   }
@@ -202,6 +207,7 @@ body > .mobile-nav-button {
 }
 
 @media only print {
+
 	.menu-wrapper,
 	.breadcrumb-wrapper,
 	.loader-wrapper,
@@ -220,6 +226,6 @@ body > .mobile-nav-button {
 	}
 
 	.print-logo {
-		display: block;
+    display: block;
 	}
 }
