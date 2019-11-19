@@ -9,11 +9,13 @@
 @import "components/table";
 @import "components/button";
 @import "components/breadcrumb";
+@import "components/blockquote";
 @import "components/loader";
 @import "components/notifications";
 @import "components/select";
 @import "components/toggle";
 @import "components/dropdown";
+@import "components/hr";
 
 html {
 	box-sizing: border-box;
@@ -24,7 +26,7 @@ html {
 }
 
 *, html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 * {
@@ -207,14 +209,14 @@ body > .mobile-nav-button {
 }
 
 @media only print {
-
 	.menu-wrapper,
 	.breadcrumb-wrapper,
 	.loader-wrapper,
 	.input-wrapper,
 	.select-wrapper,
 	.textarea-wrapper,
-	.dropdown-wrapper,
+  .dropdown-wrapper,
+  .notification-toast,
 	.button,
 	.toggle,
 	input {
