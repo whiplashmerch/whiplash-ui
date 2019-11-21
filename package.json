@@ -4,19 +4,15 @@
   "description": "UI assets for Whiplash Merch",
   "main": "/dist/whiplash-ui.js",
   "repository": "git@github.com:whiplashmerch/whiplash-ui.git",
-  "author": "Jacob M. Roufa <jacob.roufa@gmail.com> (http://jacobroufa.com/)",
+  "author": "Adam Kempa <adamkempa@gmail.com> (http://adamkempa.com/)",
   "contributors": [
     {
-      "name": "Casey Baggz",
-      "email": "casey.baggz@gmail.com"
+      "name": "Adam Kempa",
+      "email": "adamkempa@gmail.com"
     },
     {
       "name": "Mark Dickson",
       "email": "mark@sitesteaders.com"
-    },
-    {
-      "name": "Matt Smith",
-      "email": "azamatsmith@gmail.com"
     }
   ],
   "license": "MIT",
@@ -25,7 +21,7 @@
     "css:autoprefix": "postcss -r dist/whiplash-ui.css --map --use autoprefixer -b '> 5%'",
     "css:minify": "postcss dist/whiplash-ui.css --map --use cssnano -o dist/whiplash-ui.min.css",
     "css": "npm run css:sass && npm run css:autoprefix && npm run css:minify",
-    "js": "cp js/whiplash-ui.js dist/ && minify --output dist/whiplash-ui.min.js js/whiplash-ui.js",
+    "js": "cp js/whiplash-ui.js dist/ && uglifyjs --output dist/whiplash-ui.min.js js/whiplash-ui.js",
     "dist": "npm run css && npm run js",
     "preversion": "npm run dist"
   },
@@ -36,11 +32,11 @@
     "scss"
   ],
   "devDependencies": {
-    "autoprefixer": "7.1.2",
-    "cssnano": "3.10.0",
-    "minifier": "^0.8.1",
-    "node-sass": "^4.5.3",
-    "postcss": "6.0.8",
-    "postcss-cli": "4.1.0"
+    "autoprefixer": "9.7.1",
+    "cssnano": "4.1.10",
+    "node-sass": "4.13.0",
+    "postcss": "7.0.21",
+    "postcss-cli": "6.1.3",
+    "uglify-js": "3.6.8"
   }
 }
