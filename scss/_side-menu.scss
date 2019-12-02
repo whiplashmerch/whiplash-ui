@@ -11,7 +11,7 @@
     position: relative;
   }
 
-  a {
+  .menu-list a {
     border-left: 2px solid transparent;
     color: $nav-subitem-bg;
     display: block;
@@ -48,7 +48,6 @@
         background: url($asset-path + 'logos/horizontal-logo-dark.svg') center center no-repeat transparent;
         background-size: contain;
         height: 1.625rem;
-        width: 10rem;
       }
   }
 
@@ -69,15 +68,19 @@
       }
     }
 
+    li {
+      border-bottom: 1px solid white;
+    }
+
     li > a {
-      font-size: 12px;
+      font-size: 14px;
       padding: 0 $nav-padding + $nav-indent;
     }
   }
 
   .tertiary-menu {
     > a {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: bold;
       padding: 0 ($nav-padding + $nav-indent);
     }

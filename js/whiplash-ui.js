@@ -1,4 +1,6 @@
-document.addEventListener('turbolinks:load', handleUIBehavior);
+$(document).ready(function() {
+  handleUIBehavior();
+});
 
 function handleUIBehavior() {
   var mobileNavButton = document.querySelector('.mobile-nav-button');
@@ -16,7 +18,7 @@ function handleUIBehavior() {
 
   Array.prototype.forEach.call(loaders, activateLoader);
 
-  Array.prototype.forEach.call(selects, transformSelect);
+  // Array.prototype.forEach.call(selects, transformSelect);
 
   Array.prototype.forEach.call(toggles, transformToggle);
 
@@ -52,78 +54,6 @@ function activateLoader(loader) {
     dot.classList.add('loader-dot');
     loader.appendChild(dot);
   }
-}
-
-function transformSelect(select) {
-  var inputName = select.getAttribute('name');
-  var selectedOption = select.querySelector('option[selected]') || select.firstElementChild;
-  var inputValue = selectedOption.getAttribute('value') || '';
-  var selectedText = selectedOption.textContent;
-
-  var selectWrapper = document.createElement('div');
-  var selectInput = document.createElement('input');
-  var selectSelection = document.createElement('div');
-  var selectListWrapper = document.createElement('div');
-  var selectList = document.createElement('ul');
-
-  selectWrapper.classList.add('select-wrapper');
-  selectSelection.classList.add('select-selection');
-  selectListWrapper.classList.add('select-list-wrapper');
-
-  selectInput.setAttribute('type', 'hidden');
-  selectInput.setAttribute('name', inputName);
-  selectInput.setAttribute('value', inputValue);
-
-  selectSelection.textContent = selectedText;
-
-  selectWrapper.appendChild(selectInput);
-  selectWrapper.appendChild(selectSelection);
-  selectWrapper.appendChild(selectListWrapper);
-  selectListWrapper.appendChild(selectList);
-
-  Array.prototype.reduce.call(select.getElementsByTagName('option'), addSelectOption, selectList);
-
-  select.parentNode.insertBefore(selectWrapper, select);
-  select.parentNode.removeChild(select);
-
-  selectSelection.addEventListener('click', selectOpenHandler);
-}
-
-function addSelectOption(selectList, option) {
-  var value = option.getAttribute('value');
-  var text = option.textContent;
-  var selectItem = document.createElement('li');
-  var selectDiv = document.createElement('div');
-
-  selectItem.appendChild(selectDiv);
-  selectDiv.setAttribute('value', value);
-  selectDiv.textContent = text;
-
-  selectList.appendChild(selectItem);
-
-  selectItem.addEventListener('click', selectNewSelectionHandler);
-
-  return selectList;
-}
-
-function selectNewSelectionHandler(event) {
-  var option = event.target.firstElementChild || event.target;
-  var newVal = option.getAttribute('value');
-  var text = option.textContent;
-  var parent = getParent(event.target, 'select-wrapper');
-  var input = parent.firstElementChild;
-  var selection = input.nextElementSibling;
-
-  input.setAttribute('value', newVal);
-  selection.textContent = text;
-
-  parent.classList.remove('open');
-}
-
-function selectOpenHandler(event) {
-  var parent = getParent(event.target, 'select-wrapper');
-
-  parent.classList.add('open');
 }
 
 function transformToggle(toggle) {
