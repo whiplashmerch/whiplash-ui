@@ -1,7 +1,8 @@
 # whiplash-ui
-Whiplash CSS/JS
+A library of global UI elements for use across Whiplash applications.
 
-## usage
+
+## Usage
 
 To implement the Whiplash UI, run `yarn add whiplash-ui` in your project's root directory.
 
@@ -17,7 +18,7 @@ In your `application.js` add the line:
 //= require whiplash-ui/javascripts/behavior
 ```
 
-## elements
+## Elements
 
 ### DotLoader loading indicator
 
@@ -30,6 +31,22 @@ This component style is taken from the UI toolkit. To implement this style in a 
 ### Toggle checkbox control
 
 The style of this control is taken from the UI toolkit. To implement in a Whiplash UI application, create an element `<input type="checkbox" class="toggle-input">` and the JS will create the required HTML structure to facilitate the complex styling of the element.
+
+### Checkbox
+
+```
+<div class="check-box">
+  <input id="test" type="checkbox" class="check-box-input" name="test" value="on">
+  <span class="check-box-button"></span>
+  <label for="test">This is a checkbox.</label>
+</div><br>
+<div class="check-box">
+  <input id="test" type="checkbox" class="check-box-input" name="test" value="on">
+  <span class="check-box-button"></span>
+  <label for="test">This is a second checkbox.</label>
+</div>
+```
+
 
 ### Dropdown/up floating menu control
 

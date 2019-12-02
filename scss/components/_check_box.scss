@@ -1,10 +1,11 @@
-.check-button {
+.check-box {
   display: inline-block;
   position: relative;
   margin-right: .8rem;
+  margin-bottom: 10px;
 }
 
-.check-button-input {
+.check-box-input {
   bottom: 0;
   cursor: pointer;
   display: block;
@@ -18,7 +19,7 @@
   z-index: 10;
 }
 
-.check-button-btn {
+.check-box-button {
   background: transparent;
   border: 1px solid #b3b3cc;
   border-radius: 50%;
@@ -31,8 +32,14 @@
   vertical-align: middle;
 }
 
-.check-button-input:checked+.check-button-btn {
+.check-box-input:checked+.check-box-button {
   background: url(https://d1dhez4kvp48e8.cloudfront.net/assets/icons/check_button_check_white.svg) no-repeat 50% #9b8fff;
   background-size: .6rem;
   border: 1px solid #9b8fff;
+}
+
+.check-box label {
+  margin-left: 5px;
+  top: 1px;
+  position: relative;
 }
