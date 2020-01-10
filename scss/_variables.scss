@@ -115,9 +115,9 @@ $font-path: 'https://d1dhez4kvp48e8.cloudfront.net/fonts/';
 
 %default-font {
   font-family: 'Lato', 'Aller-Light', Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  /*font-size: 1rem;
+  line-height: 1.3;*/
   font-weight: 400;
-  line-height: 1.3;
   -webkit-font-smoothing: antialiased;
 }
 
