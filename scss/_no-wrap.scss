@@ -1,0 +1,22 @@
+.no-wrap,
+.no-wrap-xs {
+  white-space: nowrap;
+}
+
+.no-wrap-sm {
+  @media (min-width: 768px) {
+    white-space: nowrap;
+  }
+}
+
+.no-wrap-md {
+  @media (min-width: 1024px) {
+    white-space: nowrap;
+  }
+}
+
+.no-wrap-lg {
+  @media (min-width: 1200px) {
+    white-space: nowrap;
+  }
+}

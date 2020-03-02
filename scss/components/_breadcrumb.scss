@@ -25,6 +25,7 @@
 				text-decoration: none;
 				text-transform: capitalize;
 				transition: color 0.2s linear;
+				cursor: pointer;
 
 				&:hover {
 					color: $nav-active-bg;
