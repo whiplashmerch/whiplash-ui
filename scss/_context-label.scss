@@ -1,0 +1,58 @@
+span.context-labels {
+  max-width: 55%;
+
+  span.context-label {
+    margin: 0 0 5px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    float: right;
+
+    span.context-label {
+      display: block;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+span.context-label {
+  display: inline-block;
+  color: white !important;
+  padding: 2px 5px;
+  margin: 2px 0 3px 5px;
+  border-radius: 2px;
+  font-style: normal;
+
+  &.warning {
+    background-color: #4800b6;
+  }
+
+  &.important {
+    background-color: #cc3e4a;
+  }
+
+  &.success {
+    background-color: #00bc93;
+  }
+
+  &.caution{
+    background-color: #FFA500
+  }
+
+  &.small {
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}

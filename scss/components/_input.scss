@@ -1,10 +1,11 @@
 .field {
-	color: $field-text;
+	position: relative;
+	margin: 0;
+	max-width: 400px;
 	font-size: 0.875rem;
 	font-weight: bold;
 	letter-spacing: 0.03rem;
-	margin: 0 1rem 1rem;
-	position: relative;
+	color: $field-text;
 
 	label {
 		color: $table-header-text;
@@ -37,6 +38,12 @@
 		&:hover, &:active {
 			border-color: $nav-active-bg;
 		}
+	}
+
+	input[type=text]:disabled {
+		background-color: #eee;
+		border: 1px solid #aaa;
+		color: #666;
 	}
 
   textarea,
