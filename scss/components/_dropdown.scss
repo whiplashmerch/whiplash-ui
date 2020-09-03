@@ -1,5 +1,11 @@
 .dropdown-wrapper {
 	position: relative;
+
+	&.open {
+		.dropdown {
+			display: block;
+		}		
+	}
 }
 
 .dropdown {
@@ -14,10 +20,6 @@
 	position: absolute;
 	width: 13.5625rem;
 	z-index: 100;
-
-	&.open {
-		display: block;
-	}
 
 	&.dropdown-down {
 		top: 4rem;

@@ -103,9 +103,10 @@ function toggleClickHandler(event) {
 function registerDropdownClickHandlers(button) {
   var dropdownId = button.getAttribute('data-dropdown');
   var dropdown = document.getElementById(dropdownId);
+  var parent = getParent(dropdown, 'dropdown-wrapper');
 
   button.addEventListener('click', function() {
-    dropdown.classList.toggle('open');
+    parent.classList.toggle('open');
   });
 }
 
