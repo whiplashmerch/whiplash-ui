@@ -11,7 +11,7 @@ function handleUIBehavior() {
   var dropdowns = document.querySelectorAll('button[data-dropdown]');
 
   if (mobileNavButton != null) {
-    mobileNavButton.addEventListener('click', mobileNavClickHandler);
+    mobileNavButton.addEventListener('click', mobileNavClickHandler(mobileNavButton));
   }
 
   Array.prototype.forEach.call(subMenuItem, registerSubMenuClickHandlers);
@@ -25,9 +25,10 @@ function handleUIBehavior() {
   Array.prototype.forEach.call(dropdowns, registerDropdownClickHandlers);
 }
 
-function mobileNavClickHandler() {
+function mobileNavClickHandler(mobileNavButton) {
   var menu = document.querySelector('.main-menu');
 
+  mobileNavButton.classList.toggle('open');
   menu.classList.toggle('open');
 }
 
