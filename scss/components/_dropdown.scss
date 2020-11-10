@@ -2,7 +2,7 @@
 	position: relative;
 
 	&.open {
-		.dropdown {
+		> .dropdown {
 			display: block;
 		}		
 	}
