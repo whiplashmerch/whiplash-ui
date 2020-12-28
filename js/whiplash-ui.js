@@ -68,12 +68,12 @@ jQuery(function() {
   $('.act-as-button').on('click', function() {
     var $dropdownWrapper = $(this).closest('.dropdown-wrapper');
     
-    // If dropdown is expanded
-    if ($dropdownWrapper.hasClass('open')) {
-      setTimeout(function() {
+    setTimeout(function() {
+      // If dropdown is expanded
+      if ($dropdownWrapper.hasClass('open')) {
         $dropdownWrapper.find('input').focus();
-      }, 500);
-    } 
+      }
+    }, 500);
   });
 
   // Add focus to search form - Desktop
