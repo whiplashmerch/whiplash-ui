@@ -4,17 +4,23 @@
 
 jQuery(function() {
 
-  const debounce = (func, wait) => {
-    let timeout;
-  
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
+  function debounce(func, wait, immediate) {
+    var timeout;
+
+    return function() {
+      var context = this, args = arguments;
+
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
       };
-  
+
+      var callNow = immediate && !timeout;
+
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
+      
+      if (callNow) func.apply(context, args);
     };
   };
 
@@ -89,14 +95,14 @@ jQuery(function() {
     if (window.innerWidth >= 980) {
       $('body').removeAttr('style');
     }
-  }, 300);
+  }, 300, false);
 
   // Add overflow:hidden to body on window resize from desktop to mobile if a dynamic dropdown is open
   var hideBodyOverflow = debounce(function() {
     if (window.innerWidth < 980 && $('.dynamic-dropdown-wrapper.open').length) {
       $('body').css({ 'overflow': 'hidden' });
     }
-  }, 300);
+  }, 300, false);
   
   window.addEventListener('resize', function() {
     resetBody();
