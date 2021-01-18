@@ -230,7 +230,6 @@ function registerDropdownClickHandlers(button) {
   var parent = getParent(dropdown, 'dropdown-wrapper');
 
   button.addEventListener('click', function() {
-    console.log('button', button);
     parent.classList.toggle('open');
   });
 }
