@@ -50,7 +50,7 @@ jQuery(function() {
         $dynamicDropdown.addClass('slide');
         
         if (window.innerWidth < 980) {
-          $('body').css({ 'overflow-x': 'hidden' });
+          $('body').css({ 'overflow': 'hidden' });
         }
       }, 100);
 
@@ -100,7 +100,7 @@ jQuery(function() {
   // Add overflow:hidden to body on window resize from desktop to mobile if a dynamic dropdown is open
   var hideBodyOverflow = debounce(function() {
     if (window.innerWidth < 980 && $('.dynamic-dropdown-wrapper.open').length) {
-      $('body').css({ 'overflow-x': 'hidden' });
+      $('body').css({ 'overflow': 'hidden' });
     }
   }, 300, false);
   
