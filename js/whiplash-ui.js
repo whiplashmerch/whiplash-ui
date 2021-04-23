@@ -50,7 +50,7 @@ jQuery(function() {
         $dynamicDropdown.addClass('slide');
         
         if (window.innerWidth < 980) {
-          $('body').css({ 'overflow': 'hidden' });
+          $('body').css({ 'overflow-x': 'hidden' });
         }
       }, 100);
 
