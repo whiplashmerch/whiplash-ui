@@ -115,14 +115,6 @@ jQuery(function() {
 // ----- End New Nav ----- //
 // ----------------------- //
 
-
-// Dim the body element during page refresh when identity is changed.
-function changeIdentityTransition() {
-  document.body.style.transition = "opacity .333s ease-out";
-  document.body.style.opacity = "0.5";
-  document.body.style.pointerEvents = "none";
-}
-
 $(document).ready(function() {
   handleUIBehavior();
 });
