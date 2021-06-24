@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "css:sass": "sass scss/whiplash-ui.scss -o dist",
+    "css:sass": "sass scss/whiplash-ui.scss dist/whiplash-ui.css",
     "css:autoprefix": "postcss -r dist/whiplash-ui.css --map --use autoprefixer -b '> 5%'",
     "css:minify": "postcss dist/whiplash-ui.css --map --use cssnano -o dist/whiplash-ui.min.css",
     "css": "npm run css:sass && npm run css:autoprefix && npm run css:minify",
