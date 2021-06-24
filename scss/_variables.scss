@@ -54,7 +54,7 @@ $orange: #FF5D29;
 
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #fbfbfb !default;
+$nav-bg: $white !default;
 $subnav-bg: #f6f6f6 !default;
 $nav-hover-bg: $subnav-bg !default;
 $horizontal-nav-logo-bg: #3F00B6 !default;
@@ -73,6 +73,8 @@ $nav-subitem-bg: $horizontal-nav-bg !default;
 
 
 $nav-active-bg: #8071FE !default;
+
+
 $lang-select-border: #000 !default;
 $lang-select-bg: #222 !default;
 $lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
