@@ -27,8 +27,7 @@ function handleUIBehavior() {
 
 function mobileNavClickHandler() {
   var button = document.querySelector('.mobile-nav-button');
-  var hasSideMenu = button.nextElementSibling.classList.contains('menu-wrapper');
-  var menu = hasSideMenu ? button.nextElementSibling : document.querySelector('.top-menu .menu');
+  var menu = document.querySelector('.top-menu .menu');
 
   button.classList.toggle('open');
   menu.classList.toggle('open');
