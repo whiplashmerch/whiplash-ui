@@ -1,4 +1,4 @@
-.top-menu {
+.lite-nav {
   background-repeat: no-repeat; 
   background-image:  
     linear-gradient(to right, $eggshell-20pct, $eggshell-20pct),
@@ -18,7 +18,7 @@
     padding: 0.5rem 1rem;
 
     .logo {
-      background: url($asset-path + 'logos/geo-logo-white.svg') center center no-repeat transparent;
+      background: url($asset-path + 'logos/Whiplash-Brandmark-RGB.svg') center center no-repeat transparent;
       background-size: contain;
       height: 2.5rem;
       margin: -0.1875rem auto 0.1875rem;
@@ -102,7 +102,7 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .top-menu {
+  .lite-nav {
     text-align: center;
 
     > .mobile-nav-button {
