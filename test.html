@@ -56,12 +56,112 @@
               </div>
           </div>
       </div>
-      <div>
-          <a class="button">Button</a>
-          <input class="button" type="submit" value="Button" />
-      </div>
-      <div>
-          <div class="side-menu"></div>
+        <header class="side-menu menu-wrapper">
+            <div class="logo-wrapper">
+                <a class="nochange" href="">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            <div class="menu-search field">
+                <form action="/search" accept-charset="UTF-8" method="post">
+                    <input name="utf8" type="hidden" value="✓">
+                    <input type="hidden" name="authenticity_token" value="FCwdJuR0GVucBXxURWr3BGnMlhfIMvESf+xdqOkT5QWXI929Pzq5qm4gtAy1sbVWxxKWuxtBJpKAuYOaZivadQ==">
+                    <input type="search" name="search" id="search" placeholder="Search">
+                </form>
+            </div>
+            <div class="menu align-center">
+                <ul class="menu-list align-left">
+                    <li>
+                        <div class="sub-menu">
+                          <a class="category-link" href="">Item1</a>
+                          <ul class="menu-list">
+                                <li><a class="page-link" href="/pages/storage">Subitem1</a></li>
+                                <li><a class="page-link" href="/pages/billing-overview">Subitem2</a></li>
+                          </ul>
+                        </div>
+                    </li>
+                      <li>
+                        <div class="sub-menu">
+                          <a class="category-link" href="">Item2</a>
+                          <ul class="menu-list">
+                                <li><a class="page-link" href="">Subitem1</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="sub-menu">
+                          <a class="category-link" href="">Item3</a>
+                          <ul class="menu-list">
+                                <li><a class="page-link" href="">Subitem1</a></li>
+                                <li><a class="page-link" href="">Subitem2</a></li>
+                                <li><a class="page-link" href="">Subitem3</a></li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="sub-menu">
+                          <a class="category-link" href="">Item4</a>
+                            <ul class="menu-list">
+                                <li>
+                                    <div class="tertiary-menu">
+                                        <a class="sub-category-link" href="">Subitem1</a>
+                                        <ul class="menu-list">
+                                            <li><a class="page-link" href="">SubSubItem1</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                  <li>
+                                    <div class="tertiary-menu">
+                                        <a class="sub-category-link" href="">Subitem2</a>
+                                        <ul class="menu-list">
+                                            <li><a class="page-link" href="">SubSubItem1</a></li>
+                                            <li><a class="page-link" href="">SubSubItem2</a></li>
+                                        </ul>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="tertiary-menu">
+                                        <a class="sub-category-link" href="">Subitem3</a>
+                                        <ul class="menu-list">
+                                            <li><a class="page-link" href="">SubSubItem1</a></li>
+                                        </ul>
+                                    </div>
+                                  </li>
+                                    <li><a class="page-link" href="">SubItem4</a></li>
+                                    <li><a class="page-link" href="">SubItem5</a></li>
+                            </ul>
+                        </div>
+                      </li>
+                </ul>
+              </div>
+        </header>
+        <div class="main-wrapper" id="content">
+            <a class="button">Primary</a>
+          <a class="button disabled">Primary Disabled</a>
+          <a class="button secondary">Secondary</a>
+          <a class="button secondary disabled">Secondary Disabled</a>
+          <a class="button destructive">Destructive</a>
+          <a class="button destructive disabled">Destructive Disabled</a>
+          <a class="button tertiary">Tertiary</a>
+          <a class="button tertiary disabled">Tertiary Disabled</a>
+          <a class="button tertiary no-min">No-Min</a>
+          <a class="button tertiary no-min disabled">No-Min Disabled</a>
+          <a class="button tertiary destructive">Tertiary Destructive</a>
+          <a class="button tertiary destructive disabled">Tertiary Destructive Disabled</a>
+          
+          <input type="submit" value="Primary" class="button">
+          <input type="submit" value="Primary Disabled" class="button" disabled>
+          <input type="submit" value="Secondary" class="button secondary">
+          <input type="submit" value="Secondary Disabled" class="button secondary" disabled>
+          <input type="submit" value="Destructive" class="button destructive">
+          <input type="submit" value="Destructive Disabled" class="button destructive" disabled>
+          <input type="submit" value="Tertiary" class="button tertiary">
+          <input type="submit" value="Tertiary Disabled" class="button tertiary" disabled>
+          <input type="submit" value="No-Min" class="button tertiary no-min">
+          <input type="submit" value="No-Min Disabled" class="button tertiary no-min" disabled>
+          <input type="submit" value="Tertiary Destructive" class="button tertiary destructive">
+          <input type="submit" value="Tertiary Destructive Disabled" class="button tertiary destructive" disabled>
+        </div>
       </div>
   </body>
 </html>
