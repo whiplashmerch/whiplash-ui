@@ -74,7 +74,7 @@
   }
 
   &:hover {
-    border: 1px solid $select-hover-bg;
+    border: 1px solid $curious;
     box-shadow: 0 1px 3px 0 $select-hover-shadow;
   }
 
@@ -136,8 +136,8 @@
       }
 
       &:hover {
-        border-bottom: 1px solid $select-hover-border;
-        color: $select-hover-bg;
+        border-bottom: 1px solid $curious;
+        color: $curious;
       }
     }
   }
