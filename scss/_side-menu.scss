@@ -1,5 +1,5 @@
 .side-menu {
-  background-color: $nav-bg;
+  background-color: $white;
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -13,7 +13,7 @@
 
   .menu-list a {
     border-left: 2px solid transparent;
-    color: $nav-subitem-bg;
+    color: $cape-cod;
     display: block;
     overflow-x: hidden;
     padding-bottom: 0.5rem !important;
@@ -23,18 +23,13 @@
 
     &:active,
     &:hover {
-      color: $main-text;
-    }
-
-    &:hover {
-      background-color: $nav-hover-bg;
-      border-left: 2px solid $nav-hover-border;
-      color: $nav-hover-text;
+      background-color: $pumice-10-pct;
+      border-left: 3px solid $curious;
+      color: $curious;
     }
   }
 
   li {
-    color: $nav-subitem-bg;
 
     > a {
       padding: 0 $nav-padding;
@@ -45,7 +40,7 @@
       padding: $logo-padding;
 
       .logo {
-        background: url($asset-path + 'logos/horizontal-logo-dark.svg') center center no-repeat transparent;
+        background: url($asset-path + 'logos/Whiplash-Horizontal-Logo-RGB.svg') center center no-repeat transparent;
         background-size: contain;
         height: 1.625rem;
       }
@@ -58,7 +53,7 @@
     }
 
     .menu-list {
-      background-color: $subnav-bg;
+      background-color: $pumice-10-pct;
       border-bottom: 1px solid $border;
       border-top: 1px solid $border;
 
@@ -93,7 +88,7 @@
 
 @media only screen and (max-width: 930px) {
   .side-menu {
-    background-color: $nav-bg;
+    background-color: $white;
     left: -$nav-width;
     transition: left 0.3s ease-in-out;
     z-index: 100;
