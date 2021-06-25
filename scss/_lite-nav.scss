@@ -72,7 +72,7 @@
         }
 
         > .menu-list {
-          background-color: $horizontal-subnav-bg;
+          background-color: $white;
           border: 1px solid $horizontal-subnav-border;
           border-radius: 2px;
           box-shadow: 0 0 15px $horizontal-subnav-shadow;
@@ -157,7 +157,7 @@
     }
 
     .menu {
-      background-color: $nav-bg;
+      background-color: $white;
       display: block;
       height: 100%;
       left: -$nav-width;
@@ -199,7 +199,7 @@
 
             > .menu-list {
               display: none;
-              background-color: $nav-bg;
+              background-color: $white;
               border: none;
               box-shadow: none;
               padding: 0 1rem 1rem 0;
