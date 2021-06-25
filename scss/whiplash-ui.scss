@@ -55,11 +55,13 @@ ul {
 	margin: 1em auto;
 }
 
+
 a {
-  color: $link-text;
-  text-decoration: none;
+  color: $inline-link;
+  text-decoration: none; 
+  
   &:hover {
-    color: lighten( $link-text, 15% )
+    color: $inline-link-hover; 
   }
 
   strong, em, u, del {
