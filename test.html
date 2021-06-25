@@ -5,12 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="dist/whiplash-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <title>Testing</title>
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script type="text/javascript" src="dist/whiplash-ui.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.select2').select2();
+        });
+    </script>
+    <style>
+        .content-section {
+            margin: 2em 0;
+        }
+    </style>
   </head>
   <body>
       <div id="top-nav" class="lite-nav">
@@ -136,31 +148,36 @@
               </div>
         </header>
         <div class="main-wrapper" id="content">
+          <div class="content-section">
             <a class="button">Primary</a>
-          <a class="button disabled">Primary Disabled</a>
-          <a class="button secondary">Secondary</a>
-          <a class="button secondary disabled">Secondary Disabled</a>
-          <a class="button destructive">Destructive</a>
-          <a class="button destructive disabled">Destructive Disabled</a>
-          <a class="button tertiary">Tertiary</a>
-          <a class="button tertiary disabled">Tertiary Disabled</a>
-          <a class="button tertiary no-min">No-Min</a>
-          <a class="button tertiary no-min disabled">No-Min Disabled</a>
-          <a class="button tertiary destructive">Tertiary Destructive</a>
-          <a class="button tertiary destructive disabled">Tertiary Destructive Disabled</a>
-          
-          <input type="submit" value="Primary" class="button">
-          <input type="submit" value="Primary Disabled" class="button" disabled>
-          <input type="submit" value="Secondary" class="button secondary">
-          <input type="submit" value="Secondary Disabled" class="button secondary" disabled>
-          <input type="submit" value="Destructive" class="button destructive">
-          <input type="submit" value="Destructive Disabled" class="button destructive" disabled>
-          <input type="submit" value="Tertiary" class="button tertiary">
-          <input type="submit" value="Tertiary Disabled" class="button tertiary" disabled>
-          <input type="submit" value="No-Min" class="button tertiary no-min">
-          <input type="submit" value="No-Min Disabled" class="button tertiary no-min" disabled>
-          <input type="submit" value="Tertiary Destructive" class="button tertiary destructive">
-          <input type="submit" value="Tertiary Destructive Disabled" class="button tertiary destructive" disabled>
+            <a class="button disabled">Primary Disabled</a>
+            <a class="button secondary">Secondary</a>
+            <a class="button secondary disabled">Secondary Disabled</a>
+            <a class="button destructive">Destructive</a>
+            <a class="button destructive disabled">Destructive Disabled</a>
+            <a class="button tertiary">Tertiary</a>
+            <a class="button tertiary disabled">Tertiary Disabled</a>
+            <a class="button tertiary no-min">No-Min</a>
+            <a class="button tertiary no-min disabled">No-Min Disabled</a>
+            <a class="button tertiary destructive">Tertiary Destructive</a>
+            <a class="button tertiary destructive disabled">Tertiary Destructive Disabled</a>
+            
+            <input type="submit" value="Primary" class="button">
+            <input type="submit" value="Primary Disabled" class="button" disabled>
+            <input type="submit" value="Secondary" class="button secondary">
+            <input type="submit" value="Secondary Disabled" class="button secondary" disabled>
+            <input type="submit" value="Destructive" class="button destructive">
+            <input type="submit" value="Destructive Disabled" class="button destructive" disabled>
+            <input type="submit" value="Tertiary" class="button tertiary">
+            <input type="submit" value="Tertiary Disabled" class="button tertiary" disabled>
+            <input type="submit" value="No-Min" class="button tertiary no-min">
+            <input type="submit" value="No-Min Disabled" class="button tertiary no-min" disabled>
+            <input type="submit" value="Tertiary Destructive" class="button tertiary destructive">
+            <input type="submit" value="Tertiary Destructive Disabled" class="button tertiary destructive" disabled>
+          </div>
+          <div class="content-section">
+            <select class="select2"></select>
+          </div>
         </div>
       </div>
   </body>
