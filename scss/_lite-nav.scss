@@ -63,6 +63,7 @@
 
       .sub-menu {
         position: relative;
+        z-index: 1;
 
         &:hover {
           > .menu-list {
