@@ -29,6 +29,11 @@ $gray: #808080;
 $silver: #BBBBBB;
 $iron: #D6D8DB;
 $valencia: #D93446;
+$cloudy-gray: #696969;
+$nobel: #999999;
+$silver: #BBBBBB;
+$waterloo: #808091;
+$white-smoke: #EEEEEE;
 
 
 ////// REBRAND COLORS
@@ -124,6 +129,12 @@ $table-body-odd-bg: $white !default;
 $table-body-even-bg: #FAFAFA !default;
 $table-row-hover-bg: #F7F6FF !default;
 
+$select-input-text: $cloudy-gray;
+$select-input-border: $silver;
+$select-input-active-border: $curious;
+$select-input-list-option-hover-text: $white;
+$select-input-list-option-hover-background: $curious;
+$select-input-disabled-text: $nobel;
 $select-bg: $white !default;
 $select-border: $search-border-bottom !default;
 $select-shadow: hsla(240, 7%, 54%, 0.1) !default;
@@ -148,6 +159,15 @@ $dropdown-shadow: $horizontal-subnav-shadow !default;
 $main-text: #303030 !default; // main content text color
 $inline-link: $deep-cerulean;
 $inline-link-hover: $shark;
+$text-input-label-text: $waterloo;
+$text-input-placeholder-text: $silver;
+$text-input-text: $shark;
+$text-input-help-text: $waterloo;
+$text-input-border: $silver;
+$text-input-active-border: $curious;
+$text-input-disabled-text: $silver;
+$text-input-disabled-background: $white-smoke;
+$text-input-disabled-border: $silver;
 
 
 $lang-select-text: #fff !default; // color of unselected language tab text
