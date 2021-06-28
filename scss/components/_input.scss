@@ -8,7 +8,7 @@
 	color: $field-text;
 
 	label {
-		color: $table-header-text;
+		color: $text-input-label-text;
 		display: block;
 		font-size: inherit;
 		letter-spacing: 0.0125rem;
@@ -103,4 +103,51 @@
 		}
 	}
 
+	select.whiplash-select,
+	.select2-container {
+		width: 100% !important;
+	}
+
+	select.whiplash-select {
+		display: block;
+		height: 47px;
+		opacity: 0;
+	}
+	
+	&.standard {
+		max-width: 400px;
+
+		&.full-width {
+		  max-width: none;
+		  width: 100%;
+		} 
+	  
+		input {
+		  padding: 0.8rem 1rem 0.8rem 1rem;
+		}
+	  
+		input,
+		select.whiplash-select,
+		.select2-container {
+		  min-width: 1px !important;
+		}
+	  
+		input,
+		textarea {
+		  font-weight: normal;
+		}
+	  
+		.inline-toggle {
+		  margin-top: 1.8rem;
+		}
+	  
+		&:nth-child(n+2) {
+		  margin-top: 80px;
+		}
+	  
+		a {
+		  display: inline-block;
+		  margin-top: 5px;
+		}
+	}
 }
