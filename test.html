@@ -15,7 +15,7 @@
     <script type="text/javascript" src="dist/whiplash-ui.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.select2').select2();
+            $('.whiplash-select').select2();
         });
     </script>
     <style>
@@ -176,7 +176,16 @@
             <input type="submit" value="Tertiary Destructive Disabled" class="button tertiary destructive" disabled>
           </div>
           <div class="content-section">
-            <select class="select2"></select>
+              <div class="field standard">
+                <label for="standard">Standard Select</label>
+                <select class="whiplash-select" id="standard">
+                  <option value="">Select something...</option>
+                  <option value="status">Status</option>
+                  <option value="date">Date</option>
+                  <option value="date_enum">Relative Date</option>
+                  <option value="items">Contains Items</option>
+                </select>
+              </div>
           </div>
         </div>
       </div>
