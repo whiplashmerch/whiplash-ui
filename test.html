@@ -21,6 +21,33 @@
     <style>
         .content-section {
             margin: 2em 0;
+            display: flex;
+            flex: 0 1 auto;
+            flex-wrap: wrap;
+        }
+
+        /* OVERRIDES FOR THE PURPOSES OF TESTING */
+        .lite-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 4;
+        }
+
+        .side-menu {
+            top: 57px;
+        }
+
+        .example-col {
+            padding: 20px;
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+
+        .buttons {
+            flex-basis: 100%;
+            max-width: 100%;
         }
     </style>
   </head>
@@ -68,7 +95,7 @@
               </div>
           </div>
       </div>
-        <header class="side-menu menu-wrapper">
+        <header class="side-menu">
             <div class="logo-wrapper">
                 <a class="nochange" href="">
                     <div class="logo"></div>
@@ -149,43 +176,301 @@
         </header>
         <div class="main-wrapper" id="content">
           <div class="content-section">
-            <a class="button">Primary</a>
-            <a class="button disabled">Primary Disabled</a>
-            <a class="button secondary">Secondary</a>
-            <a class="button secondary disabled">Secondary Disabled</a>
-            <a class="button destructive">Destructive</a>
-            <a class="button destructive disabled">Destructive Disabled</a>
-            <a class="button tertiary">Tertiary</a>
-            <a class="button tertiary disabled">Tertiary Disabled</a>
-            <a class="button tertiary no-min">No-Min</a>
-            <a class="button tertiary no-min disabled">No-Min Disabled</a>
-            <a class="button tertiary destructive">Tertiary Destructive</a>
-            <a class="button tertiary destructive disabled">Tertiary Destructive Disabled</a>
-            
-            <input type="submit" value="Primary" class="button">
-            <input type="submit" value="Primary Disabled" class="button" disabled>
-            <input type="submit" value="Secondary" class="button secondary">
-            <input type="submit" value="Secondary Disabled" class="button secondary" disabled>
-            <input type="submit" value="Destructive" class="button destructive">
-            <input type="submit" value="Destructive Disabled" class="button destructive" disabled>
-            <input type="submit" value="Tertiary" class="button tertiary">
-            <input type="submit" value="Tertiary Disabled" class="button tertiary" disabled>
-            <input type="submit" value="No-Min" class="button tertiary no-min">
-            <input type="submit" value="No-Min Disabled" class="button tertiary no-min" disabled>
-            <input type="submit" value="Tertiary Destructive" class="button tertiary destructive">
-            <input type="submit" value="Tertiary Destructive Disabled" class="button tertiary destructive" disabled>
+            <div class="example-col buttons">
+                <a class="button">Primary</a>
+                <a class="button disabled">Primary Disabled</a>
+                <a class="button secondary">Secondary</a>
+                <a class="button secondary disabled">Secondary Disabled</a>
+                <a class="button destructive">Destructive</a>
+                <a class="button destructive disabled">Destructive Disabled</a>
+                <a class="button tertiary">Tertiary</a>
+                <a class="button tertiary disabled">Tertiary Disabled</a>
+                <a class="button tertiary no-min">No-Min</a>
+                <a class="button tertiary no-min disabled">No-Min Disabled</a>
+                <a class="button tertiary destructive">Tertiary Destructive</a>
+                <a class="button tertiary destructive disabled">Tertiary Destructive Disabled</a>
+                
+                <input type="submit" value="Primary" class="button">
+                <input type="submit" value="Primary Disabled" class="button" disabled>
+                <input type="submit" value="Secondary" class="button secondary">
+                <input type="submit" value="Secondary Disabled" class="button secondary" disabled>
+                <input type="submit" value="Destructive" class="button destructive">
+                <input type="submit" value="Destructive Disabled" class="button destructive" disabled>
+                <input type="submit" value="Tertiary" class="button tertiary">
+                <input type="submit" value="Tertiary Disabled" class="button tertiary" disabled>
+                <input type="submit" value="No-Min" class="button tertiary no-min">
+                <input type="submit" value="No-Min Disabled" class="button tertiary no-min" disabled>
+                <input type="submit" value="Tertiary Destructive" class="button tertiary destructive">
+                <input type="submit" value="Tertiary Destructive Disabled" class="button tertiary destructive" disabled>
+            </div>
           </div>
           <div class="content-section">
-              <div class="field standard">
-                <label for="standard">Standard Select</label>
-                <select class="whiplash-select" id="standard">
-                  <option value="">Select something...</option>
-                  <option value="status">Status</option>
-                  <option value="date">Date</option>
-                  <option value="date_enum">Relative Date</option>
-                  <option value="items">Contains Items</option>
-                </select>
+              <div class="example-col">
+                <div class="field standard">
+                    <label for="standard">Standard Select</label>
+                    <select class="whiplash-select" id="standard">
+                    <option value="">Select something...</option>
+                    <option value="status">Status</option>
+                    <option value="date">Date</option>
+                    <option value="date_enum">Relative Date</option>
+                    <option value="items">Contains Items</option>
+                    </select>
+                </div>
+                <div class="field standard">
+                    <label for="disabled">Disabled Select</label>
+                    <select class="whiplash-select" id="disabled" disabled>
+                    <option value="">Select something...</option>
+                    <option value="status">Status</option>
+                    <option value="date">Date</option>
+                    <option value="date_enum">Relative Date</option>
+                    <option value="items">Contains Items</option>
+                    </select>
+                </div>
               </div>
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                <div class="field standard">
+                    <label for="demo_text_input">Standard input</label>
+                    <input placeholder="Enter input..." type="text" id="demo_text_input">
+                    <p class="help">This is Help text</p>
+                  </div>
+                  <div class="field standard">
+                    <label for="demo_text_input_disabled">Standard input (Disabled)</label>
+                    <input placeholder="You can't enter input..." type="text" id="demo_text_input_disabled" disabled>
+                </div>
+                <div class="field standard">
+                    <label class="standard" for="textarea_demo">Description</label>
+                    <textarea rows="8" autocomplete="off" id="textarea_demo" ></textarea>
+                </div>
+                <div class="field standard">
+                    <label class="standard" for="textarea_demo_disabled">Description (Disabled)</label>
+                    <textarea rows="8" autocomplete="off" id="textarea_demo_disabled" disabled>
+                        This is the current value.
+                    </textarea>
+                </div>
+              </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+                <span class="context-label warning">Warning</span>
+                <span class="context-label important">Important</span>
+                <span class="context-label success">Success</span>
+                <span class="context-label caution">Caution</span>
+                <span class="context-label small success">Small</span>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+                <div class="loader-wrapper"></div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+                <div class="dropdown-wrapper more-menu standard">
+                    <button class="btn tertiary context-trigger" data-dropdown="more-menu"></button>
+                    <div class="dropdown dropdown-down" id="more-menu">
+                      <ul class="dropdown-list">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li class="disabled"><a href="#">Option 3</a></li>
+                        <li><hr></li>
+                        <li><a class="destructive" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+              <div class="dropdown-wrapper">
+                  <button class="button text" data-dropdown="stuff-biz-menu">Dropdown Trigger</button>
+                  <div class="dropdown" id="stuff-biz-menu">
+                    <ul class="dropdown-list">
+                      <li><a href="#">Stuff</a></li>
+                      <li><a href="#">Biz</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+          <div class="content-section">
+            <div class="example-col">
+                <label class="right standard">
+                    <input type="checkbox" class="toggle-input">
+                    <div>
+                        <p>Toggle Label</p>
+                    </div>
+                </label>
+            </div>  
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                <a href="https://whiplashfulfillment.com/">This is a link</a><br><br>
+                <a href="https://whiplashfulfillment.com/"><strong>This is a bold link</strong></a><br><br>
+                <a href="https://whiplashfulfillment.com/"><em>This is an italicized link</em></a><br><br>
+                <a href="https://whiplashfulfillment.com/"><u>This is an underlined link</u></a><br><br>
+                <a href="https://whiplashfulfillment.com/"><del>This is a link with strikethrough</del></a>
+              </div>
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                <p>
+                    This is regular text. <span class="inline-code">This is inline code.</span> This is more regular text.
+                  </p>
+              </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="item-header">Header</th>
+                        <th class="location-header">Header</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                      </tr>
+                      <tr>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                      </tr>
+                      <tr>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                <table class="status-table standard">
+                    <tbody>
+                      <tr>
+                        <td>Shipments in Batch:</td>
+                        <td>11</td>
+                      </tr>
+                      <tr>
+                        <td>Carrier:</td>
+                        <td>Asendia</td>
+                      </tr>
+                      <tr>
+                        <td>EasyPost Batches:</td>
+                        <td>
+                          <span>batch_55j9e4s134t7k4p8aq4g9k</span>
+                          <a class="btn tertiary" href="javascript:void(0)">Print</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                <ul class="checkbox-list standard">
+                    <li>
+                      <div class="check-box">
+                        <label class="standard right" for="test">
+                          <input type="checkbox" name="test" id="test" class="check-box-input" value="test" checked>
+                          <div class="check-box-button"></div>
+                          <span>Option 1 - Checked</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="check-box">
+                        <label class="standard right" for="test">
+                          <input type="checkbox" name="test" id="test" class="check-box-input" value="test">
+                          <div class="check-box-button"></div>
+                          <span>Option 2 - Unchecked</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="check-box">
+                        <label class="standard right" for="test">
+                          <input type="checkbox" name="test" id="test" class="check-box-input" value="test" checked disabled>
+                          <div class="check-box-button"></div>
+                          <span>Option 3 - Checked and Disabled</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="check-box">
+                        <label class="standard right" for="test">
+                          <input type="checkbox" name="test" id="test" class="check-box-input" value="test" disabled>
+                          <div class="check-box-button"></div>
+                          <span>Option 4 - Unchecked and Disabled</span>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                <blockquote>This is a blockquote.</blockquote>
+                <blockquote>
+                <p>This is a multi-line blockquote.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut risus vitae nibh aliquet mollis. Sed ac volutpat tellus, in tincidunt elit. Nam elementum scelerisque dui eu varius. In non placerat mauris. Praesent ut libero interdum, facilisis purus vel, gravida lacus. Quisque ut congue turpis. Etiam vestibulum vel enim non sagittis. Maecenas quis rhoncus nisl, eget efficitur ante. Aliquam dictum tincidunt turpis. Vestibulum eu eros mi.</p>
+                </blockquote>
+              </div>
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                    <ul>
+                        <li class="filter-pill">Active Filter </li>
+                        <li class="filter-pill disabled">Disabled Filter</li>
+                        <li class="filter-pill highlighted">Highlighted Filter</li>
+                    </ul>
+              </div>
+          </div>
+          <div class="content-section">
+              <div class="example-col">
+                <div class="breadcrumb-wrapper">
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a>One</a></li>
+                        <li class="breadcrumb-item"><a>Two</a></li>
+                        <li class="breadcrumb-item"><a>Three</a></li>
+                    </ul>
+                </div>
+              </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+                <div class="notification-toast">Success</div>
+                <div class="notification-toast pending">Success</div>
+                <div class="notification-toast error">Success</div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+                <div class="banner"><p>Success</p></div>
+                <div class="banner pending"><p>Pending</p></div>
+                <div class="banner warning"><p>Warning</p></div>
+                <div class="banner error"><p>Error</p></div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+                <ul class="tab-bar standard">
+                    <li class="active"><a href="javascript:void(0)">Tab 1</a></li>
+                    <li><a href="javascript:void(0)">Tab 2</a></li>
+                    <li><a href="javascript:void(0)">Tab 3</a></li>
+                  </ul>
+                  <div class="tab-bar-select standard">
+                    <label class="standard">Select a section to edit:</label>
+                    <select name="warehouse_tab_select" id="warehouse_tab_select" class="tabs-select whiplash-select standard select2-hidden-accessible" data-select2-id="warehouse_tab_select" tabindex="-1" aria-hidden="true">
+                      <option value="/warehouses/1/edit/location">Option 1</option>
+                      <option value="/warehouses/1/edit/labels_and_packaging">Option 2</option>
+                      <option value="/warehouses/1/edit/receiving">Option 3</option>
+                    </select>
+                  </div>
+            </div>
           </div>
         </div>
       </div>
