@@ -3,6 +3,15 @@
   position: relative;
   margin-right: .8rem;
   margin-bottom: 10px;
+
+  .check-box-input:disabled {
+    cursor: not-allowed;
+    
+    & + .check-box-button{
+      background-color: $silver;
+      border-color: $silver;
+    }
+  }
 }
 
 .check-box-input {
@@ -33,13 +42,13 @@
 }
 
 .check-box-input:checked+.check-box-button {
-  background: url(https://d1dhez4kvp48e8.cloudfront.net/assets/icons/check_button_check_white.svg) no-repeat 50% #9b8fff;
+  background: url(https://d1dhez4kvp48e8.cloudfront.net/assets/icons/check_button_check_white.svg) no-repeat 50% $checkbox-checked-background;
+  border: 1px solid $checkbox-checked-border;
   background-size: .6rem;
-  border: 1px solid #9b8fff;
 }
 
 .check-box label {
-  margin-left: 5px;
   top: 1px;
-  position: relative;
+  position: static;
+  margin-left: 0;
 }
