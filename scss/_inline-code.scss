@@ -1,0 +1,13 @@
+.inline-code {
+    border: 1px solid $inline-code-border;
+    border-radius: 3px;
+    background-color: $inline-code-background;
+    color: $inline-code-text;
+    padding: 0px 4px;
+    display: inline-block;
+    margin: 3px 0;
+  
+    &.secondary {
+      color: $gray;
+    }
+}
