@@ -3,7 +3,7 @@
   width: 100%;
 
   td, th {
-    background: url($asset-path + 'styles/table-border.svg') repeat-y 100% transparent;
+    background: url($asset-path + 'table-border.svg') repeat-y 100% transparent;
 
     &:last-child {
       background: none;

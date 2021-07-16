@@ -9,7 +9,7 @@
 			display: inline-block;
 
 			&:not(:last-child):after {
-				background: url($asset-path + 'styles/breadcrumb-arrow.svg') no-repeat 100% transparent;
+				background: url($asset-path + 'breadcrumb-arrow.svg') no-repeat 100% transparent;
 				background-size: contain;
 				color: $main-text;
 				content: "";

@@ -114,7 +114,7 @@
 		}
 
 		&:before {
-			background: url($asset-path + 'styles/search.svg') center center no-repeat transparent;
+			background: url($asset-path + 'search.svg') center center no-repeat transparent;
 			background-size: contain;
 			bottom: 0.9rem;
 			content: "";

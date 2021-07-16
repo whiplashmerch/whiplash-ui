@@ -31,7 +31,7 @@
   
       &:after {
         content: "";
-        background-image: url(/assets/ellipsis-hover.svg);
+        background-image: url($asset-path + 'ellipsis-hover.svg');
       }
   
       &:hover {

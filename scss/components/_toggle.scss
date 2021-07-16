@@ -17,7 +17,7 @@
 		z-index: 0;
 
 		&:before {
-			background-image: url($asset-path + 'styles/unchecked.svg');
+			background-image: url($asset-path + 'unchecked.svg');
 			opacity: 1;
 			right: .8rem;
 			top: .4rem;
@@ -36,7 +36,7 @@
 		}
 
 		&:after {
-			background-image: url($asset-path + 'styles/checked.svg');
+			background-image: url($asset-path + 'checked.svg');
 			opacity: 0;
 			left: .8rem;
 			top: .35rem;
