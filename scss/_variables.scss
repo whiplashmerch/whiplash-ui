@@ -214,29 +214,29 @@ $context-label-caution-background: $orange !default;
 
 // BANNERS
 ////////////////////
-$banner-text: $curious;
-$banner-background: $curious-10pct;
-$banner-link: $curious;
-$banner-link-hover: $curious;
+$banner-text: $curious !default;
+$banner-background: $curious-10pct !default;
+$banner-link: $curious !default;
+$banner-link-hover: $curious !default;
 
-$banner-success-text: $sushi;
-$banner-success-background: $sushi-10pct;
-$banner-success-link: $deep-cerulean;
-$banner-success-link-hover: $shark;
+$banner-success-text: $sushi !default;
+$banner-success-background: $sushi-10pct !default;
+$banner-success-link: $deep-cerulean !default;
+$banner-success-link-hover: $shark !default;
 
-$banner-error-text: $valencia;
-$banner-error-background: $valencia-10pct;
-$banner-error-link: $deep-cerulean;
-$banner-error-link-hover: $shark;
+$banner-error-text: $valencia !default;
+$banner-error-background: $valencia-10pct !default;
+$banner-error-link: $deep-cerulean !default;
+$banner-error-link-hover: $shark !default;
 
-$banner-fixed-bottom-border: $iron;
-$banner-fixed-link: $inline-link;
+$banner-fixed-bottom-border: $iron !default;
+$banner-fixed-link: $inline-link !default;
 
-$banner-fixed-warning-background: $ghost-white;
-$banner-fixed-warning-text: $inline-link;
+$banner-fixed-warning-background: $ghost-white !default;
+$banner-fixed-warning-text: $inline-link !default;
 
-$banner-fixed-error-background: $wl-status-error-background;
-$banner-fixed-error-text: $wl-status-error;
+$banner-fixed-error-background: $wl-status-error-background !default;
+$banner-fixed-error-text: $wl-status-error !default;
 
 
 $lang-select-text: #fff !default; // color of unselected language tab text
@@ -246,41 +246,41 @@ $lang-select-pressed-text: #fff !default; // color of language tab text when mou
 
 //FILTER PILLS
 ////////////////////
-$filter-pill-background: $curious-10pct;
-$filter-pill-text: $curious;
-$filter-pill-shadow: $curious;
+$filter-pill-background: $curious-10pct !default;
+$filter-pill-text: $curious !default;
+$filter-pill-shadow: $curious !default;
 
-$filter-pill-background-highlighted: $sushi-10pct;
-$filter-pill-text-highlighted: $sushi;
-$filter-pill-shadow-highlighted: $sushi;
+$filter-pill-background-highlighted: $sushi-10pct !default;
+$filter-pill-text-highlighted: $sushi !default;
+$filter-pill-shadow-highlighted: $sushi !default;
 
-$filter-pill-background-warning: $valencia-10pct;
-$filter-pill-text-warning: $valencia;
-$filter-pill-shadow-warning: $valencia;
+$filter-pill-background-warning: $valencia-10pct !default;
+$filter-pill-text-warning: $valencia !default;
+$filter-pill-shadow-warning: $valencia !default;
 
-$filter-pill-background-disabled: $nobel-10pct;
-$filter-pill-text-disabled: $nobel;
-$filter-pill-shadow-disabled: $nobel;
+$filter-pill-background-disabled: $nobel-10pct !default;
+$filter-pill-text-disabled: $nobel !default;
+$filter-pill-shadow-disabled: $nobel !default;
 
 
 //MORE MENU
 ////////////////////
-$more-menu-trigger-text-open: $shark;
-$more-menu-trigger-background-open: transparent;
-$more-menu-trigger-border-open: $shark;
-$more-menu-trigger-text-open-hover: $shark;
-$more-menu-trigger-background-open-hover: transparent;
-$more-menu-trigger-border-open-hover: $shark;
+$more-menu-trigger-text-open: $shark !default;
+$more-menu-trigger-background-open: transparent !default;
+$more-menu-trigger-border-open: $shark !default;
+$more-menu-trigger-text-open-hover: $shark !default;
+$more-menu-trigger-background-open-hover: transparent !default;
+$more-menu-trigger-border-open-hover: $shark !default;
 
-$more-menu-border: $iron;
-$more-menu-item-text: $sea-green;
-$more-menu-item-text-hover: $shark;
-$more-menu-item-background: transparent;
-$more-menu-item-background-hover: transparent;
-$more-menu-item-text-destructive: $valencia;
-$more-menu-item-text-destructive-hover: $shark;
-$more-menu-item-background-destructive: transparent;
-$more-menu-item-background-destructive-hover: transparent;
+$more-menu-border: $iron !default;
+$more-menu-item-text: $sea-green !default;
+$more-menu-item-text-hover: $shark !default;
+$more-menu-item-background: transparent !default;
+$more-menu-item-background-hover: transparent !default;
+$more-menu-item-text-destructive: $valencia !default;
+$more-menu-item-text-destructive-hover: $shark !default;
+$more-menu-item-background-destructive: transparent !default;
+$more-menu-item-background-destructive-hover: transparent !default;
 
 
 // LOADER
@@ -290,17 +290,17 @@ $loader-dot-color: $sushi !default;
 
 // TABS
 ////////////////////
-$tabs-bottom-border: $white-smoke;
+$tabs-bottom-border: $white-smoke !default;
 
-$tabs-selected-primary-text: $curious;
-$tabs-selected-secondary-text: $nobel;
-$tabs-selected-background: $curious-5pct;
-$tabs-selected-indicator: $curious;
+$tabs-selected-primary-text: $curious !default;
+$tabs-selected-secondary-text: $nobel !default;
+$tabs-selected-background: $curious-5pct !default;
+$tabs-selected-indicator: $curious !default;
 
-$tabs-unselected-primary-text: $waterloo;
-$tabs-unselected-primary-text-hover: $curious;
-$tabs-unselected-secondary-text: $gray-suit;
-$tabs-unselected-background: $curious-3pct;
+$tabs-unselected-primary-text: $waterloo !default;
+$tabs-unselected-primary-text-hover: $curious !default;
+$tabs-unselected-secondary-text: $gray-suit !default;
+$tabs-unselected-background: $curious-3pct !default;
 
 
 // SIZES
@@ -345,8 +345,9 @@ $font-path: 'https://d1dhez4kvp48e8.cloudfront.net/fonts/';
 
 // OTHER
 ////////////////////
-// $asset-path: 'https://s3.amazonaws.com/wl-s3-assets/brand/';
-$asset-path: 'https://d1dhez4kvp48e8.cloudfront.net/brand/';
+$logo-asset-path: 'https://s3.amazonaws.com/wl-s3-assets/brand/';
+$asset-path: 'https://s3.amazonaws.com/wl-s3-assets/assets/whiplash-ui/';
+//$logo-asset-path: 'https://d1dhez4kvp48e8.cloudfront.net/brand/';
 
 
 ////////////////////////////////////////////////////////////////////////////////
