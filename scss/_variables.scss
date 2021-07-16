@@ -21,164 +21,286 @@ under the License.
 // Use these settings to help adjust the appearance of Slate
 
 
-////// GENERAL COLORS
+////// GENERAL USE COLORS
 /////////////////////
-$white: #FFFFFF;
-$black: #000000;
-$gray: #808080;
-$silver: #BBBBBB;
-$iron: #D6D8DB;
-$valencia: #D93446;
-$cloudy-gray: #696969;
-$nobel: #999999;
-$silver: #BBBBBB;
-$waterloo: #808091;
-$white-smoke: #EEEEEE;
+$white: #FFFFFF !default;
+$black: #000000 !default;
+$gray: #808080 !default;
+$grey-lighter: #dcdcdc;
+
+$black-50-percent-opacity: rgba($black, 0.5) !default;
+
+$silver: #BBBBBB !default;
+$iron: #D6D8DB !default;
+$athens-gray: #F5F5F7 !default;
+$solitude: #E1E1EB !default;
+$valencia: #D93446 !default;
+$valencia-10pct: rgba($valencia, .1) !default;
+$cloudy-gray: #696969 !default;
+$nobel: #999999 !default;
+$silver: #BBBBBB !default;
+$gray-suit: #C3BFC9 !default;
+$alto: #DDDDDD !default;
+$waterloo: #808091 !default;
+$dove-gray: #666666 !default;
+$white-smoke: #EEEEEE !default;
+$ghost-white: #EAE8FF !default;
+$gainsboro: #E5E5E5 !default;
+$nobel: #999999 !default;
+$nobel-10pct: rgba($nobel, .1) !default;
 
 
 ////// REBRAND COLORS
 /////////////////////
-$curious: #2F9EC6;
-  $curious-10pct: rgba($curious, .1); 
-  $curious-5pct: rgba($curious, .05); 
-  $curious-3pct: rgba($curious, .03); 
-$deep-cerulean: #057BA6;
-$sea-green: #2E8250;
-  $sea-green-10pct: rgba($sea-green, .1); 
-$sushi: #7DBC46;
-  $sushi-10pct: rgba($sushi, .1); 
-$shark: #1B1F1F;
-$cape-cod: #4D5454;
-$pumice: #C1C3C1;
-  $pumice-10-pct: rgba($pumice, .1);
-$eggshell: #E6E1C5;
-  $eggshell-20pct: rgba($eggshell, .2);
-  $eggshell-10pct: rgba($eggshell, .1);
-  $eggshell-5pct: rgba($eggshell, .05);
-$supernova: #F5C800;
-  $supernova-15pct: rgba($supernova, .15); 
-$orange: #FF5D29;
-  $orange-15pct: rgba($orange, .15); 
+$curious: #2F9EC6 !default;
+  $curious-10pct: rgba($curious, .1) !default; 
+  $curious-5pct: rgba($curious, .05) !default; 
+  $curious-3pct: rgba($curious, .03) !default; 
+$deep-cerulean: #057BA6 !default;
+$sea-green: #2E8250 !default;
+  $sea-green-10pct: rgba($sea-green, .1) !default; 
+$sushi: #7DBC46 !default;
+  $sushi-10pct: rgba($sushi, .1) !default; 
+$shark: #1B1F1F !default;
+$cape-cod: #4D5454 !default;
+$pumice: #C1C3C1 !default;
+  $pumice-10-pct: rgba($pumice, .1) !default;
+$eggshell: #E6E1C5 !default;
+  $eggshell-20pct: rgba($eggshell, .2) !default;
+  $eggshell-10pct: rgba($eggshell, .1) !default;
+  $eggshell-5pct: rgba($eggshell, .05) !default;
+$supernova: #F5C800 !default;
+  $supernova-15pct: rgba($supernova, .15) !default; 
+$orange: #FF5D29 !default;
+  $orange-15pct: rgba($orange, .15) !default; 
 
 
 ////// BUTTONS
 /////////////////////
-$button-primary-text: $white;
-$button-primary-background: $sea-green;
-$button-primary-border: $sea-green;
-$button-primary-text-hover: $white;
-$button-primary-background-hover: $shark;
-$button-primary-border-hover: $shark;
+$button-primary-text: $white !default;
+$button-primary-background: $sea-green !default;
+$button-primary-border: $sea-green !default;
+$button-primary-text-hover: $white !default;
+$button-primary-background-hover: $shark !default;
+$button-primary-border-hover: $shark !default;
 
-$button-secondary-background: transparent;
-$button-secondary-border: $sea-green;
-$button-secondary-text: $sea-green;
-$button-secondary-background-hover: transparent;
-$button-secondary-border-hover: $shark;
-$button-secondary-text-hover: $shark;
+$button-secondary-background: transparent !default;
+$button-secondary-border: $sea-green !default;
+$button-secondary-text: $sea-green !default;
+$button-secondary-background-hover: transparent !default;
+$button-secondary-border-hover: $shark !default;
+$button-secondary-text-hover: $shark !default;
 
-$button-tertiary-background: transparent;
-$button-tertiary-border: $sea-green;
-$button-tertiary-text: $sea-green;
-$button-tertiary-background-hover: transparent;
-$button-tertiary-border-hover: $shark;
-$button-tertiary-text-hover: $shark;
+$button-tertiary-background: transparent !default;
+$button-tertiary-border: $sea-green !default;
+$button-tertiary-text: $sea-green !default;
+$button-tertiary-background-hover: transparent !default;
+$button-tertiary-border-hover: $shark !default;
+$button-tertiary-text-hover: $shark !default;
 
-$button-destructive-text: $valencia;
-$button-destructive-border: $valencia;
-$button-destructive-background: transparent;
-$button-destructive-text-hover: $white;
-$button-destructive-border-hover: $valencia;
-$button-destructive-background-hover: $valencia;
+$button-destructive-text: $valencia !default;
+$button-destructive-border: $valencia !default;
+$button-destructive-background: transparent !default;
+$button-destructive-text-hover: $white !default;
+$button-destructive-border-hover: $valencia !default;
+$button-destructive-background-hover: $valencia !default;
 
 
-// BACKGROUND COLORS
+// CODE/EXAMPLES
 ////////////////////
-$examples-bg: #393939 !default;
+$inline-code-text: $valencia !default;
+$inline-code-background: $athens-gray !default;
+$inline-code-border: $solitude !default;
 $code-bg: #303030 !default;
-$code-annotation-bg: #1c1c1c !default;
-$code-bg: #1d1f21 !default;
-$main-bg: #F9F9FA !default;
-$search-notice-bg: #9677DF !default;
+$code-text: #dfc48c !default;
 
-
-
-// BORDER & SHADOW COLORS
+// LITE NAV/SIDE MENU
 ////////////////////
 $horizontal-subnav-border: #e5e5e5 !default;
 $horizontal-subnav-shadow: rgba(132,131,161,0.2) !default;
-$dropdown-shadow: 0 9px 15px rgba(132, 131, 161, 0.5);
+$dropdown-shadow: 0 9px 15px rgba(132, 131, 161, 0.5) !default;
 $border: #EDEDF3 !default;
-$nav-hover-border: #726EEA !default;
 
 
-
-$lang-select-border: #000 !default;
-$lang-select-bg: #222 !default;
-$lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
-$lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
-
-$aside-notice-bg: #8fbcd4 !default;
-$aside-warning-bg: #FFEB3B !default;
-$aside-success-bg: #4CAF50 !default;
-
+// FIELD/INPUT
+////////////////////
 $search-border-bottom: #B3B3CC !default;
+$field-text: #646471 !default;
 
+
+// TABLE
+////////////////////
 $table-header-bg: #F5F5F7 !default;
+$table-header-text: #808091 !default;
 $table-body-odd-bg: $white !default;
 $table-body-even-bg: #FAFAFA !default;
 $table-row-hover-bg: #F7F6FF !default;
 
-$select-input-text: $cloudy-gray;
-$select-input-border: $silver;
-$select-input-active-border: $curious;
-$select-input-list-option-hover-text: $white;
-$select-input-list-option-hover-background: $curious;
-$select-input-disabled-text: $nobel;
-$select-bg: $white !default;
-$select-border: $search-border-bottom !default;
-$select-shadow: hsla(240, 7%, 54%, 0.1) !default;
-$select-hover-border: #9B8FFF !default;
-$select-hover-shadow: rgba(128, 113, 254, 0.2) !default;
 
+// SELECT
+////////////////////
+$select-input-text: $cloudy-gray !default;
+$select-input-border: $silver !default;
+$select-input-active-border: $curious !default;
+$select-input-list-option-hover-text: $white !default;
+$select-input-list-option-hover-background: $curious !default;
+$select-input-disabled-text: $nobel !default;
+
+
+// TOGGLE
+////////////////////
 $toggle-bg: #E1E1EA !default;
 $toggle-shadow: rgba(179, 179, 204, 0.2) !default;
-$toggle-active-bg: #00e7ae !default;
+$toggle-active-background: $sushi !default;
 $toggle-active-shadow: rgba(0, 0, 0, 0.1) !default;
 $toggle-btn-bg: $white !default;
 $toggle-btn-shadow: rgba(0, 0, 9, 0.1) !default;
 
 
+// DROPDOWN
+////////////////////
+$dropdown-button-text: $sea-green !default;
+$dropdown-button-text-hover: $shark !default;
+$dropdown-item-text: $sea-green !default;
+$dropdown-item-text-hover: $shark !default;
 $dropdown-bg: $white !default;
 $dropdown-border: $horizontal-subnav-border !default;
 $dropdown-shadow: $horizontal-subnav-shadow !default;
 
 
+// CHECKBOX
+////////////////////
+$checkbox-checked-background: $sushi !default;
+$checkbox-checked-border: $sushi !default;
+
+
 // TEXT COLORS
 ////////////////////
 $main-text: #303030 !default; // main content text color
-$inline-link: $deep-cerulean;
-$inline-link-hover: $shark;
-$text-input-label-text: $waterloo;
-$text-input-placeholder-text: $silver;
-$text-input-text: $shark;
-$text-input-help-text: $waterloo;
-$text-input-border: $silver;
-$text-input-active-border: $curious;
-$text-input-disabled-text: $silver;
-$text-input-disabled-background: $white-smoke;
-$text-input-disabled-border: $silver;
+$inline-link: $deep-cerulean !default;
+$inline-link-hover: $shark !default;
+$text-input-label-text: $waterloo !default;
+$text-input-placeholder-text: $silver !default;
+$text-input-text: $shark !default;
+$text-input-help-text: $waterloo !default;
+$text-input-border: $silver !default;
+$text-input-active-border: $curious !default;
+$text-input-disabled-text: $silver !default;
+$text-input-disabled-background: $white-smoke !default;
+$text-input-disabled-border: $silver !default;
+
+
+// BLOCKQUOTE
+////////////////////
+$blockquote-text: $shark !default;
+$blockquote-background: $curious-5pct !default;
+$blockquote-left-border: $curious !default;
+
+
+$wl-info: $curious !default;
+$wl-status-error: $valencia !default;
+$wl-status-error-background: $valencia-10pct !default; 
+
+
+// CONTEXT LABELS
+////////////////////
+$context-label-text: $white !default;
+$context-label-background: $waterloo !default;
+$context-label-warning-background: $curious !default;
+$context-label-important-background: $valencia !default;
+$context-label-success-background: $sushi !default;
+$context-label-caution-background: $orange !default;
+
+
+// BANNERS
+////////////////////
+$banner-text: $curious;
+$banner-background: $curious-10pct;
+$banner-link: $curious;
+$banner-link-hover: $curious;
+
+$banner-success-text: $sushi;
+$banner-success-background: $sushi-10pct;
+$banner-success-link: $deep-cerulean;
+$banner-success-link-hover: $shark;
+
+$banner-error-text: $valencia;
+$banner-error-background: $valencia-10pct;
+$banner-error-link: $deep-cerulean;
+$banner-error-link-hover: $shark;
+
+$banner-fixed-bottom-border: $iron;
+$banner-fixed-link: $inline-link;
+
+$banner-fixed-warning-background: $ghost-white;
+$banner-fixed-warning-text: $inline-link;
+
+$banner-fixed-error-background: $wl-status-error-background;
+$banner-fixed-error-text: $wl-status-error;
 
 
 $lang-select-text: #fff !default; // color of unselected language tab text
 $lang-select-active-text: #fff !default; // color of selected language tab text
 $lang-select-pressed-text: #fff !default; // color of language tab text when mouse is pressed
-$mobile-nav-button-color: #000 !default;
-$table-header-text: #808091 !default;
-$loader-dots: $table-header-text !default;
-$button-text: $main-bg !default;
-$field-text: #646471 !default;
-$code-text: #dfc48c !default;
+
+
+//FILTER PILLS
+////////////////////
+$filter-pill-background: $curious-10pct;
+$filter-pill-text: $curious;
+$filter-pill-shadow: $curious;
+
+$filter-pill-background-highlighted: $sushi-10pct;
+$filter-pill-text-highlighted: $sushi;
+$filter-pill-shadow-highlighted: $sushi;
+
+$filter-pill-background-warning: $valencia-10pct;
+$filter-pill-text-warning: $valencia;
+$filter-pill-shadow-warning: $valencia;
+
+$filter-pill-background-disabled: $nobel-10pct;
+$filter-pill-text-disabled: $nobel;
+$filter-pill-shadow-disabled: $nobel;
+
+
+//MORE MENU
+////////////////////
+$more-menu-trigger-text-open: $shark;
+$more-menu-trigger-background-open: transparent;
+$more-menu-trigger-border-open: $shark;
+$more-menu-trigger-text-open-hover: $shark;
+$more-menu-trigger-background-open-hover: transparent;
+$more-menu-trigger-border-open-hover: $shark;
+
+$more-menu-border: $iron;
+$more-menu-item-text: $sea-green;
+$more-menu-item-text-hover: $shark;
+$more-menu-item-background: transparent;
+$more-menu-item-background-hover: transparent;
+$more-menu-item-text-destructive: $valencia;
+$more-menu-item-text-destructive-hover: $shark;
+$more-menu-item-background-destructive: transparent;
+$more-menu-item-background-destructive-hover: transparent;
+
+
+// LOADER
+////////////////////
+$loader-dot-color: $sushi !default;
+
+
+// TABS
+////////////////////
+$tabs-bottom-border: $white-smoke;
+
+$tabs-selected-primary-text: $curious;
+$tabs-selected-secondary-text: $nobel;
+$tabs-selected-background: $curious-5pct;
+$tabs-selected-indicator: $curious;
+
+$tabs-unselected-primary-text: $waterloo;
+$tabs-unselected-primary-text-hover: $curious;
+$tabs-unselected-secondary-text: $gray-suit;
+$tabs-unselected-background: $curious-3pct;
 
 
 // SIZES
@@ -225,12 +347,6 @@ $font-path: 'https://d1dhez4kvp48e8.cloudfront.net/fonts/';
 ////////////////////
 // $asset-path: 'https://s3.amazonaws.com/wl-s3-assets/brand/';
 $asset-path: 'https://d1dhez4kvp48e8.cloudfront.net/brand/';
-$nav-active-shadow: #000 !default;
-$nav-footer-border-color: #666 !default;
-$nav-embossed-border-top: #000 !default;
-$nav-embossed-border-bottom: #939393 !default;
-$main-embossed-text-shadow: 0px 1px 0px #fff !default;
-$search-box-border-color: #666 !default;
 
 
 ////////////////////////////////////////////////////////////////////////////////
