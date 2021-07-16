@@ -8,6 +8,31 @@
 	}
 }
 
+.dropdown-wrapper:not(.more-menu){
+	button {
+	  color: $dropdown-button-text;
+	  padding: 0;
+  
+	  &:hover {
+		color: $dropdown-button-text-hover;
+	  }
+	}
+  
+	.dropdown-list {
+	  li {
+		width: 100%;
+  
+		a {
+		  color: $dropdown-item-text;
+  
+		  &:hover {
+			color: $dropdown-item-text-hover;
+		  }
+		}
+	  }
+	}
+  }
+
 .dropdown {
 	background: $dropdown-bg;
 	border: 1px solid $dropdown-border;

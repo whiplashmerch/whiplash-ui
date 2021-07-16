@@ -16,34 +16,40 @@
 		text-transform: capitalize;
 	}
 
-	input[type=text],
+  input[type=text],
   input[type=number],
   input[type=password],
   input[type=email],
   input[type=search] {
 		-webkit-appearance: none;
 		background-color: transparent;
-		border: 1px solid $search-border-bottom;
+		border: 1px solid $text-input-border;
 		border-radius: 1px;
-		color: $main-text;
+		color: $text-input-text;
 		display: block;
 		font-size: 1rem;
 		letter-spacing: 0.011875rem;
 		outline: 0;
-		padding: 0.8rem 5rem 0.8rem 1rem;
-		transition: border 150ms ease-out;
+		padding: 0.8rem 1rem 0.8rem 1rem;
+		transition: none;
 		width: 100%;
-    box-sizing: border-box;
+    	box-sizing: border-box;
 
 		&:hover, &:active {
-			border-color: $curious;
+			border-color: $text-input-active-border;
 		}
-	}
 
-	input[type=text]:disabled {
-		background-color: #eee;
-		border: 1px solid #aaa;
-		color: #666;
+		&::placeholder {
+			color: $text-input-placeholder-text;
+			font-weight: normal;
+		}
+
+		&:disabled, &.read-only {
+			background-color: $text-input-disabled-background;
+			border: 1px solid $text-input-disabled-border;
+			color: $text-input-disabled-text;
+			cursor: not-allowed;
+		}
 	}
 
   textarea,
@@ -53,6 +59,22 @@
     font-size: 1rem;
     padding: 1rem;
     width: 100%;
+  }
+
+  textarea {
+	outline: none;
+	border-style: solid;
+  
+	&:hover {
+	  border-color: $text-input-active-border;
+	}
+  
+	&:disabled {
+	  background-color: $text-input-disabled-background;
+	  border-color: $text-input-disabled-border;
+	  color: $text-input-disabled-text;
+	  cursor: not-allowed;
+	}
   }
 
 	&.menu-search {
@@ -73,7 +95,7 @@
 		}
 
 		input[type=text],
-    input[type=search] {
+    	input[type=search] {
 			border-top: initial;
 			border-right: initial;
 			border-bottom: 1px dotted $search-border-bottom;
@@ -85,6 +107,8 @@
 
 	&.search,
 	&.menu-search {
+		margin-bottom: 1rem;
+
 		input {
 			padding: 0.8rem 5rem 0.8rem 3rem !important;
 		}
@@ -99,7 +123,11 @@
 			left: 0.75rem;
 			position: absolute;
 			width: 1.125rem;
-			z-index: 10;
+			z-index: 1;
+		}
+
+		&:after {
+			background-color: $wl-info;
 		}
 	}
 
@@ -121,6 +149,10 @@
 		  max-width: none;
 		  width: 100%;
 		} 
+
+		label {
+			padding-bottom: .4rem;
+		}
 	  
 		input {
 		  padding: 0.8rem 1rem 0.8rem 1rem;

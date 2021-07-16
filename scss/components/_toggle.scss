@@ -76,7 +76,7 @@
 
 	&.active {
 		.toggle-inner {
-			background-color: $toggle-active-bg;
+			background-color: $toggle-active-background;
 			box-shadow: inset 0 1px 1px 0 $toggle-active-shadow;
 
 			&:before {
