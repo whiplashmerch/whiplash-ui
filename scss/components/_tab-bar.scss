@@ -1,0 +1,92 @@
+.tab-bar.standard {
+    display: flex;
+    margin: 0;
+    background: $tabs-unselected-background;
+    border-top: 1px solid $alto;
+    padding: 0;
+  
+    li {
+      display: inline-block;
+  
+      a, button {
+        display: block;
+        padding: 15px 40px;
+        color: $tabs-unselected-primary-text;
+        font-size: 1rem;
+        min-width: 0;
+  
+        .optional-label {
+          display: none;
+        }
+  
+        &:hover {
+          color: $tabs-unselected-primary-text-hover;
+        }
+      }
+  
+      a {
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
+      }
+  
+      @media (max-width: 1199px) {
+        span {
+          display: none;
+        }
+      }
+  
+      // Apply to first tab and every other subsequent sibling tab if there are 5 total tabs
+      &:first-child:nth-last-child(n + 5),
+      &:first-child:nth-last-child(n + 5) ~ li {
+        flex: 1 1 auto;
+        margin: 0;
+  
+        a {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+  
+      &.active {
+        
+        a {
+          color: $tabs-selected-primary-text;
+        }
+  
+        border-bottom: 4px solid $tabs-selected-indicator;
+        background: $tabs-selected-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+  
+  .tab-bar-select.standard {
+    display: none;
+    padding: 1.5rem;
+  
+    .select2 {
+      min-width: 100%;
+    }
+  
+    .select2-selection {
+      border-color: $deep-cerulean;
+    }
+  
+    .select2-selection__rendered {
+      border-color: $deep-cerulean;
+      background-color: $curious-10pct;
+      border-radius: 3px;
+      color: $deep-cerulean;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .tab-bar.standard {
+      display: none;
+    }
+  
+    .tab-bar-select.standard {
+      display: block;
+    }
+  }

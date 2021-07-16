@@ -1,0 +1,23 @@
+.checkbox-list.standard {
+	padding: 0;
+	max-width: 100%;
+	list-style: none;
+  
+	&.multi-column {
+	  @media (min-width: 768px) {
+		column-count: 2;
+	  }
+  
+	  @media (min-width: 1024px) {
+		column-count: 3;
+	  }
+	}
+  
+	.check-box {
+	  margin-bottom: 22px;
+	}
+  
+	label {
+	  display: inline-block;
+	}
+}

@@ -9,14 +9,14 @@
 			display: inline-block;
 
 			&:not(:last-child):after {
-				background: url($asset-path + 'styles/breadcrumb-arrow.svg') no-repeat 100% transparent;
+				background: url($asset-path + 'breadcrumb-arrow.svg') no-repeat 100% transparent;
 				background-size: contain;
 				color: $main-text;
 				content: "";
 				display: inline-block;
 				height: 0.5625rem;
 				margin: 0 0.125rem -0.0625rem -0.25rem;
-				width: 0.625rem;
+				width: 1rem;
 			}
 
 			a {
@@ -28,7 +28,7 @@
 				cursor: pointer;
 
 				&:hover {
-					color: $nav-active-bg;
+					color: $curious;
 				}
 			}
 		}

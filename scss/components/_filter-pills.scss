@@ -1,0 +1,59 @@
+.filter-pill {
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: $filter-pill-background;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 0 0 $filter-pill-shadow;
+    box-shadow: 0 1px 0 0 $filter-pill-shadow;
+    color: $filter-pill-text;
+    display: inline-block;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: .8rem;
+    height: 2rem;
+    max-width: 20rem;
+    -ms-flex-pack: center;
+    justify-content: center;
+    letter-spacing: .04rem;
+    overflow: hidden;
+    padding: .5rem .8rem;
+    position: relative;
+    margin: 0 1rem 1rem 0;
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    i.icon {
+      position: relative;
+      top: -2px;
+      vertical-align: middle;
+      color: $curious;
+      line-height: 1rem;
+      margin-left: 5px;
+      font-size: 0.9rem;
+    }
+  
+    &.highlighted {
+      color: $filter-pill-text-highlighted;
+      background-color: $filter-pill-background-highlighted;
+      -webkit-box-shadow: 0 1px 0 0 $filter-pill-shadow-highlighted;
+      box-shadow: 0 1px 0 0 $filter-pill-shadow-highlighted;
+    }
+  
+    &.warning {
+      color: $filter-pill-text-warning;
+      background-color: $filter-pill-background-warning;
+      -webkit-box-shadow: 0 1px 0 0 $filter-pill-shadow-warning;
+      box-shadow: 0 1px 0 0 $filter-pill-shadow-warning;
+    }
+  
+    &.disabled {
+      color: $filter-pill-text-disabled;
+      background-color: $filter-pill-background-disabled;
+      -webkit-box-shadow: 0 1px 0 0 $filter-pill-shadow-disabled;
+      box-shadow: 0 1px 0 0 $filter-pill-shadow-disabled;
+    }
+  }

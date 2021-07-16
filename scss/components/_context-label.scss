@@ -1,5 +1,18 @@
 span.context-labels {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   max-width: 55%;
+
+  .add-margin {
+    margin-bottom: 5px;
+
+    &:not(:first-child) {
+        span {
+            margin-left: 5px;
+        }
+    }
+  }
 
   span.context-label {
     margin: 0 0 5px 0;
@@ -24,27 +37,28 @@ span.context-labels {
 }
 
 span.context-label {
+  color: $context-label-text;
+  background-color: $context-label-background;
   display: inline-block;
-  color: white !important;
   padding: 2px 5px;
   margin: 2px 0 3px 5px;
   border-radius: 2px;
   font-style: normal;
 
   &.warning {
-    background-color: #4800b6;
+    background-color: $context-label-warning-background;
   }
 
   &.important {
-    background-color: #cc3e4a;
+    background-color: $context-label-important-background;
   }
 
   &.success {
-    background-color: #00bc93;
+    background-color: $context-label-success-background;
   }
 
   &.caution{
-    background-color: #FFA500
+    background-color: $context-label-caution-background;
   }
 
   &.small {

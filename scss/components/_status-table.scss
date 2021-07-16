@@ -1,0 +1,26 @@
+.status-table.standard {
+    margin-bottom: 40px;
+  
+    tr {
+      td {
+        padding: 5px 5px 12px 5px;
+  
+        &:first-child {
+          font-style: italic;
+        }
+  
+        &:last-child {
+          padding-left: 10px;
+        }
+  
+        span {
+          margin-right: .5rem;
+        }
+      }
+    }
+  
+    .btn {
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
