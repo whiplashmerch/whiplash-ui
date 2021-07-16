@@ -246,3 +246,9 @@ function getParent(element, className) {
 
   return element;
 }
+
+jQuery(function() {
+  $('.tab-bar-select').on('change', function(e){
+    window.location.href = $(this).find("option:selected" ).val();
+  });
+});
