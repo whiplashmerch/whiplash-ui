@@ -1,4 +1,3 @@
-@import "context-label";
 @import "normalize";
 @import "variables";
 @import "icon-font";
@@ -7,6 +6,8 @@
 @import "lite-nav";
 @import "side-menu";
 @import "type";
+@import "checkbox-list";
+@import "components/context-label";
 @import "components/actions";
 @import "components/help";
 @import "components/input";
@@ -21,6 +22,11 @@
 @import "components/check_box";
 @import "components/dropdown";
 @import "components/hr";
+@import "components/filter-pills";
+@import "components/more-menu";
+@import "components/banner";
+@import "components/status-table";
+@import "components/tab-bar";
 
 html {
 	box-sizing: border-box;
@@ -43,7 +49,7 @@ html {
 }
 
 body {
-	background-color: $main-bg;
+	background-color: $white;
 }
 
 h1 {
@@ -127,9 +133,39 @@ pre {
 		padding: 0 28px 0 43px;
 	}
 
-	aside, dt, h1, h2, h3, h4, h5, h6, ol, p, table, ul {
+	aside, dt, h1, h2, h3, h4, h5, h6, ol, p, ul {
 		display: block;
 	}
+}
+
+label.standard {
+  color: $dove-gray;
+  display: flex;
+  align-items: center;
+  font-size: .875rem;
+  letter-spacing: 0.0125rem;
+  padding-bottom: .275rem;
+
+  &.right {
+    padding-bottom: 0;
+    
+    .toggle {
+      float: left;
+    }
+
+    .check-box-button {
+      margin-top: -2px;
+    }
+
+    .help {
+      padding-left: 0;
+    }
+
+    .check-box-input ~ span {
+      margin-left: 5px;
+      color: $waterloo;
+    }
+  }
 }
 
 @media (min-width: 768px) {
