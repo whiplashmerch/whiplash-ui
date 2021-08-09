@@ -7,6 +7,7 @@
 @import "side-menu";
 @import "type";
 @import "checkbox-list";
+@import "inline-code";
 @import "components/context-label";
 @import "components/actions";
 @import "components/help";
@@ -105,12 +106,6 @@ pre {
 	}
 }
 
-.sub-menu {
-	.menu-list {
-		display: none;
-	}
-}
-
 .main-wrapper {
 	padding: $main-padding;
 
@@ -145,6 +140,7 @@ label.standard {
   font-size: .875rem;
   letter-spacing: 0.0125rem;
   padding-bottom: .275rem;
+  cursor: pointer;
 
   &.right {
     padding-bottom: 0;

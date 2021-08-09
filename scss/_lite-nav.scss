@@ -29,7 +29,7 @@
   .menu {
     margin: 0.1875rem 0 0 -0.1875rem;
 
-    a {
+    a, .submenu-trigger {
       color: $cape-cod;
       display: block;
       padding: 1rem .4rem;
@@ -44,6 +44,26 @@
       }
     }
 
+    .submenu-trigger {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      padding: 1rem;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -0.75rem;
+        transform: translateY(-50%);
+        width: 11px;
+        height: 10px;
+        background-image: url($asset-path + 'icon-identity-expand.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
     li {
       display: inline-block;
     }
@@ -55,21 +75,14 @@
       > li {
         margin-right: 1.5rem;
 
-        > a, > .submenu > a {
+        > a, > .submenu > button {
           font-size: 0.9rem;
-          letter-spacing: 0.04rem;
         }
       }
 
       .sub-menu {
         position: relative;
         z-index: 1;
-
-        &:hover {
-          > .menu-list {
-            display: inherit;
-          }
-        }
 
         > .menu-list {
           background-color: $white;
@@ -81,7 +94,7 @@
           top: 3rem;
           width: 14rem;
 
-          a {
+          span {
             color: $cape-cod;
             padding: 1rem;
 
