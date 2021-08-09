@@ -76,19 +76,22 @@
                         <a href="">Item3</a>
                     </li>
                     <li>
-                        <div class="sub-menu submenu">
-                            <a href="">Item4</a>
-                            <ul class="menu-list">
-                                <li>
-                                    <a href="">SubItem1</a>
-                                </li>
-                                <li>
-                                    <a href="">SubItem2</a>
-                                </li>
-                                <li>
-                                    <a href="">SubItem3</a>
-                                </li>
-                            </ul>
+                        <div class="sub-menu submenu dropdown-wrapper">
+                            <button class="submenu-trigger" data-dropdown="drop-1">Item4</button>
+                                <div class="dropdown" id="drop-1">
+                                    <ul class="menu-list" >
+                                        <li>
+                                            <a href="">SubItem1</a>
+                                        </li>
+                                        <li>
+                                            <a href="">SubItem2</a>
+                                        </li>
+                                        <li>
+                                            <a href="">SubItem3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
                         </div>
                     </li>
                 </ul>
@@ -241,13 +244,11 @@
                 </div>
                 <div class="field standard">
                     <label class="standard" for="textarea_demo">Description</label>
-                    <textarea rows="8" autocomplete="off" id="textarea_demo" ></textarea>
+                    <textarea rows="8" autocomplete="off" id="textarea_demo"></textarea>
                 </div>
                 <div class="field standard">
                     <label class="standard" for="textarea_demo_disabled">Description (Disabled)</label>
-                    <textarea rows="8" autocomplete="off" id="textarea_demo_disabled" disabled>
-                        This is the current value.
-                    </textarea>
+                    <textarea rows="8" autocomplete="off" id="textarea_demo_disabled" disabled>This is the current value.</textarea>
                 </div>
               </div>
           </div>
