@@ -94,3 +94,10 @@
 .select2-results__option.loading-results {
   font-size: 14px;
 }
+
+@media (min-width: 1081px) {
+  .select2 {
+    min-width: 100%;
+    width: auto !important;
+  }
+}
