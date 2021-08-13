@@ -142,6 +142,16 @@ label.standard {
   padding-bottom: .275rem;
   cursor: pointer;
 
+  &.toggle-label {
+    display: inline-flex;
+    width: auto;
+    text-transform: none;
+
+    p {
+      line-height: 1.2;
+    }
+  }
+
   &.right {
     padding-bottom: 0;
     
@@ -162,6 +172,14 @@ label.standard {
       color: $waterloo;
     }
   }
+}
+
+.sentence-case {
+	text-transform: none;
+}
+
+.inline {
+	display: inline;
 }
 
 @media (min-width: 768px) {
