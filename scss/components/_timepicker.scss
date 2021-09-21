@@ -1,0 +1,27 @@
+.timepicker {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #B3B3CC;
+    position: absolute;
+    background-color: #fff;
+    display: none;
+    margin-top: 5px;
+    padding: 1em;
+    z-index: 1;
+
+    .timepicker-contents {
+        display: flex;
+
+        .select2-selection {
+            margin: 0 5px;
+
+            .select2-selection__arrow {
+                right: 5px;
+            }
+        }
+    }
+
+    .button {
+        margin: 2em 5px 0;
+    }
+}
