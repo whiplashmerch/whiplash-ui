@@ -252,3 +252,255 @@ jQuery(function() {
     window.location.href = $(this).find("option:selected" ).val();
   });
 });
+
+
+// ------------------------- //
+// ----- Begin File Uploads ----- //
+// ------------------------- //
+
+const removeUploadInputImage = () => {
+  var fileInputLabel = $(".inputfile-label");
+  $('.image-upload-container').hide();
+  $('#uploaded-image-url').remove();
+  $('.uploaded-filename')
+    .text('')
+    .css('opacity','0');
+  fileInputLabel.show();
+}
+
+jQuery(function() {
+  // Image upload
+  $("input:file.direct-upload").each(function(i, elem) {
+    var fileInput    = $(elem);
+    var fileInputLabel = $(".inputfile-label");
+    var form         = $(fileInput.parents('form:first'));
+    var allowedExtensions = form.data('allowed-extensions');
+    var displayFilename = form.data('display-filename');
+    var submitButton = form.find('input[type="submit"]');
+    var progressBar  = $("<div class='bar'></div>");
+    var barContainer = $("<div class='progress'></div>").append(progressBar);
+    var filename = $("<div class='uploaded-filename'>AHOY</div>");
+
+    // Optionally display filename when upload is complete.
+    fileInput.after(barContainer);
+    if (displayFilename){
+      fileInput.after(filename);
+    }
+
+    fileInput.fileupload({
+      fileInput:       fileInput,
+      url:             fileInput.data('url'),
+      type:            'POST',
+      autoUpload:       true,
+      formData:         fileInput.data('form-data'),
+      paramName:        'file', // S3 does not like nested name fields i.e. name="user[avatar_url]"
+      dataType:         'XML',  // S3 returns XML if success_action_status is set to 201
+      replaceFileInput: true,
+      maxNumberOfFiles: 1,
+      add: function (e, data) {
+        theExtension = data.files[0].name.slice(-4).replace('.','');
+
+        if (allowedExtensions !== undefined && allowedExtensions.length) {
+          if (allowedExtensions.includes(theExtension)) {
+            $('.uploaded-filename').text(data.files[0].name);
+            data.submit();
+          } else {
+            alert("Please upload one of the following file types: \n" + allowedExtensions);
+          }
+        } else {
+          $('.uploaded-filename').text(data.files[0].name);
+          data.submit();
+        }
+      },
+      progressall: function (e, data) {
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        progressBar.css('width', progress + '%');
+      },
+      start: function (e, data) {
+        //if (acceptedExtensions.contains())
+        submitButton.prop('disabled', true);
+        fileInputLabel.hide();
+        var theUploadedImageContainer = $('<div>', {class: 'image-upload-container'});
+        var theUploadedImageFadeIn = $('<div>', {class: 'image-upload-fade-in'});
+        var theUploadedImageStatusText = $('<div>', {class: 'image-upload-status-text'}).text('Uploading...');
+        var theUploadedImageRemove = $('<a>', {class: 'image-upload-remove'}).attr('href','#').html('&times;');
+        
+        theUploadedImageContainer.append(theUploadedImageStatusText);
+        theUploadedImageContainer.append(theUploadedImageFadeIn);
+        theUploadedImageContainer.append(theUploadedImageRemove);
+        
+        if (displayFilename){
+          theUploadedImageContainer.insertBefore(filename);
+        } else {
+          theUploadedImageContainer.insertBefore(barContainer);
+        }
+        
+        progressBar.
+          css('background', '#2F9EC6').
+          css('display', 'block').
+          css('width', '0%');
+      },
+      done: function(e, data) {
+        submitButton.prop('disabled', false);
+
+        // extract key and generate URL from response
+        var key   = $(data.jqXHR.responseXML).find("Key").text();
+        var url   = '//' + fileInput.data('host') + '/' + key;
+      
+        progressBar.hide();
+        
+        csvImageURL = "/assets/upload-placeholder-csv.png";
+        xmlImageURL = "/assets/upload-placeholder-xml.png";
+        pdfImageURL = "/assets/upload-placeholder-pdf.png";
+        switch(url.slice(-4).toLowerCase()) {
+          case ".csv":
+            $('.image-upload-fade-in').css('background-image','url(' + csvImageURL + ')');
+            break;
+          case ".xml":
+            $('.image-upload-fade-in').css('background-image','url(' + xmlImageURL + ')');
+            break;
+          case ".pdf":
+            $('.image-upload-fade-in').css('background-image','url(' + pdfImageURL + ')');
+            break;
+          default:
+            $('.image-upload-fade-in').css('background-image','url(' + encodeURI(url) + ')');
+        } 
+
+        $('.image-upload-status-text').css('opacity','0');
+        $('.image-upload-fade-in').css('opacity','1');
+        $('.uploaded-filename').css('opacity','1');
+
+        $('.image-upload-remove').css('opacity','1');
+        
+        $('body').on('click', '.image-upload-remove', function() {
+          removeUploadInputImage();
+        });
+
+        // create hidden field
+        var input = $("<input />", { type:'hidden', name: fileInput.attr('name'), value: url, id: 'uploaded-image-url'})
+        form.append(input);
+      },
+      fail: function(e, data) {
+        submitButton.prop('disabled', false);
+        fileInputLabel.show();
+
+        $('.image-upload-container').hide();
+        progressBar.hide();
+      }
+    });
+  });
+});
+
+
+// ------------------------- //
+// ----- Begin Timepicker ----- //
+// ------------------------- //
+
+// Custom timepicker
+function buildTimepicker(input) {
+
+  // HELPER FUNCTIONS
+  // pad single digit numbers with 0
+  function numberPad(num) {
+    var length = 2 - ('' + num).length;
+    return (length > 0 ? new Array(++length).join('0') : '') + num;
+  }
+
+  // sort out time in correct 24 hour format
+  function formatTime(hours, minutes, ampm) {
+    var numHours = Number(hours),
+        numMinutes = Number(minutes),
+        cleanedAMPM = ampm.toLowerCase();
+
+    if (cleanedAMPM === 'pm' && numHours < 12) {
+      numHours = numHours + 12;
+    } else if (cleanedAMPM === 'am' && numHours === 12) {
+      numHours = numHours - 12;
+    }
+
+    numHours = numberPad(numHours);
+    numMinutes = numberPad(numMinutes);
+
+    return numHours + ':' + numMinutes;
+  }
+
+  // BUILD TIMEPICKER
+  // generate html for timepicker dialog
+  var html = '<div class="timepicker">'; 
+        html +='<div class="timepicker-contents">';
+          html += '<select class="whiplash-select" name="hour" id="hour">';
+            for (var i = 1; i <= 12; i++) {
+              if (i === 1) {
+                html += '<option selected>'+ numberPad(i) +'</option>';
+              } else {
+                html += '<option>'+ numberPad(i) +'</option>';
+              }
+            }
+          html += '</select>';
+          html += '<select class="whiplash-select" name="minute" id="minute">';
+            for (var i = 0; i < 60; i++) {
+              if (i === 0) {
+                html += '<option selected>'+ numberPad(i) +'</option>'
+              } else {
+                html += '<option>'+ numberPad(i) +'</option>'
+              }
+            }
+          html += '</select>';
+          html += '<select class="whiplash-select" name="ampm" id="ampm">';
+            html += '<option selected>AM</option>';
+            html += '<option>PM</option>';
+          html += '</select>';
+        html += '</div>';
+        html += '<button class="button small secondary-border" id="fedex-pickup-cancel">Cancel</button>';
+        html += '<button class="button small" id="fedex-pickup-set">Set Time</button>';
+      html += '</div>';
+
+  // append html after its associated input
+  $(input).after(html);
+
+  var $timepicker = $('.timepicker'),
+      $hourSelect = $('#hour'),
+      $minuteSelect = $('#minute'),
+      $ampmSelect = $('#ampm'),
+      $cancel = $('#fedex-pickup-cancel'),
+      $settime = $('#fedex-pickup-set'),
+      hours = $hourSelect.val(),
+      minutes = $minuteSelect.val(),
+      ampm = $ampmSelect.val();
+
+  // EVENTS
+  // capuring time selections
+  $($hourSelect).on('change', function() {
+    hours = $(this).val();
+  });
+
+  $($minuteSelect).on('change', function() {
+    minutes = $(this).val();
+  });
+
+  $($ampmSelect).on('change', function() {
+    ampm = $(this).val();
+  });
+
+  // input toggles dropdown
+  $(input).on('click', function() {
+    $timepicker.toggle('fast');
+  });
+
+  // stop click through beneath timepicker dropdown
+  $timepicker.on('click', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+  });
+
+  // cancel button closes dialog
+  $cancel.on('click', function() {
+    $timepicker.toggle('fast');
+  });
+
+  // set button sets new time as input value
+  $settime.on('click', function() {
+    $(input).val(formatTime(hours, minutes, ampm));
+    $timepicker.toggle('fast');
+  });
+}
