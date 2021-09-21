@@ -1,0 +1,35 @@
+/* ********************************* */
+/* Zebra Datepicker Global Overrides */
+/* ********************************* */
+
+/* datetimepicker */
+.Zebra_DatePicker {
+    .dp_body {
+        td.dp_selected {
+            background: $wl-info;
+
+            &.dp_current {
+                color: $white;
+            }
+        }
+    }
+}
+
+.Zebra_DatePicker_Icon_Wrapper {
+    width: 100% !important;
+    button.Zebra_DatePicker_Icon{
+      top: 15.296875px !important;
+      right: 8px !important;
+      opacity: .4;
+      cursor: text;
+      pointer-events: none;
+    }
+}
+
+button.Zebra_DatePicker_Icon {
+    background: url("/assets/zebra_date-picker_icons.png") no-repeat center top;
+}
+  
+.Zebra_DatePicker .dp_icon {
+    background-image: url("/assets/zebra_date-picker_icons.png");
+}
