@@ -127,6 +127,7 @@ function handleUIBehavior() {
   var selects = document.querySelectorAll('.select-input');
   var toggles = document.querySelectorAll('.toggle-input');
   var dropdowns = document.querySelectorAll('button[data-dropdown]');
+  var timepickers = document.querySelectorAll('input[data-timepicker]');
 
   if (mobileNavButton != null) {
     mobileNavButton.addEventListener('click', mobileNavClickHandler);
@@ -145,6 +146,8 @@ function handleUIBehavior() {
   Array.prototype.forEach.call(toggles, transformToggle);
 
   Array.prototype.forEach.call(dropdowns, registerDropdownClickHandlers);
+
+  Array.prototype.forEach.call(timepickers, registerTimepickers);
 }
 
 // function dynamicDropdownClickHandler() {
@@ -247,6 +250,13 @@ function getParent(element, className) {
   return element;
 }
 
+function registerTimepickers(timepicker) {
+  
+  var timepickerId = timepicker.getAttribute('data-timepicker');
+  var timepicker = document.getElementById(timepickerId);
+  buildTimepicker(timepicker);
+}
+
 jQuery(function() {
   $('.tab-bar-select').on('change', function(e){
     window.location.href = $(this).find("option:selected" ).val();
@@ -258,7 +268,7 @@ jQuery(function() {
 // ----- Begin File Uploads ----- //
 // ------------------------- //
 
-const removeUploadInputImage = () => {
+var removeUploadInputImage = function() {
   var fileInputLabel = $(".inputfile-label");
   $('.image-upload-container').hide();
   $('#uploaded-image-url').remove();
@@ -397,7 +407,8 @@ jQuery(function() {
 // ------------------------- //
 
 // Custom timepicker
-function buildTimepicker(input) {
+function buildTimepicker(timepicker) {
+  console.log(timepicker);
 
   // HELPER FUNCTIONS
   // pad single digit numbers with 0
@@ -456,7 +467,7 @@ function buildTimepicker(input) {
       html += '</div>';
 
   // append html after its associated input
-  $(input).after(html);
+  $(timepicker).after(html);
 
   var $timepicker = $('.timepicker'),
       $hourSelect = $('#hour'),
@@ -483,7 +494,7 @@ function buildTimepicker(input) {
   });
 
   // input toggles dropdown
-  $(input).on('click', function() {
+  $(timepicker).on('click', function() {
     $timepicker.toggle('fast');
   });
 
@@ -500,7 +511,7 @@ function buildTimepicker(input) {
 
   // set button sets new time as input value
   $settime.on('click', function() {
-    $(input).val(formatTime(hours, minutes, ampm));
+    $(timepicker).val(formatTime(hours, minutes, ampm));
     $timepicker.toggle('fast');
   });
 }
