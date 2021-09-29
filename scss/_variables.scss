@@ -29,11 +29,15 @@ $gray: #808080 !default;
 $grey-lighter: #dcdcdc;
 
 $black-50-percent-opacity: rgba($black, 0.5) !default;
+$black-15-percent-opacity: rgba($black,0.15) !default;
 
 $silver: #BBBBBB !default;
 $iron: #D6D8DB !default;
 $athens-gray: #F5F5F7 !default;
 $solitude: #E1E1EB !default;
+$lavender-blush: #FFEFF2 !default;
+$brilliant-rose: #f156a3 !default;
+$red:#CC3E4A !default;
 $valencia: #D93446 !default;
 $valencia-10pct: rgba($valencia, .1) !default;
 $cloudy-gray: #696969 !default;
@@ -197,6 +201,8 @@ $blockquote-background: $curious-5pct !default;
 $blockquote-left-border: $curious !default;
 
 
+$wl-action: $sea-green !default;
+$wl-action-hover: $shark !default;
 $wl-info: $curious !default;
 $wl-status-error: $valencia !default;
 $wl-status-error-background: $valencia-10pct !default; 
@@ -301,6 +307,13 @@ $tabs-unselected-primary-text: $waterloo !default;
 $tabs-unselected-primary-text-hover: $curious !default;
 $tabs-unselected-secondary-text: $gray-suit !default;
 $tabs-unselected-background: $curious-3pct !default;
+
+
+// CARD
+////////////////////
+
+$card-reorder-highlight: $curious-5pct;
+$card-hover-background: $curious-10pct;
 
 
 // SIZES
