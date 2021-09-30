@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="dist/whiplash-ui.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/css/bootstrap/zebra_datepicker.min.css">
     <title>Testing</title>
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/zebra_datepicker.min.js"></script>
     <script type="text/javascript" src="dist/whiplash-ui.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('.whiplash-select').select2();
+            $('input.datepicker').Zebra_DatePicker();
+            $('input.datetimepicker').Zebra_DatePicker({
+              format: 'Y-m-d H:i',
+              onClose: function () {
+                if (this[0].value && !this[0].value.includes(" (Eastern)")) {
+                  this[0].value = this[0].value + " (Eastern)";
+                }
+              }
+            });
         });
     </script>
     <style>
@@ -43,6 +55,12 @@
             padding: 20px;
             flex-basis: 50%;
             max-width: 50%;
+        }
+
+        .example-col-sm {
+            padding: 20px;
+            flex-basis: 25%;
+            max-width: 25%;
         }
 
         .buttons {
@@ -236,9 +254,9 @@
                 <div class="field standard">
                     <label for="demo_text_input">Standard input</label>
                     <input placeholder="Enter input..." type="text" id="demo_text_input">
-                    <p class="help">This is Help text</p>
-                  </div>
-                  <div class="field standard">
+                    <p class="help">This is help text</p>
+                </div>
+                <div class="field standard">
                     <label for="demo_text_input_disabled">Standard input (Disabled)</label>
                     <input placeholder="You can't enter input..." type="text" id="demo_text_input_disabled" disabled>
                 </div>
@@ -478,7 +496,44 @@
               <div class="field standard">
                 <label for="demo_timpepicker">Timepicker</label>
                 <input type="text" name="timepicker[example]" id="timepicker_example" data-timepicker="timepicker_example" readonly="readonly">
-                <p class="help">This is Help text</p>
+              </div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+              <div class="field standard">
+                <label for="example[datepicker]">DatePicker</label>
+                <input value="" autocomplete="off" required="required" type="text" name="example[datepicker]" id="example_datepicker" class="datepicker">
+              </div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col">
+              <div class="field standard">
+                <label for="example[datetimepicker]">DateTimePicker</label>
+                <input value="" autocomplete="off" required="required" type="text" name="example[datetimepicker]" id="example_datetimepicker" class="datetimepicker">
+              </div>
+            </div>
+          </div>
+          <div class="content-section">
+            <div class="example-col-sm">
+              <div class="card example-card">
+                <div class="card-header"></div>
+                <div class="card-feature">
+                  <div class="card-logo-wrapper">
+                    <p class="text-accent">Example Card Text</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <p><strong>Example Card Footer</strong></p>
+                </div>
+                <div class="card-hover">
+                  <div class="card-hover-feature">
+                    <a class="button" href="#">Button</a>
+                    <br>
+                    <a class="button mini" href="#">Button Mini</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
