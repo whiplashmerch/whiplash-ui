@@ -1,0 +1,64 @@
+.radio-button-list.standard {
+    padding: 0;
+    max-width: 100%;
+    list-style: none;
+  
+    &.multi-column {
+      @media (min-width: 768px) {
+        column-count: 2;
+      }
+  
+      @media (min-width: 1024px) {
+        column-count: 3;
+      }
+    }
+  }
+  
+  
+  .radio.standard {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 21px;
+  
+    .radio-input-container {
+      float: left;
+      margin-top: -1px;
+    }
+  
+    .radio-input {
+      display: flex;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #b3b3cc;
+      border-radius: 50%;
+      
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+  
+        &:checked + .radio-control {
+          background: #9b8fff;
+        }
+      }
+    }
+  
+    .radio-control {
+      display: block;
+      transform: translate(1px, 0px);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  
+    .radio-label {
+      position: relative;
+      top: -1px;
+      margin-left: 9px;
+      line-height: 16px;
+      float: left;
+      color: #808091;
+    }
+  }
