@@ -78,6 +78,11 @@
   &.loading {
     padding: 0.813rem 0;
   }
+
+  &.split-left {
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+  }
 }
 
 .button:disabled,
@@ -192,7 +197,42 @@ input.tertiary {
       color: $gray;
     }
   }
-  
+
+  &.bg-white{
+    background-color: white;
+  }
+
+  &.split-right {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+  }
+}
+
+.split-button{
+  display: flex;
+}
+
+.button-link { 
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0px;
+  background-color: transparent;
+  transition: color ease-in-out .2s, color ease-in-out .2s;
+  border: none;
+  border-bottom: 1px solid;
+  &:hover {
+    color: #7C2483;
+  }
+  &:focus{
+    color: #4D5454;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: #bbb;
+  }
 }
 
 @media only screen and (max-width: 767px) {
