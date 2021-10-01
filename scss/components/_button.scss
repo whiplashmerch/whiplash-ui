@@ -22,6 +22,8 @@
   color: $button-primary-text;
   display: inline-block;
   font-size: 0.8125rem;
+  letter-spacing: 0.08rem;
+  margin: 0.5rem auto;
   min-width: 11.9375rem;
   outline: 0;
   padding: 1rem 0.5rem;
@@ -29,7 +31,6 @@
   text-transform: uppercase;
   transition: background-color ease-out, border ease-out, color ease-out;
   transition-duration: unset;
-  margin: 0px;
   width: 100%;
 
   &:hover {
@@ -68,6 +69,7 @@
     border: none;
     letter-spacing: 0.06rem;
     text-transform: capitalize;
+    margin: 0;
 
     &:hover {
       background-color: transparent;
