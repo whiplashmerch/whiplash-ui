@@ -39,6 +39,17 @@
           opacity: 0;
         }
       }
+
+      &.disabled, &:disabled {
+        &:before,
+        &:after {
+          background-image: url(/assets/ellipsis-disabled.svg);
+        }
+      }
+  
+      &.split-right{
+        height: 100%;
+      }
     }
   
     &.open {
@@ -72,7 +83,8 @@
   
     .dropdown-down {
       position: absolute;
-      top: 2rem;
+      top: 100%;
+      margin-top: 0.31rem;
       margin-bottom: 20px;
       width: auto;
       min-width: 140px;
@@ -136,6 +148,38 @@
                 background-color: inherit;
                 color: $waterloo;
                 cursor: not-allowed;
+              }
+            }
+          }
+
+          button {
+            border: none;
+          }
+    
+          button {
+            width: 100%;
+            text-transform: uppercase;
+            color: $more-menu-item-text;
+            background-color: $more-menu-item-background;
+            text-align: left;
+            letter-spacing: 0.64px;
+            padding: .4rem 1.2rem;
+            display: inline-block;
+            font-size: 12px; 
+            white-space: nowrap;
+    
+            &:hover {
+              background-color: $more-menu-item-background-hover;
+              color: $more-menu-item-text-hover;
+            }
+    
+            &.destructive {
+              color: $more-menu-item-text-destructive;
+              background-color: $more-menu-item-background-destructive;
+              
+              &:hover {
+                background-color: $more-menu-item-background-destructive-hover;
+                color: $more-menu-item-text-destructive-hover;
               }
             }
           }
