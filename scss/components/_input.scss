@@ -8,7 +8,7 @@
 	color: $field-text;
 
 	label {
-		color: $text-input-label-text;
+		color: $text-input-label-text !important;
 		display: block;
 		font-size: inherit;
 		letter-spacing: 0.0125rem;
@@ -140,87 +140,5 @@
 		display: block;
 		height: 47px;
 		opacity: 0;
-	}
-	
-	&.standard {
-		max-width: 400px;
-
-		&.full-width {
-		  max-width: none;
-		  width: 100%;
-		} 
-
-		label {
-			padding-bottom: .4rem;
-		}
-	  
-		input {
-		  padding: 0.8rem 1rem 0.8rem 1rem;
-		}
-	  
-		input,
-		select.whiplash-select,
-		.select2-container {
-		  min-width: 1px !important;
-		}
-
-		select.disabled {
-			& + .select2-container {
-			  cursor: not-allowed;
-		
-			  .selection {
-				pointer-events: none;
-			  }
-			  
-			  .select2-selection {
-				background-color: $white-smoke !important;
-			  }
-		
-			  .select2-selection__arrow {
-				display: none;    
-			  }
-			}
-		}
-	  
-		input,
-		textarea {
-		  font-weight: normal;
-		}
-	  
-		.inline-toggle {
-		  margin-top: 1.8rem;
-		  position: relative;
-    	  top: -1rem;
-		}
-	  
-		&:nth-child(n+2) {
-		  margin-top: 60px;
-		}
-	  
-		a {
-		  display: inline-block;
-		  margin-top: 5px;
-		}
-
-		&.full-width {
-			max-width: none;
-			width: 100%;
-		  }
-		
-		  .toggle-triggered {
-			margin-top: 1rem;
-			margin-left: 4.5rem;
-		  }
-		
-		  @media (min-width: 768px) {
-			&.half-width-sm {
-			  display: inline-block;
-			  width: 190px;
-			}
-		
-			&.half-width-sm + &.half-width-sm {
-			  margin-left: 16px;
-			}
-		}
 	}
 }
