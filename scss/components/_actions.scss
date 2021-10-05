@@ -9,31 +9,6 @@
     }
   }
 
-  &.standard {
-    margin-top: 40px;
-
-    .button {
-      margin-left: 10px;
-  
-      &:first-child {
-        margin-left: 0px;
-      }
-    }
-  
-    @media only screen and (max-width: 767px) {
-      .button {
-        margin-left: 0;
-      }
-    }
-  
-    @media only screen and (max-width: 767px) {
-      .button {
-        max-width: 400px;
-        margin-bottom: 10px;
-      }
-    }
-  }
-
   @media only screen and (max-width: 767px) {
     .button {
       margin-left: 0;
