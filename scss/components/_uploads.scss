@@ -29,8 +29,8 @@
 }
 
 .field {
-  .inputfile-label {
-    color: $wl-action;
+  .inputfile-label, .upload-form .inputfile-label {
+    color: $wl-action !important;
   }
 }
 
