@@ -270,7 +270,6 @@ jQuery(function() {
 
 // Custom timepicker
 function buildTimepicker(timepicker) {
-  console.log(timepicker);
 
   // HELPER FUNCTIONS
   // pad single digit numbers with 0
