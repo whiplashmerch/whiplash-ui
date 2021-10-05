@@ -28,6 +28,12 @@
   }
 }
 
+.field {
+  .inputfile-label {
+    color: $wl-action;
+  }
+}
+
 .image-upload-container {
   width: 200px;
   height: 200px;
