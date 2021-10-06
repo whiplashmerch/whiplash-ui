@@ -21,76 +21,303 @@ under the License.
 // Use these settings to help adjust the appearance of Slate
 
 
-// BACKGROUND COLORS
+////// GENERAL USE COLORS
+/////////////////////
+$white: #FFFFFF !default;
+$black: #000000 !default;
+$gray: #808080 !default;
+$grey-lighter: #dcdcdc;
+
+$black-50-percent-opacity: rgba($black, 0.5) !default;
+$black-15-percent-opacity: rgba($black,0.15) !default;
+
+$silver: #BBBBBB !default;
+$iron: #D6D8DB !default;
+$alabaster: #FAFAFA !default;
+$athens-gray: #F5F5F7 !default;
+$solitude: #E1E1EB !default;
+$lavender-blush: #FFEFF2 !default;
+$cherub: #F8D7DA !default;
+$brilliant-rose: #f156a3 !default;
+$red:#CC3E4A !default;
+$valencia: #D93446 !default;
+$valencia-10pct: rgba($valencia, .1) !default;
+$cloudy-gray: #696969 !default;
+$nobel: #999999 !default;
+$mine-shaft: #303030 !default;
+$silver-light: #C3C3C3 !default;
+$silver: #BBBBBB !default;
+$gray-suit: #C3BFC9 !default;
+$alto: #DDDDDD !default;
+$waterloo: #808091 !default;
+$dove-gray: #666666 !default;
+$white-smoke: #EEEEEE !default;
+$ghost-white: #EAE8FF !default;
+$gainsboro: #E5E5E5 !default;
+$nobel: #999999 !default;
+$nobel-10pct: rgba($nobel, .1) !default;
+
+
+////// REBRAND COLORS
+/////////////////////
+$curious: #2F9EC6 !default;
+  $curious-10pct: rgba($curious, .1) !default; 
+  $curious-5pct: rgba($curious, .05) !default; 
+  $curious-3pct: rgba($curious, .03) !default; 
+$deep-cerulean: #057BA6 !default;
+$sea-green: #2E8250 !default;
+  $sea-green-10pct: rgba($sea-green, .1) !default; 
+$sushi: #7DBC46 !default;
+  $sushi-10pct: rgba($sushi, .1) !default; 
+$shark: #1B1F1F !default;
+$cape-cod: #4D5454 !default;
+$pumice: #C1C3C1 !default;
+  $pumice-10-pct: rgba($pumice, .1) !default;
+$eggshell: #E6E1C5 !default;
+  $eggshell-20pct: rgba($eggshell, .2) !default;
+  $eggshell-10pct: rgba($eggshell, .1) !default;
+  $eggshell-5pct: rgba($eggshell, .05) !default;
+$supernova: #F5C800 !default;
+  $supernova-15pct: rgba($supernova, .15) !default; 
+$orange: #FF5D29 !default;
+  $orange-15pct: rgba($orange, .15) !default; 
+
+
+////// BUTTONS
+/////////////////////
+$button-primary-text: $white !default;
+$button-primary-background: $sea-green !default;
+$button-primary-border: $sea-green !default;
+$button-primary-text-hover: $white !default;
+$button-primary-background-hover: $shark !default;
+$button-primary-border-hover: $shark !default;
+
+$button-secondary-background: transparent !default;
+$button-secondary-border: $sea-green !default;
+$button-secondary-text: $sea-green !default;
+$button-secondary-background-hover: transparent !default;
+$button-secondary-border-hover: $shark !default;
+$button-secondary-text-hover: $shark !default;
+
+$button-tertiary-background: transparent !default;
+$button-tertiary-border: $sea-green !default;
+$button-tertiary-text: $sea-green !default;
+$button-tertiary-background-hover: transparent !default;
+$button-tertiary-border-hover: $shark !default;
+$button-tertiary-text-hover: $shark !default;
+
+$button-destructive-text: $valencia !default;
+$button-destructive-border: $valencia !default;
+$button-destructive-background: transparent !default;
+$button-destructive-text-hover: $white !default;
+$button-destructive-border-hover: $valencia !default;
+$button-destructive-background-hover: $valencia !default;
+
+
+// CODE/EXAMPLES
 ////////////////////
-$nav-bg: #fbfbfb !default;
-$subnav-bg: #f6f6f6 !default;
-$nav-hover-bg: $subnav-bg !default;
-$horizontal-nav-logo-bg: #3F00B6 !default;
-$horizontal-nav-bg: #5134C4 !default;
-$horizontal-subnav-bg: #fff !default;
+$inline-code-text: $valencia !default;
+$inline-code-background: $athens-gray !default;
+$inline-code-border: $solitude !default;
+$code-bg: #303030 !default;
+$code-text: #dfc48c !default;
+
+// LITE NAV/SIDE MENU
+////////////////////
 $horizontal-subnav-border: #e5e5e5 !default;
 $horizontal-subnav-shadow: rgba(132,131,161,0.2) !default;
-$examples-bg: #393939 !default;
-$code-bg: #303030 !default;
-$code-annotation-bg: #1c1c1c !default;
-$nav-subitem-bg: $horizontal-nav-bg !default;
-$nav-active-bg: #8071FE !default;
-$lang-select-border: #000 !default;
-$lang-select-bg: #222 !default;
-$lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
-$lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
-$main-bg: #F9F9FA !default;
-$aside-notice-bg: #8fbcd4 !default;
-$aside-warning-bg: #FFEB3B !default;
-$aside-success-bg: #4CAF50 !default;
-$search-notice-bg: #9677DF !default;
+$dropdown-shadow: 0 9px 15px rgba(132, 131, 161, 0.5) !default;
 $border: #EDEDF3 !default;
-$nav-hover-border: #726EEA !default;
-$mobile-nav-button-bg: rgba(249, 249, 250, 0.7) !default;
-$mobile-nav-inverted-bg: $code-bg !default;
+
+
+// FIELD/INPUT
+////////////////////
 $search-border-bottom: #B3B3CC !default;
+$field-text: #646471 !default;
+
+
+// TABLE
+////////////////////
 $table-header-bg: #F5F5F7 !default;
-$table-body-odd-bg: $horizontal-subnav-bg !default;
+$table-header-text: #808091 !default;
+$table-body-odd-bg: $white !default;
 $table-body-even-bg: #FAFAFA !default;
 $table-row-hover-bg: #F7F6FF !default;
-$button-bg: $horizontal-nav-bg !default;
-$button-secondary-bg: $code-bg !default;
-$button-dark-bg: #F9F8FF !default;
-$button-dark-shadow: #DCDCDF !default;
-$code-bg: #1d1f21 !default;
-$select-bg: $horizontal-subnav-bg !default;
-$select-border: $search-border-bottom !default;
-$select-shadow: hsla(240, 7%, 54%, 0.1) !default;
-$select-hover-bg: $nav-active-bg !default;
-$select-hover-border: #9B8FFF !default;
-$select-hover-shadow: rgba(128, 113, 254, 0.2) !default;
+
+
+// SELECT
+////////////////////
+$select-input-text: $cloudy-gray !default;
+$select-input-border: $silver !default;
+$select-input-active-border: $curious !default;
+$select-input-list-option-hover-text: $white !default;
+$select-input-list-option-hover-background: $curious !default;
+$select-input-disabled-text: $nobel !default;
+
+
+// TOGGLE
+////////////////////
 $toggle-bg: #E1E1EA !default;
 $toggle-shadow: rgba(179, 179, 204, 0.2) !default;
-$toggle-active-bg: #00e7ae !default;
+$toggle-active-background: $sushi !default;
 $toggle-active-shadow: rgba(0, 0, 0, 0.1) !default;
-$toggle-btn-bg: $horizontal-subnav-bg !default;
+$toggle-btn-bg: $white !default;
 $toggle-btn-shadow: rgba(0, 0, 9, 0.1) !default;
-$dropdown-bg: $horizontal-subnav-bg !default;
+
+
+// DROPDOWN
+////////////////////
+$dropdown-button-text: $sea-green !default;
+$dropdown-button-text-hover: $shark !default;
+$dropdown-item-text: $sea-green !default;
+$dropdown-item-text-hover: $shark !default;
+$dropdown-bg: $white !default;
 $dropdown-border: $horizontal-subnav-border !default;
 $dropdown-shadow: $horizontal-subnav-shadow !default;
+
+
+// CHECKBOX
+////////////////////
+$checkbox-checked-background: $sushi !default;
+$checkbox-checked-border: $sushi !default;
+
 
 // TEXT COLORS
 ////////////////////
 $main-text: #303030 !default; // main content text color
-$nav-text: #fff !default;
-$nav-active-text: $main-text !default; $nav-hover-text: #4641BE !default;
-$link-text: $horizontal-nav-bg;
+$inline-link: $deep-cerulean !default;
+$inline-link-hover: $shark !default;
+$text-input-label-text: $waterloo !default;
+$text-input-placeholder-text: $silver !default;
+$text-input-text: $shark !default;
+$text-input-help-text: $waterloo !default;
+$text-input-border: $silver !default;
+$text-input-active-border: $curious !default;
+$text-input-disabled-text: $silver !default;
+$text-input-disabled-background: $white-smoke !default;
+$text-input-disabled-border: $silver !default;
+
+
+// BLOCKQUOTE
+////////////////////
+$blockquote-text: $shark !default;
+$blockquote-background: $curious-5pct !default;
+$blockquote-left-border: $curious !default;
+
+
+$wl-action: $sea-green !default;
+$wl-action-hover: $shark !default;
+$wl-info: $curious !default;
+$wl-status-error: $valencia !default;
+$wl-status-error-background: $valencia-10pct !default; 
+
+
+// CONTEXT LABELS
+////////////////////
+$context-label-text: $white !default;
+$context-label-background: $waterloo !default;
+$context-label-warning-background: $curious !default;
+$context-label-important-background: $valencia !default;
+$context-label-success-background: $sushi !default;
+$context-label-caution-background: $orange !default;
+
+
+// BANNERS
+////////////////////
+$banner-text: $curious !default;
+$banner-background: $curious-10pct !default;
+$banner-link: $curious !default;
+$banner-link-hover: $curious !default;
+
+$banner-success-text: $sushi !default;
+$banner-success-background: $sushi-10pct !default;
+$banner-success-link: $deep-cerulean !default;
+$banner-success-link-hover: $shark !default;
+
+$banner-error-text: $valencia !default;
+$banner-error-background: $valencia-10pct !default;
+$banner-error-link: $deep-cerulean !default;
+$banner-error-link-hover: $shark !default;
+
+$banner-fixed-bottom-border: $iron !default;
+$banner-fixed-link: $inline-link !default;
+
+$banner-fixed-warning-background: $ghost-white !default;
+$banner-fixed-warning-text: $inline-link !default;
+
+$banner-fixed-error-background: $wl-status-error-background !default;
+$banner-fixed-error-text: $wl-status-error !default;
+
+
 $lang-select-text: #fff !default; // color of unselected language tab text
 $lang-select-active-text: #fff !default; // color of selected language tab text
 $lang-select-pressed-text: #fff !default; // color of language tab text when mouse is pressed
-$horizontal-nav-text: #C4C2FF !default;
-$mobile-nav-button-color: #000 !default;
-$table-header-text: #808091 !default;
-$loader-dots: $table-header-text !default;
-$button-text: $main-bg !default;
-$field-text: #646471 !default;
-$code-text: #dfc48c !default;
+
+
+//FILTER PILLS
+////////////////////
+$filter-pill-background: $curious-10pct !default;
+$filter-pill-text: $curious !default;
+$filter-pill-shadow: $curious !default;
+
+$filter-pill-background-highlighted: $sushi-10pct !default;
+$filter-pill-text-highlighted: $sushi !default;
+$filter-pill-shadow-highlighted: $sushi !default;
+
+$filter-pill-background-warning: $valencia-10pct !default;
+$filter-pill-text-warning: $valencia !default;
+$filter-pill-shadow-warning: $valencia !default;
+
+$filter-pill-background-disabled: $nobel-10pct !default;
+$filter-pill-text-disabled: $nobel !default;
+$filter-pill-shadow-disabled: $nobel !default;
+
+
+//MORE MENU
+////////////////////
+$more-menu-trigger-text-open: $shark !default;
+$more-menu-trigger-background-open: transparent !default;
+$more-menu-trigger-border-open: $shark !default;
+$more-menu-trigger-text-open-hover: $shark !default;
+$more-menu-trigger-background-open-hover: transparent !default;
+$more-menu-trigger-border-open-hover: $shark !default;
+
+$more-menu-border: $iron !default;
+$more-menu-item-text: $sea-green !default;
+$more-menu-item-text-hover: $shark !default;
+$more-menu-item-background: transparent !default;
+$more-menu-item-background-hover: transparent !default;
+$more-menu-item-text-destructive: $valencia !default;
+$more-menu-item-text-destructive-hover: $shark !default;
+$more-menu-item-background-destructive: transparent !default;
+$more-menu-item-background-destructive-hover: transparent !default;
+
+
+// LOADER
+////////////////////
+$loader-dot-color: $sushi !default;
+
+
+// TABS
+////////////////////
+$tabs-bottom-border: $white-smoke !default;
+
+$tabs-selected-primary-text: $curious !default;
+$tabs-selected-secondary-text: $nobel !default;
+$tabs-selected-background: $curious-5pct !default;
+$tabs-selected-indicator: $curious !default;
+
+$tabs-unselected-primary-text: $waterloo !default;
+$tabs-unselected-primary-text-hover: $curious !default;
+$tabs-unselected-secondary-text: $gray-suit !default;
+$tabs-unselected-background: $curious-3pct !default;
+
+
+// CARD
+////////////////////
+
+$card-reorder-highlight: $curious-5pct;
+$card-hover-background: $curious-10pct;
 
 
 // SIZES
@@ -135,14 +362,9 @@ $font-path: 'https://d1dhez4kvp48e8.cloudfront.net/fonts/';
 
 // OTHER
 ////////////////////
-// $asset-path: 'https://s3.amazonaws.com/wl-s3-assets/brand/';
-$asset-path: 'https://d1dhez4kvp48e8.cloudfront.net/brand/';
-$nav-active-shadow: #000 !default;
-$nav-footer-border-color: #666 !default;
-$nav-embossed-border-top: #000 !default;
-$nav-embossed-border-bottom: #939393 !default;
-$main-embossed-text-shadow: 0px 1px 0px #fff !default;
-$search-box-border-color: #666 !default;
+$logo-asset-path: 'https://s3.amazonaws.com/wl-s3-assets/brand/';
+$asset-path: 'https://s3.amazonaws.com/wl-s3-assets/assets/whiplash-ui/';
+//$logo-asset-path: 'https://d1dhez4kvp48e8.cloudfront.net/brand/';
 
 
 ////////////////////////////////////////////////////////////////////////////////

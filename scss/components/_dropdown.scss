@@ -2,11 +2,44 @@
 	position: relative;
 
 	&.open {
-		.dropdown {
+		> .submenu-trigger {
+			&:after {
+				transform: rotate(180deg);
+				top: 40%;
+			}
+		}
+
+		> .dropdown {
 			display: block;
 		}		
 	}
 }
+
+.dropdown-wrapper:not(.more-menu),
+.dropdown-wrapper:not(.submenu) {
+	button {
+	  color: $dropdown-button-text;
+	  padding: 0;
+  
+	  &:hover {
+		color: $dropdown-button-text-hover;
+	  }
+	}
+  
+	.dropdown-list {
+	  li {
+		width: 100%;
+  
+		a {
+		  color: $dropdown-item-text;
+  
+		  &:hover {
+			color: $dropdown-item-text-hover;
+		  }
+		}
+	  }
+	}
+  }
 
 .dropdown {
 	background: $dropdown-bg;

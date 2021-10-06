@@ -3,7 +3,7 @@
   width: 100%;
 
   td, th {
-    background: url($asset-path + 'styles/table-border.svg') repeat-y 100% transparent;
+    background: url($asset-path + 'table-border.svg') repeat-y 100% transparent;
 
     &:last-child {
       background: none;
@@ -15,11 +15,12 @@
     display: table-header-group;
     vertical-align: middle;
     width: 100%;
+    font-weight: normal;
 
     th {
       color: $table-header-text;
       font-size: 0.8rem;
-      font-weight: 100;
+      font-weight: normal;
       height: 3rem;
       letter-spacing: 0.0125rem;
       padding: 0 1rem;
@@ -37,7 +38,7 @@
       }
 
       &:hover {
-        background-color: $table-row-hover-bg;
+        background-color: inherit;
       }
     }
 
@@ -50,4 +51,8 @@
       -webkit-font-smoothing: antialiased;
     }
   }
+}
+
+table.table {
+  display: table;
 }

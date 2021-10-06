@@ -1,0 +1,14 @@
+.parsley-error {
+    border: 1px solid $red !important;
+    background-color: $lavender-blush !important;
+}
+
+ul.parsley-errors-list {
+    margin-top: 5px;
+    margin-bottom: 0;
+    list-style: none;
+    padding: 0 5px;
+    font-size: .8em;
+    line-height: 1.6;
+    color: $red;
+}

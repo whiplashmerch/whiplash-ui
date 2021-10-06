@@ -1,64 +1,255 @@
+.buttons-right {
+
+  .button{
+    margin: 0 .5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  form {
+    display: inline-block;
+  }
+}
+
+
 .button {
-  background-color: $button-bg;
-  border: none;
   border-radius: 5px;
-  color: $button-text;
+  border: 1px solid $button-primary-border;
+  background-color: $button-primary-background;
   cursor: pointer;
+  color: $button-primary-text;
   display: inline-block;
   font-size: 0.8125rem;
   letter-spacing: 0.08rem;
-  margin: 0.5rem auto;
+  margin: 0px;
   min-width: 11.9375rem;
   outline: 0;
   padding: 1rem 0.5rem;
   text-align: center;
   text-transform: uppercase;
-  transition: background-color .2s ease-out,border .2s ease-out,color .2s ease-out;
+  transition: background-color ease-out, border ease-out, color ease-out;
+  transition-duration: unset;
   width: 100%;
 
   &:hover {
-    background-color: $nav-active-bg;
+    border: 1px solid $button-primary-border-hover;
+    background-color: $button-primary-background-hover;
+    color: $button-primary-text-hover;
   }
 
-  &.secondary-border {
-    background-color: transparent;
-    border: 1px solid $button-secondary-bg;
-    color: $main-text;
+  &.secondary {
+    border: 1px solid $button-secondary-border;
+    background-color: $button-secondary-background;
+    transition: unset;
+    color: $button-secondary-text;
 
     &:hover {
-      background-color: $main-text;
-      color: $nav-text;
+      border: 1px solid $button-secondary-border-hover;
+      background-color: $button-secondary-background-hover;
+      color: $button-secondary-text-hover;
     }
   }
 
-  &.secondary-dark {
-    background-color: $button-dark-bg;
-    box-shadow: none;
-    color: $button-bg;
-    transition: background-color .2s ease-out,box-shadow .2s ease-out,color .2s ease-out;
-
+  &.destructive {
+    border: 1px solid $button-destructive-border;
+    color: $button-destructive-text;
+    background-color: $button-destructive-background;
+    
     &:hover {
-      background-color: $button-dark-bg;
-      box-shadow: 0 2px 5px 0 $button-dark-shadow;
-      color: $nav-active-bg;
+      border: 1px solid $button-destructive-border-hover;
+      color: $button-destructive-text-hover;
+      background-color: $button-destructive-background-hover;
     }
   }
 
   &.text {
     background-color: transparent;
     border: none;
-    color: $button-bg;
     letter-spacing: 0.06rem;
     text-transform: capitalize;
+    margin: 0;
 
     &:hover {
       background-color: transparent;
       border: none;
-      color: $nav-active-bg;
     }
   }
 
   &.loading {
     padding: 0.813rem 0;
+  }
+
+  &.split-left {
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.button:disabled,
+.button.disabled
+{
+  border: 1px solid $silver;
+  background-color: $white;
+  color: $silver;
+  cursor: not-allowed;
+  
+  &:hover {
+    border: 1px solid $silver;
+    background-color: $white;
+    color: $silver;
+  }
+}
+
+.button.secondary:disabled,
+.button.secondary.disabled  {
+  background-color: transparent;
+  border: 1px solid $silver;
+  color: $silver;
+
+  cursor: not-allowed;
+  &:hover {
+    border: 1px solid $silver;
+    color: $silver;
+    background-color: transparent;
+  }
+
+  &.wait-submit {
+    cursor: wait;
+  }
+}
+
+.button.small {
+  font-size: 0.7125rem;
+  padding: 0.5rem;
+  min-width: 0
+}
+
+.button.no-min {  
+  min-width: 0;
+}
+
+button.tertiary,
+a.tertiary,
+label.tertiary,
+input.tertiary {
+  border: 1px solid $button-tertiary-border;
+  color: $button-tertiary-text;
+  text-transform: uppercase;
+  padding: 4px 15px;
+  border-radius: 2px;
+  font-size: 12px;
+  background-color: $button-tertiary-background;
+  white-space: nowrap;
+  
+  &:hover, &.context-menu-active {
+    color: $button-tertiary-text-hover;
+    background: $button-tertiary-background-hover;
+    border: 1px solid $button-tertiary-border-hover;
+  }
+
+  &.secondary-toggle {
+    background-color: transparent;
+    border: 1px solid grey;
+    color: $gray;
+   
+
+    &:hover{
+      background-color: $gray;
+      border: 1px solid grey;
+      color: $white;
+    }
+  }
+
+  &.destructive {
+    border-color: $button-destructive-border;
+    color: $button-destructive-text;
+    background: $button-destructive-background;
+
+    &:hover {
+      background-color: $button-destructive-background-hover;
+      color: $button-destructive-text-hover;
+      border-color: $button-destructive-border-hover;
+    }
+  }
+
+  &.disabled, &:disabled{
+    cursor: not-allowed;
+    color: $silver;
+    border-color: $silver;
+    background-color: transparent;
+
+    &:hover {
+      color: $silver;
+      border-color: $silver;
+      background-color: transparent;
+    }
+  }
+
+  &:disabled.no-border {
+    cursor: default;
+    background-color: transparent;
+    border: transparent;
+    color: $gray;
+
+    &:hover{
+      background-color: transparent;
+      border: transparent;
+      color: $gray;
+    }
+  }
+
+  &.bg-white{
+    background-color: white;
+  }
+
+  &.split-right {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+  }
+}
+
+.split-button{
+  display: flex;
+}
+
+.button-link { 
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0px;
+  background-color: transparent;
+  transition: color ease-in-out .2s, color ease-in-out .2s;
+  border: none;
+  border-bottom: 1px solid;
+  &:hover {
+    color: #7C2483;
+  }
+  &:focus{
+    color: #4D5454;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: #bbb;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  button.tertiary,
+  a.tertiary,
+  label.tertiary {
+    text-align: center;
+    margin-top: 4px;
+
+    &:not(#add-filter) {
+      display: block;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

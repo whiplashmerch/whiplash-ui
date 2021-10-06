@@ -1,0 +1,196 @@
+.more-menu.standard {
+    display: inline-block;
+  
+    .context-trigger {
+      position: relative;
+      float: left;
+      padding: 0;
+      width: 55px;
+      height: 25px;
+      letter-spacing: 0.64px;
+      outline: none;
+  
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url($asset-path + 'ellipsis.svg');
+        background-size: 22px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+  
+      &:before {
+        z-index: 1;
+      }
+  
+      &:after {
+        content: "";
+        background-image: url($asset-path + 'ellipsis-hover.svg');
+      }
+  
+      &:hover {
+        &:before {
+          opacity: 0;
+        }
+      }
+
+      &.disabled, &:disabled {
+        &:before,
+        &:after {
+          background-image: url(/assets/ellipsis-disabled.svg);
+        }
+      }
+  
+      &.split-right{
+        height: 100%;
+      }
+    }
+  
+    &.open {
+      .context-trigger {
+        background-color: $more-menu-trigger-background-open;
+        border-color: $more-menu-trigger-border-open;
+  
+        &:before {
+          opacity: 0;
+        }
+  
+        &:after {
+          content: "\00D7";
+          color: $more-menu-trigger-text-open;
+          background-image: none;
+          font-size: 1.2rem;
+          font-weight: bold;
+          line-height: 1.4rem;
+        }
+  
+        &:hover {
+          background-color: $more-menu-trigger-background-open-hover;
+          border-color: $more-menu-trigger-border-open-hover;
+          
+          &:after {
+            color: $more-menu-trigger-text-open-hover;
+          }
+        }
+      }
+    }
+  
+    .dropdown-down {
+      position: absolute;
+      top: 100%;
+      margin-top: 0.31rem;
+      margin-bottom: 20px;
+      width: auto;
+      min-width: 140px;
+      right: 0;
+      left: auto;
+      padding: 0;
+      border: 1px solid $more-menu-border;
+      border-radius: 3px;
+      -webkit-box-shadow: 0 2px 5px $black-50-percent-opacity;
+      box-shadow: 0 2px 5px $black-50-percent-opacity;
+      height: auto;
+    
+      ul.dropdown-list {
+        padding: .4rem 0;
+        margin: 0;
+        
+        li{
+          width: 100%;
+          padding: 0;
+          margin: 0;
+    
+          hr {
+            margin: .3rem 0;
+            border: 0;
+            border-bottom: 1px solid $gainsboro;
+          }
+    
+          a {
+            width: 100%;
+            text-transform: uppercase;
+            color: $more-menu-item-text;
+            background-color: $more-menu-item-background;
+            text-align: left;
+            letter-spacing: 0.64px;
+            padding: .4rem 1.2rem;
+            display: inline-block;
+            font-size: 12px; 
+            white-space: nowrap;
+    
+            &:hover {
+              background-color: $more-menu-item-background-hover;
+              color: $more-menu-item-text-hover;
+            }
+    
+            &.destructive {
+              color: $more-menu-item-text-destructive;
+              background-color: $more-menu-item-background-destructive;
+              
+              &:hover {
+                background-color: $more-menu-item-background-destructive-hover;
+                color: $more-menu-item-text-destructive-hover;
+              }
+            }
+          }
+  
+          &.disabled {
+            a {
+              color: $waterloo;
+  
+              &:hover {
+                background-color: inherit;
+                color: $waterloo;
+                cursor: not-allowed;
+              }
+            }
+          }
+
+          button {
+            border: none;
+          }
+    
+          button {
+            width: 100%;
+            text-transform: uppercase;
+            color: $more-menu-item-text;
+            background-color: $more-menu-item-background;
+            text-align: left;
+            letter-spacing: 0.64px;
+            padding: .4rem 1.2rem;
+            display: inline-block;
+            font-size: 12px; 
+            white-space: nowrap;
+    
+            &:hover {
+              background-color: $more-menu-item-background-hover;
+              color: $more-menu-item-text-hover;
+            }
+    
+            &.destructive {
+              color: $more-menu-item-text-destructive;
+              background-color: $more-menu-item-background-destructive;
+              
+              &:hover {
+                background-color: $more-menu-item-background-destructive-hover;
+                color: $more-menu-item-text-destructive-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    &.open.above {
+      .dropdown {
+        top: auto;
+        bottom: .9rem;
+      }
+    }
+  }
