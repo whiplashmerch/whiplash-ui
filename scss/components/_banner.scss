@@ -10,9 +10,14 @@
     letter-spacing: .04rem;
     -webkit-font-smoothing: antialiased;
   
-    &.pending, &.warning {
+    &.pending {
       background: $banner-background;
       color: $banner-text;
+    }
+
+    &.warning {
+      background: $banner-warning-background;
+      color: $banner-warning-text;
     }
   
     &.error {
