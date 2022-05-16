@@ -28,7 +28,7 @@ for branch in $(git branch -a | sed 's/^\s*//' | grep -v 'master$\|main$\|develo
 				if [[ $merge_base = $merge_source_current_commit ]];
 				then
 					if [[ "${DRY_RUN}" == "--no-dryrun" ]]; then
-					    #echo "${branch}" | sed 's/remotes\/origin\///' | xargs -n 1 git push origin --delete
+					    echo "${branch}" | sed 's/remotes\/origin\///' | xargs -n 1 git push origin --delete
 					    $ECHO "Finish running deleting ${branch}"
 					else
 				            $ECHO "Dry running deleting ${branch}"
@@ -37,9 +37,9 @@ for branch in $(git branch -a | sed 's/^\s*//' | grep -v 'master$\|main$\|develo
 					$ECHO "Ignore branch ${branch} since it's not merged"
 				fi				
 		else
-			echo "Skipping branch less than 6 months: ${branch}"
+			$ECHO "Skipping branch less than 6 months: ${branch}"
 		fi
 	else
-        echo "Skipping local branch ${branch}"	
+        $ECHO "Skipping local branch ${branch}"	
     fi
 done
