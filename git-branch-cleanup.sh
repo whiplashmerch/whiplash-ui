@@ -27,10 +27,10 @@ for branch in $(git branch -a | sed 's/^\s*//' | grep -v 'master$\|main$\|develo
 				merge_source_current_commit=$(git rev-parse $merge_source_branch)
 				if [[ $merge_base = $merge_source_current_commit ]];
 				then
-					if [[ "${DRY_RUN}" == "--no-dryrun" ]]; 
+					if [[ "${DRY_RUN}" == "--no-dryrun" ]]; then
 					    #echo "${branch}" | sed 's/remotes\/origin\///' | xargs -n 1 git push origin --delete
 					    $ECHO "Finish running deleting ${branch}"
-					then
+					else
 				            $ECHO "Dry running deleting ${branch}"
 				        fi
 				else
