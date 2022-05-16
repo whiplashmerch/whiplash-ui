@@ -12,7 +12,9 @@ jobs:
           echo "${{ github.event.client_payload.repository }}"
           echo "${{ github.event.client_payload.origin_sha }}"
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Run Cleanup Scripting
         run: |
           echo "Running bash script to cleanup!"
