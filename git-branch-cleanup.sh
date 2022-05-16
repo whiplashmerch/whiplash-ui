@@ -9,15 +9,18 @@ else
   echo DRY_RUN=$1
 fi
 $ECHO "DRY_RUN value is ${DRY_RUN}"
-RESULT=`git branch -a`
-$ECHO $RESULT
+ALLBRANCHES=`git branch -a`
+$ECHO $ALLBRANCHES
 for branch in $(git branch -a | sed 's/^\s*//' | grep -v 'master$\|main$\|develop$\|development$'); do
    if [[ $branch == remotes/* ]] ;
    then
 	    if [[ "$(git log $branch --since "6 months ago" | wc -l)" -eq 0 ]]; 
 		then
 			    $ECHO "This branch is 6 months old now: ${branch}"
-				merge_destination_branch="master"
+				merge_destination_branch="remotes/origin/master"
+				if [[ $ALLBRANCHES = *"remotes/origin/main"* ]]; then
+				   merge_destination_branch="remotes/origin/main"
+				fi
 				merge_source_branch=$branch
 				$ECHO "Running checking branch is merged from source ${merge_source_branch} to target ${merge_destination_branch}"
 				merge_base=$(git merge-base $merge_destination_branch $merge_source_branch)
