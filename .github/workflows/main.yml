@@ -16,5 +16,7 @@ jobs:
       - name: Run Cleanup Scripting
         run: |
           echo "Running bash script to cleanup!"
+          git checkout master
+          git pull
           chmod +x git-branch-cleanup.sh
           ./git-branch-cleanup.sh
