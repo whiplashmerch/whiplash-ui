@@ -10,6 +10,7 @@ else
 fi
 $ECHO "DRY_RUN value is ${DRY_RUN}"
 
+$ECHO "git branch -a"
 for branch in $(git branch -a | sed 's/^\s*//' | grep -v 'master$\|main$\|develop$\|development$'); do
    if [[ $branch == remotes/* ]] ;
    then
