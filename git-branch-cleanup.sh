@@ -18,7 +18,7 @@ for branch in $(git branch -a | sed 's/^\s*//' | grep -v 'master$\|main$\|develo
 			    $ECHO "This branch is 6 months old now: ${branch}"
 				merge_destination_branch="master"
 				merge_source_branch=$branch
-				ECHO "Running checking branch is merged from source ${merge_source_branch} to target ${merge_destination_branch}"
+				$ECHO "Running checking branch is merged from source ${merge_source_branch} to target ${merge_destination_branch}"
 				merge_base=$(git merge-base $merge_destination_branch $merge_source_branch)
 				merge_source_current_commit=$(git rev-parse $merge_source_branch)
 				if [[ $merge_base = $merge_source_current_commit ]];
