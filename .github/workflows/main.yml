@@ -1,0 +1,20 @@
+name: Git branch cleanup
+
+#on : [repository_dispatch]
+on: [push, pull_request, repository_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Debug Output
+        run: |
+          echo "${{ github.event.client_payload.repository }}"
+          echo "${{ github.event.client_payload.origin_sha }}"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Cleanup Scripting
+        run: |
+          echo "Running bash script to cleanup!"
+          chmod +x git-branch-cleanup.sh
+          ./git-branch-cleanup.sh
