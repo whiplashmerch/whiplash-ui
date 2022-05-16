@@ -27,16 +27,14 @@ for branch in $(git branch -a | sed 's/^\s*//' | grep -v 'master$\|main$\|develo
 				merge_source_current_commit=$(git rev-parse $merge_source_branch)
 				if [[ $merge_base = $merge_source_current_commit ]];
 				then
-					$ECHO "Running Deleting ${branch}"
 					if [[ "${DRY_RUN}" == "--no-dryrun" ]]; 
-					      #echo "${branch}" | sed 's/remotes\/origin\///' | xargs -n 1 git push origin --delete
-						  $ECHO "Deleted running deleting ${branch}"
+					    #echo "${branch}" | sed 's/remotes\/origin\///' | xargs -n 1 git push origin --delete
+					    $ECHO "Finish running deleting ${branch}"
 					then
-				          $ECHO "Dry running deleting ${branch}"
-				    fi
+				            $ECHO "Dry running deleting ${branch}"
+				        fi
 				else
 					$ECHO "Ignore branch ${branch} since it's not merged"
-
 				fi				
 		else
 			echo "Skipping branch less than 6 months: ${branch}"
