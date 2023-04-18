@@ -34,7 +34,7 @@
   "devDependencies": {
     "autoprefixer": "9.7.1",
     "cssnano": "4.1.10",
-    "postcss": "8.2.12",
+    "postcss": "8.2.13",
     "postcss-cli": "8.3.1",
     "uglify-js": "3.6.8"
   },
